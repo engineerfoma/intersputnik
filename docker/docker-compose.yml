@@ -1,0 +1,10 @@
+version: "3.3"
+
+services:
+  front:
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - "127.0.0.1:5634:3000"
+    command: yarn prod

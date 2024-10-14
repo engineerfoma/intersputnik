@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  fara-front-dev:
+    container_name: fara-front-dev
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile.dev
+    ports:
+      - "5639:3000"
+    command: yarn dev
+    volumes:
+      - ../:/frontend
