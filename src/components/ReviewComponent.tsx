@@ -1,11 +1,11 @@
-import React, { Fragment, memo } from 'react'
+import React, { memo } from 'react'
 
 //react-boostrap
 import { Button, Form, Row, Col } from 'react-bootstrap'
 
 const ReviewComponent = memo(() => {
   return (
-    <Fragment>
+    <>
       <div className='streamit-reviews'>
         <div
           id='comments'
@@ -94,7 +94,7 @@ const ReviewComponent = memo(() => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </>
   )
 })
 

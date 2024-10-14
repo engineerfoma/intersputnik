@@ -19,20 +19,8 @@ import GenreSlider from '@/components/sections/GenreSlider'
 import { ottVerticleLatestMovies } from '@/StaticData/data'
 
 const OTT = memo(() => {
-  const videoJsOptions = {
-    controls: true,
-    autoplay: false,
-    preload: 'auto',
-    sources: [
-      {
-        src: 'https://media.axprod.net/TestVectors/v7-Clear/Manifest_1080p.mpd',
-      },
-    ],
-    tracks: [],
-  }
   return (
     <>
-      {/* <VideoPlayer options={videoJsOptions} /> */}
       <OttHeroSlider />
       <ContinueWatching />
       <TopTenMoviesToWatch />

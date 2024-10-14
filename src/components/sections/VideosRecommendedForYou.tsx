@@ -1,4 +1,4 @@
-import { useState, Fragment, memo } from "react";
+import { useState, memo } from "react";
 
 //components
 import SectionSlider from "../slider/SectionSlider";
@@ -11,7 +11,7 @@ const VideosRecommendedForYou = memo(() => {
   const [title] = useState("Videos Recommended For You");
 
   return (
-    <Fragment>
+    <>
       <SectionSlider
         title={title}
         list={recommendedforYou}
@@ -27,7 +27,7 @@ const VideosRecommendedForYou = memo(() => {
           />
         )}
       </SectionSlider>
-    </Fragment>
+    </>
   );
 })
 
