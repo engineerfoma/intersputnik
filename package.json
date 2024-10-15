@@ -3,7 +3,7 @@
   "version": "5.2.1",
   "private": true,
   "scripts": {
-    "dev": "yarn & next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
