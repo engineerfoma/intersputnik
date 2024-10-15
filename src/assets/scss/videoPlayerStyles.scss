@@ -1,0 +1,16 @@
+.red-button .vjs-control {
+  color: red; /* Цвет иконок управления */
+}
+
+.vjs-big-play-button {
+  background-color: rgba(255, 0, 0, 0.7); /* Цвет кнопки воспроизведения */
+  border-radius: 50%; /* Круглая кнопка */
+}
+
+.vjs-volume-panel .vjs-volume-handle {
+  background-color: #ff0000; /* Цвет ползунка громкости */
+}
+
+.video-js .red-button ~ .vjs-control-bar {
+  background-color: red !important; /* Применение красного фона к панели управления */
+}

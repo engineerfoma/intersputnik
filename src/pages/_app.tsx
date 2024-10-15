@@ -5,6 +5,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import '../styles/global.scss'
 import 'sweetalert2/src/sweetalert2.scss'
+import '@/assets/scss/videoPlayerStyles.scss'
 
 import AppLayout from '@/layouts/App'
 import Frontend from '@/layouts/Frontend'
@@ -14,7 +15,7 @@ import Merchandise from '@/layouts/MerchandiseLayout'
 //store
 import { Provider } from 'react-redux'
 //reducer
-import { wrapperStore } from '@/store'
+import { wrapperStore } from '@/store/index'
 
 const layouts: any = {
   Blank: Blank,

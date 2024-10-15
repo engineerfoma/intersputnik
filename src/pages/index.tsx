@@ -1,5 +1,6 @@
-import { memo } from 'react'
-import VideoPlayer from '@/components/VideoPlayer'
+import { memo, useEffect } from 'react'
+
+import axios from 'axios'
 
 // // hero slider
 import OttHeroSlider from '@/components/slider/OttHeroSlider'
@@ -15,13 +16,31 @@ import TabSlider from '@/components/sections/TabSlider'
 import RecommendedForYou from '@/components/sections/RecommendedForYou'
 import TopPicsForYou from '@/components/sections/TopPicsForYou'
 import GenreSlider from '@/components/sections/GenreSlider'
-
+import { Stream } from '@/types/streams'
 import { ottVerticleLatestMovies } from '@/StaticData/data'
+import { streams } from '@/service/api.service'
+interface OTTProps {
+  streams: Stream[]
+}
 
-const OTT = memo(() => {
+export const getStaticProps = async () => {
+  const { data } = await streams.get()
+
+  if (!data.data) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: { streams: data.data }, // будет передано в компонент страницы как пропс
+  }
+}
+
+const OTT = memo(({ streams }: OTTProps) => {
   return (
     <>
-      <OttHeroSlider />
+      <OttHeroSlider streams={streams} />
       <ContinueWatching />
       <TopTenMoviesToWatch />
       <OnlyOnStreamit />
