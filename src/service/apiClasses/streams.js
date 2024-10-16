@@ -9,7 +9,7 @@ export class Streams {
   get() {
     return axios.get(`${this.path}`, {
       headers: {
-        Authorization: 'Bearer a099891e-3f21-4bcc-b790-6f83444631e8',
+        Authorization: 'Bearer ' + process.env.BEARER_TOKEN,
       },
     })
   }

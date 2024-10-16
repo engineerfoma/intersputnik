@@ -135,7 +135,7 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                 {streams.map((stream, index) => {
                   const videoJsOptions = useMemo(() => {
                     return {
-                      controls: true,
+                      controls: false,
                       autoplay: true,
                       muted: true,
                       preload: 'auto',
