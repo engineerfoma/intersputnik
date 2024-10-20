@@ -44,7 +44,11 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
       <div className='iq-banner-thumb-slider'>
         <div className='slider'>
           <div className='position-relative slider-bg d-flex justify-content-end'>
-            <OttHeroSliderThumbs streams={streams} setThumbsSwiper={setThumbsSwiper} thumbsSwiper={thumbsSwiper} />
+            <OttHeroSliderThumbs
+              streams={streams}
+              setThumbsSwiper={setThumbsSwiper}
+              thumbsSwiper={thumbsSwiper}
+            />
             <div
               className='slider-images'
               data-swiper='slider-images-ott'
@@ -53,12 +57,17 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                 key={String(themeSchemeDirection)}
                 dir={String(themeSchemeDirection)}
                 tag='ul'
+                modules={[Navigation]}
                 onSwiper={setThumbsSwiper}
                 slidesPerView={1}
                 watchSlidesProgress={true}
                 allowTouchMove={false}
                 loop={true}
                 className='swiper-container'
+                navigation={{
+                  prevEl: '.swiper-button-prev',
+                  nextEl: '.swiper-button-next',
+                }}
               >
                 {streams.map((stream, index) => {
                   const videoJsOptions = useMemo(() => {
@@ -116,6 +125,10 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                     </SwiperSlide>
                   )
                 })}
+                {/* <div className='joint-arrows'>
+                  <div className='swiper-button swiper-button-next'></div>
+                  <div className='swiper-button swiper-button-prev'></div>
+                </div> */}
               </Swiper>
             </div>
           </div>

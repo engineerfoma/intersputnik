@@ -10,7 +10,7 @@ export default function Document() {
       <meta />
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Fara</title>
+      <title>Fara Intersputnik</title>
       <link rel="stylesheet" href="/vendor/font-awesome/css/all.min.css" />
       <link rel="stylesheet" href="/vendor/iconly/css/style.css" />
       {/* <link rel="preconnect" href="https://fonts.googleapis.com" /> */}

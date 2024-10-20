@@ -17,8 +17,8 @@ const VideosPage = () => {
     <Fragment>
       <VideoHeroSlider />
       <PopularVideos />
-      <SpecialsLatestVideos />
-      <VideosRecommendedForYou />
+      {/* <SpecialsLatestVideos /> */}
+      {/* <VideosRecommendedForYou /> */}
     </Fragment>
   );
 };

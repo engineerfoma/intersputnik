@@ -8,7 +8,7 @@ import CardStyle from "../cards/CardStyle";
 import { populerSlider } from "../../StaticData/data";
 
 const PopularVideos = memo(()=> {
-  const [title] = useState("Popular Videos");
+  const [title] = useState("Category 1");
 
   return (
     <Fragment>

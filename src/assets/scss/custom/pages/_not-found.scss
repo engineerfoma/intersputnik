@@ -1,0 +1,14 @@
+.not-found {
+  font-size: 20rem;
+  color: #c43d30;
+  width: 100%;
+  text-align: center;
+
+  @media (max-width: 601px) {
+    font-size: 14rem;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 8rem;
+  }
+}

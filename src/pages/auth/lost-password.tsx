@@ -11,15 +11,15 @@ const LostPassword = () => {
   return (
     <Fragment>
       <main className='main-content'>
-        <div className='vh-100' style={{ backgroundImage: "url(/assets/images/pages/01.webp)", backgroundSize: 'cover', backgroundRepeat: "no-repeat", position: 'relative', minHeight: '500px' }}>
+        <div className='vh-100' style={{ backgroundImage: "url(/assets/images/home-bg.png)", backgroundSize: 'cover', backgroundRepeat: "no-repeat", position: 'relative', minHeight: '500px' }}>
           <Container>
             <Row className='justify-content-center align-items-center height-self-center vh-100'>
               <Col lg="5" md="12" className='align-self-center'>
-                <div className='user-login-card bg-body'>
+                <div className='user-login-card bg-body text-black'>
                   <p> Please enter your username or email address. You will receive a link to create a new password via email.</p>
                   <Form action='post'>
                     <Form.Group className='mb-5'>
-                      <Form.Label className='text-white fw-500 mb-2'>Username or Email Address</Form.Label>
+                      <Form.Label className='text-black fw-500 mb-2'>Username or Email Address</Form.Label>
                       <Form.Control type='text' className='rounded-0' />
                     </Form.Group>
                     <div className="iq-button">

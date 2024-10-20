@@ -22,16 +22,17 @@
         .slider--image {
           height: 100%;
           overflow: hidden;
-          background: linear-gradient(
-              90.3deg,
-              #181616 9.88%,
-              rgba(19, 18, 18, 0) 31.52%
-            ),
-            linear-gradient(
-              266.54deg,
-              #181616 13.29%,
-              rgba(19, 18, 18, 0) 98.41%
-            );
+          background: black;
+          // background: linear-gradient(
+          //     90.3deg,
+          //     #181616 9.88%,
+          //     rgba(19, 18, 18, 0) 31.52%
+          //   ),
+          //   linear-gradient(
+          //     266.54deg,
+          //     #181616 13.29%,
+          //     rgba(19, 18, 18, 0) 98.41%
+          //   );
 
           img {
             transition: 3s;

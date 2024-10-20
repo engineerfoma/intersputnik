@@ -1,5 +1,19 @@
 .title-box {
   margin-bottom: 3.125rem;
+  @media (max-width: 540px) {
+    font-size: .8rem !important;
+  }
+  h1 {
+    font-size: 2.5rem !important;
+
+    @media (max-width: 540px) {
+      font-size: 1.8rem !important;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 1.5rem !important;
+    }
+  }
 }
 
 @media (max-width: 767px) {

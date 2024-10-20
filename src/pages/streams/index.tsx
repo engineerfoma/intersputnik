@@ -18,7 +18,6 @@ const Movies = memo(() => {
             <PopularMovies />
             <SpecialsLatestMovies />
             <MoviesRecommendedForYou />
-
         </>
     );
 });

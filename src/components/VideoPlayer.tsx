@@ -6,12 +6,14 @@ import 'video.js/dist/video-js.css'
 import 'videojs-contrib-hls' // Подключение HLS
 import 'videojs-youtube' // Подключение YouTube
 
+
 interface VideoPlayerProps {
   options: {
     autoplay: boolean
     controls: boolean
     sources?: { src: string; type?: string }[]
     youtube?: { iv_load_policy: number } // Опции для YouTube
+    [key: string]: any
   }
   // color: string
 }
@@ -35,16 +37,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ options }) => {
       }
     }
   }, [options])
-
-  // useEffect(() => {
-  //   if (playerRef.current && color) {
-  //     const controlElements = document.querySelectorAll('.vjs-control')
-  //     controlElements.forEach((el) => {
-  //       const controlElement = el as HTMLElement // Приведение типа
-  //       controlElement.style.backgroundColor = color
-  //     })
-  //   }
-  // }, [color])
 
   return (
     <div data-vjs-player>

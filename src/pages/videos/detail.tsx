@@ -32,7 +32,7 @@ const VideoDetail = memo(() => {
     techOrder: ["youtube"],
     sources: [
       {
-        src: "https://www.youtube.com/watch?v=QCGq1epI9pQ",
+        src: "https://www.youtube.com/watch?v=co2a6UDHi0c",
         type: "video/youtube",
       },
     ],
@@ -97,7 +97,7 @@ const VideoDetail = memo(() => {
     date: "Nov 2020",
   };
   return (
-    <Fragment>
+    <>
       <div className="iq-main-slider site-video">
         <Container fluid>
           <Row>
@@ -109,7 +109,7 @@ const VideoDetail = memo(() => {
           </Row>
         </Container>
       </div>
-      <div className="details-part">
+      {/* <div className="details-part">
         <Container fluid>
           <Row>
             <Col lg="12">
@@ -320,9 +320,9 @@ const VideoDetail = memo(() => {
             </Col>
           </Row>
         </Container>
-      </div>
-      <UpcomingMovies />
-    </Fragment>
+      </div> */}
+      {/* <UpcomingMovies /> */}
+    </>
   );
 });
 

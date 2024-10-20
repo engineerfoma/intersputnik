@@ -21,7 +21,7 @@ const WishlistCard = memo((props: Props) => {
                         <img src={props.image} alt="movie-card" className="img-fluid object-cover d-block border-0" />
                     </div>
                     <div className="card-description">
-                        <h5 className="text-capitalize fw-500"> <Link href="/videos/detail">{props.title}</Link> </h5>
+                        <h5 className="text-capitalize fw-500"> <Link href="/videos/detail" style={{color: '#C43D30'}}>{props.title}</Link> </h5>
                         <div className="seperator d-flex align-items-center">
                             <span className="text-body fw-semibold font-size-12 text-capitalize">{props.views}</span>
                             <span className="circle circle-small"></span>

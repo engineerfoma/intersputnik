@@ -17,29 +17,29 @@ const WatchlistDetail = memo(() => {
   const watchlist = [
     {
       id: '01',
-      thumbnail: '/assets/images/movies/latest/01.webp',
-      title: 'mortal nories',
+      thumbnail: '/assets/images/logo.webp',
+      title: 'Stream 1',
       duration: '1 month ago',
       views: '30 views',
     },
     {
       id: '02',
-      thumbnail: '/assets/images/movies/latest/02.webp',
-      title: 'advetre',
+      thumbnail: '/assets/images/logo.webp',
+      title: 'Stream 2',
       duration: '3 month ago',
       views: '75 views',
     },
     {
       id: '03',
-      thumbnail: '/assets/images/movies/latest/03.webp',
-      title: 'net ailo',
+      thumbnail: '/assets/images/logo.webp',
+      title: 'Stream 3',
       duration: '2 month ago',
       views: '150 views',
     },
     {
       id: '04',
-      thumbnail: '/assets/images/movies/latest/04.webp',
-      title: 'ariivaal',
+      thumbnail: '/assets/images/logo.webp',
+      title: 'Stream 4',
       duration: '5 month ago',
       views: '300 views',
     },
@@ -47,13 +47,13 @@ const WatchlistDetail = memo(() => {
   return (
     <Fragment>
       <section className="section-padding">
-        <Container fluid>
+        <Container fluid className='section-padding'>
           <Row >
             <Col lg="4" md="5">
               <div className="playlist-main-banner position-relative">
                 <Link href="/videos/detail" className="position-absolute top-0 bottom-0 start-0 end-0 z-1"></Link>
                 <div className="img-box">
-                  <img src="/assets/images/movies/ott2.webp" alt="movie-card" className="img-fluid object-cover d-block" />
+                  <img src="/assets/images/logo.webp" alt="movie-card" className="img-fluid object-cover d-block" />
                 </div>
                 <div className="img-detail z-3">
                   <Link href="#" className="video-open playbtn text-decoration-none"
@@ -74,7 +74,7 @@ const WatchlistDetail = memo(() => {
             </Col>
             <Col lg="8" md="7" >
               <div className="playlist-listing mt-4 mt-md-0">
-                <h4 className="fw-500">Playlist Demo 1</h4>
+                <h4 className="fw-500">Playlist Strems</h4>
                 <div className="seperator d-flex align-items-center">
                   <span className="text-body fw-semibold font-size-12 text-capitalize">public</span>
                   <span className="circle circle-small"></span>

@@ -1,61 +1,88 @@
-import { Fragment, memo, useState } from "react";
+import { Fragment, memo, useState } from 'react'
 
 //react bootstrap
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from 'react-bootstrap'
 
 //components
-import ProfileCard from "../../../components/cards/ProfileCard";
+import ProfileCard from '../../../components/cards/ProfileCard'
 
 //function
-import { generateImgPath } from "../../../StaticData/data";
+import { generateImgPath } from '../../../StaticData/data'
 
 const TeamSection = memo(() => {
   const [lists] = useState([
     {
-      image: generateImgPath("/assets/images/pages/team1.webp"),
-      designation: "CEO",
-      name: "Tonny Smith",
+      title: 'Rewatch with context',
+      description: `Ever had the experience of
+                  rewatching a video and trying to
+                  remember what was being
+                  discussed at that moment?
+                `,
+      text: `Our unique technology allows
+                  you to rewatch live translated
+                  videos and see the exact points
+                  where questions were asked or
+                  comments were made.`,
     },
     {
-      image: generateImgPath("/assets/images/pages/team2.webp"),
-      designation: "Designer",
-      name: "Barry Tech",
+      title: 'Collaborate',
+      description: `Engage with content like never
+                  before. Our interactive chat
+                  feature allows you to participate
+                  in live discussions, ask questions,
+                  and make comments that are
+                  linked to specific video
+                  moments.
+                `,
+      text: `This creates a dynamic and
+                  inclusive community around the
+                  content you love.`,
     },
     {
-      image: generateImgPath("/assets/images/pages/team3.webp"),
-      designation: "Developer",
-      name: "kep John",
+      title: 'Customize',
+      description: `FARA’s strength lies in its versatility.
+                  From global conferences to live
+                  tutorials, and even interactive
+                  entertainment, our platform breaks
+                  barriers. It's perfect for educators,
+                  businesses, and creators.
+                `,
+      text: `FARA creates a more inclusive,
+                  connected world, demonstrating
+                  the transformative potential of live
+                  streaming technology across
+                  sectors.`,
     },
-    {
-      image: generateImgPath("/assets/images/pages/team4.webp"),
-      designation: "Designer",
-      name: "Monty Rock",
-    },
-  ]);
+  ])
   return (
     <Fragment>
-      <section className="section-padding">
-        <Container>
-          <Row className="align-items-center">
-            <Col lg="3"></Col>
-            <Col lg="6" md="12">
-              <div className="title-box text-center">
-                <h2>Masterminds Team</h2>
-                <p className="mb-0">
-                  Your fara is build by one of the best and well experienced
-                  web developers and an awarded Envato Elite Author.
-                </p>
+      <section>
+        <Container
+          style={{ backgroundImage: 'url(/assets/images/home-bg.png)', height: '850px' }}
+        >
+          <Row className='align-items-center section-padding-3'>
+            <Col lg='3'></Col>
+            <Col
+              lg='6'
+              md='12'
+            >
+              <div className='title-box text-center'>
+                <h1>New era of communication</h1>
               </div>
             </Col>
-            <Col lg="3"></Col>
+            <Col lg='3'></Col>
           </Row>
-          <Row className="about-us-detail">
+          <Row className='about-us-detail justify-content-center'>
             {lists.map((data, index) => (
-              <Col md="3" className="mb-4" key={index} >
+              <Col
+                md='3'
+                className='mb-4 team-section'
+                key={index}
+              >
                 <ProfileCard
-                  name={data.name}
-                  designation={data.designation}
-                  image={data.image}
+                  title={data.title}
+                  description={data.description}
+                  text={data.text}
                 ></ProfileCard>
               </Col>
             ))}
@@ -63,8 +90,8 @@ const TeamSection = memo(() => {
         </Container>
       </section>
     </Fragment>
-  );
-});
+  )
+})
 
-TeamSection.displayName = "TeamSection";
-export default TeamSection;
+TeamSection.displayName = 'TeamSection'
+export default TeamSection
