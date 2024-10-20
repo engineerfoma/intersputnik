@@ -10,7 +10,7 @@ import '@/assets/scss/videoPlayerStyles.scss'
 import AppLayout from '@/layouts/App'
 import Frontend from '@/layouts/Frontend'
 import Blank from '@/layouts/blank'
-import Merchandise from '@/layouts/MerchandiseLayout'
+// import Merchandise from '@/layouts/MerchandiseLayout'
 
 //store
 import { Provider } from 'react-redux'
@@ -20,7 +20,7 @@ import { wrapperStore } from '@/store/index'
 const layouts: any = {
   Blank: Blank,
   Frontend: Frontend,
-  Merchandise: Merchandise,
+  // Merchandise: Merchandise,
 }
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
