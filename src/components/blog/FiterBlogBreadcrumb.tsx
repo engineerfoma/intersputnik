@@ -4,7 +4,7 @@ import React, { Fragment, memo, useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 
 // import state selectors
-import { set_breadcrumb } from '@/store/streamit/actions'
+import { set_breadcrumb } from '@/store/fara/actions'
 
 const FilterBlogBreadcrumb = memo(({ type }: { type: any }) => {
     const dispatch = useDispatch()

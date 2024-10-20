@@ -15,7 +15,7 @@ const LatestMovies = () => {
       <SectionSlider
         title={title}
         list={latestMovie}
-        className="latest-block streamit-block"
+        className="latest-block fara-block"
         slidesPerView={6}
       >
         {(data) => (

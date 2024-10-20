@@ -1,20 +1,18 @@
-'use client'
+import React, { useState, useMemo } from 'react'
 
-import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react'
+import dynamic from 'next/dynamic'
 
 import VideoPlayer from '@/components/VideoPlayer.tsx'
 
 // next link
 import Link from 'next/link'
 
-// next image
-import Image from 'next/image'
-
 // components
 import CustomButton from '../CustomButton'
-
+const OttHeroSliderThumbs = dynamic(() => import('./OttHeroSliderThumbs'), {
+  ssr: false,
+})
 //static
-import { mainSlider } from '@/StaticData/main-slider'
 import { Stream } from '@/types/streams'
 
 // swiper
@@ -34,89 +32,19 @@ interface OttHeroSliderProps {
 const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
   const themeSchemeDirection = useSelector(theme_scheme_direction)
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null)
-  const [color, setColor] = useState('')
 
-  const handleClick = useCallback(() => {
-    setColor(color === '' ? 'red-button' : '')
-  }, [color])
+  // const [color, setColor] = useState('')
+
+  // const handleClick = useCallback(() => {
+  //   setColor(color === '' ? 'red-button' : '')
+  // }, [color])
 
   return (
     <>
       <div className='iq-banner-thumb-slider'>
         <div className='slider'>
           <div className='position-relative slider-bg d-flex justify-content-end'>
-            <div className='position-relative my-auto'>
-              <div
-                className='horizontal_thumb_slider'
-                data-swiper='slider-thumbs-ott'
-              >
-                <div className='banner-thumb-slider-nav'>
-                  <Swiper
-                    key={String(themeSchemeDirection)}
-                    dir={String(themeSchemeDirection)}
-                    tag='ul'
-                    thumbs={{
-                      swiper:
-                        thumbsSwiper && !thumbsSwiper.destroyed
-                          ? thumbsSwiper
-                          : null,
-                    }}
-                    direction='horizontal'
-                    navigation={{
-                      prevEl: '.slider-prev',
-                      nextEl: '.slider-next',
-                    }}
-                    spaceBetween={24}
-                    loop={true}
-                    slidesPerView={2}
-                    breakpoints={{
-                      0: {
-                        direction: 'horizontal',
-                        slidesPerView: 1,
-                      },
-                      768: {
-                        direction: 'horizontal',
-                        slidesPerView: 2,
-                      },
-                    }}
-                    watchSlidesProgress={true}
-                    className='swiper-horizontal swiper-container mb-0'
-                  >
-                    {streams.map((stream) => (
-                      <SwiperSlide
-                        className='swiper-bg'
-                        key={stream.id}
-                      >
-                        <div className='block-images position-relative'>
-                          <div className='img-box'>
-                            <Image
-                              src={stream.poster.original}
-                              className='img-fluid'
-                              alt={stream.title}
-                              loading='lazy'
-                              width={0}
-                              height={0}
-                              sizes='100vw'
-                            />
-                            <div className='block-description ps-3'>
-                              <h6 className='iq-title fw-500 mb-0'>
-                                {stream.title}
-                              </h6>
-                            </div>
-                          </div>
-                        </div>
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
-                  <div className='slider-prev swiper-button'>
-                    <i className='iconly-Arrow-Left-2 icli'></i>
-                  </div>
-                  <div className='slider-next swiper-button'>
-                    <i className='iconly-Arrow-Right-2 icli'></i>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <OttHeroSliderThumbs streams={streams} />
             <div
               className='slider-images'
               data-swiper='slider-images-ott'
@@ -156,7 +84,7 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                       <div className='slider--image block-images'>
                         <VideoPlayer
                           options={videoJsOptions}
-                          color={color}
+                          // color={color}
                         />
                       </div>
                       <div className='description'>
@@ -167,7 +95,7 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                                 <span className='badge rounded-0 text-dark text-uppercase px-3 py-2 me-3 bg-white mr-3'>
                                   FARA TV
                                 </span>
-                                <button onClick={handleClick}>Red color</button>
+                                {/* <button onClick={handleClick}>Red color</button> */}
                               </div>
                               <h1 className='texture-text big-font letter-spacing-1 line-count-1 text-capitalize RightAnimate-two'>
                                 {stream.title || 'Title text'}
@@ -178,7 +106,7 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                             </div>
                             <CustomButton
                               buttonTitle='Stream Now '
-                              link='/movies/detail'
+                              link='/streams'
                               linkButton='false'
                             />
                           </div>

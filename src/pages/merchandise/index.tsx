@@ -254,7 +254,7 @@ const MerchandiseHome = () => {
           </Container>
         </section>
   
-        <div className="newest-product-block section-padding-top streamit-block">
+        <div className="newest-product-block section-padding-top fara-block">
           <Container fluid>
             <div className="overflow-hidden">
               <div className="d-flex align-items-center justify-content-between px-3 my-4">
@@ -393,10 +393,10 @@ const MerchandiseHome = () => {
                 <Logo />
                 <h2 className="mt-3 mb-3">
                   {" "}
-                  Wear Streamit, Buy Streamit and Love Streamit{" "}
+                  Wear fara, Buy fara and Love fara{" "}
                 </h2>
                 <p className="mb-4 line-count-3">
-                  Buy exclusive streamit products from our store and get amazing
+                  Buy exclusive fara products from our store and get amazing
                   benefits.
                 </p>
                 <CustomButton

@@ -13,18 +13,14 @@ interface VideoPlayerProps {
     sources?: { src: string; type?: string }[]
     youtube?: { iv_load_policy: number } // Опции для YouTube
   }
-  color: string
+  // color: string
 }
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({ options, color }) => {
+const VideoPlayer: React.FC<VideoPlayerProps> = ({ options }) => {
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const playerRef = React.useRef<videojs.Player | null>(null)
 
-  // Используем useMemo для мемоизации options
-
   useEffect(() => {
-    console.log(123);
-    
     if (videoRef.current) {
       setTimeout(() => {
         playerRef.current = videojs(videoRef.current!, options, () => {
@@ -54,7 +50,8 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ options, color }) => {
     <div data-vjs-player>
       <video
         ref={videoRef}
-        className={`video-js vjs-default-skin ${color}`}
+        className='video-js vjs-default-skin'
+        // className={`video-js vjs-default-skin ${color}`}
       />
     </div>
   )

@@ -2055,7 +2055,7 @@ global@4.3.2, global@~4.3.0:
     min-document "^2.19.0"
     process "~0.5.1"
 
-global@4.4.0, global@^4.3.0, global@^4.3.1, global@^4.4.0, global@~4.4.0:
+global@4.4.0, global@^4.3.0, global@^4.3.1, global@^4.3.2, global@^4.4.0, global@~4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/global/-/global-4.4.0.tgz#3e7b105179006a323ed71aafca3e9c57a5cc6406"
   integrity sha512-wv/LAoHdRE3BeTGz53FAamhGlPLhlssK45usmGFThIi4XqnBmjKQ16u+RNbP7WvigRZDxUsM0J3gcQ5yicaL0w==
@@ -4472,7 +4472,7 @@ validate-npm-package-name@^6.0.0:
   resolved "https://registry.yarnpkg.com/validate-npm-package-name/-/validate-npm-package-name-6.0.0.tgz#3add966c853cfe36e0e8e6a762edd72ae6f1d6ac"
   integrity sha512-d7KLgL1LD3U3fgnvWEY1cQXoO/q6EQ1BSz48Sa149V/5zVTAbgmZIpyI8TRi6U9/JNyeYLlTKsEMPtLC27RFUg==
 
-"video.js@5.x || 6.x || 7.x || 8.x", "video.js@^7 || ^8":
+"video.js@5.x || 6.x || 7.x || 8.x", "video.js@^6 || ^7 || ^8", "video.js@^7 || ^8":
   version "8.18.1"
   resolved "https://registry.yarnpkg.com/video.js/-/video.js-8.18.1.tgz#0bf7b85bd3c6ed5ebc716b8ef4a23da7ec51c916"
   integrity sha512-oQ4M/HD2fFgEPHfmVMWxGykRFIpOmVhK0XZ4PSsPTgN2jH6E6+92f/RI2mDXDb0yu+Fxv9fxMUm0M7Z2K3Zo9w==
@@ -4504,7 +4504,7 @@ validate-npm-package-name@^6.0.0:
     videojs-vtt.js "0.12.6"
     xhr "2.4.0"
 
-"video.js@^6 || ^7", video.js@^7.21.6:
+"video.js@^6 || ^7", video.js@^7.0.0, video.js@^7.21.6:
   version "7.21.6"
   resolved "https://registry.yarnpkg.com/video.js/-/video.js-7.21.6.tgz#a42d817c42d8d91538b72197a0874aeb01c76ce9"
   integrity sha512-m41TbODrUCToVfK1aljVd296CwDQnCRewpIm5tTXMuV87YYSGw1H+VDOaV45HlpcWSsTWWLF++InDgGJfthfUw==
@@ -4547,12 +4547,20 @@ videojs-contrib-media-sources@4.7.2:
     video.js "^5.17.0 || ^6.2.0"
     webwackify "0.1.6"
 
-videojs-contrib-quality-levels@4.1.0:
+videojs-contrib-quality-levels@4.1.0, videojs-contrib-quality-levels@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/videojs-contrib-quality-levels/-/videojs-contrib-quality-levels-4.1.0.tgz#44c2d2167114a5c8418548b10a25cb409d6cba51"
   integrity sha512-TfrXJJg1Bv4t6TOCMEVMwF/CoS8iENYsWNKip8zfhB5kTcegiFYezEA0eHAJPU64ZC8NQbxQgOwAsYU8VXbOWA==
   dependencies:
     global "^4.4.0"
+
+videojs-contrib-quality-levels@^2.0.4:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/videojs-contrib-quality-levels/-/videojs-contrib-quality-levels-2.2.1.tgz#46bd7e1db25e6e45824dadf933b08f0c6ec724a1"
+  integrity sha512-cnF6OGGgoC/2nUrbdz54nzPm3BpEZQzMTpyekiX6AXs8imATX2sHbrUz97xXVSHITldk/+d7ZAUrdQYJJTyuug==
+  dependencies:
+    global "^4.3.2"
+    video.js "^6 || ^7 || ^8"
 
 videojs-font@2.1.0:
   version "2.1.0"
@@ -4568,6 +4576,15 @@ videojs-font@4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/videojs-font/-/videojs-font-4.2.0.tgz#fbce803d347c565816e296f527e208dc65c9f235"
   integrity sha512-YPq+wiKoGy2/M7ccjmlvwi58z2xsykkkfNMyIg4xb7EZQQNwB71hcSsB3o75CqQV7/y5lXkXhI/rsGAS7jfEmQ==
+
+videojs-http-source-selector@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/videojs-http-source-selector/-/videojs-http-source-selector-1.1.6.tgz#073aadbea0106ba6c98d6b611094dbf8554ffa1f"
+  integrity sha512-6b5MmKTT2cVnrjtdNj4z1VO91udbXkZkTYA6LlD8WN2aHlG2rqFTmtMab4NK4nlkkkbRnm3c2q2IddL3jffLmg==
+  dependencies:
+    global "^4.3.2"
+    video.js "^7.0.0"
+    videojs-contrib-quality-levels "^2.0.4"
 
 videojs-ie8@1.1.2:
   version "1.1.2"

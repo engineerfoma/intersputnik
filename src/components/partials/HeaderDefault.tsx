@@ -1,81 +1,94 @@
-import { memo, Fragment, useState, useEffect } from "react";
+import { memo, Fragment, useState, useEffect } from 'react'
 
 // react-bootstrap
-import { Button, Nav, Collapse, Navbar, Offcanvas, Container, Dropdown } from "react-bootstrap";
+import {
+  Button,
+  Nav,
+  Collapse,
+  Navbar,
+  Offcanvas,
+  Container,
+  Dropdown,
+} from 'react-bootstrap'
 
 //router
-import Link from "next/link";
-import { useRouter } from "next/router";
-
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 // components
-import Logo from "../logo";
-import CustomToggle from "../CustomToggle";
-
+import Logo from '../logo'
+import CustomToggle from '../CustomToggle'
 
 const HeaderDefault = memo(() => {
-  const [isMega, setIsMega] = useState(true);
-  const location = useRouter();
+  const [isMega, setIsMega] = useState(true)
+  const location = useRouter()
 
-  const [show1, setShow1] = useState(false);
-  const [show, setShow] = useState(false);
+  const [show1, setShow1] = useState(false)
+  const [show, setShow] = useState(false)
 
-  const [open, setOpen] = useState(false);
-  const [open1, setOpen1] = useState(false);
-  const [open2, setOpen2] = useState(false);
-  const [open3, setOpen3] = useState(false);
-  const [open4, setOpen4] = useState(false);
-  const [open5, setOpen5] = useState(false);
-  const [open6, setOpen6] = useState(false);
-  const [open7, setOpen7] = useState(false);
-  const [open8, setOpen8] = useState(false);
+  // const [open, setOpen] = useState(false)
+  // const [open1, setOpen1] = useState(false)
+  // const [open2, setOpen2] = useState(false)
+  // const [open3, setOpen3] = useState(false)
+  // const [open4, setOpen4] = useState(false)
+  // const [open5, setOpen5] = useState(false)
+  // const [open6, setOpen6] = useState(false)
+  // const [open7, setOpen7] = useState(false)
+  // const [open8, setOpen8] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      const headerSticky = document.querySelector(".header-sticky");
+      const headerSticky = document.querySelector('.header-sticky')
       if (headerSticky) {
         if (window.scrollY > 1) {
-          headerSticky.classList.add("sticky");
+          headerSticky.classList.add('sticky')
         } else {
-          headerSticky.classList.remove("sticky");
+          headerSticky.classList.remove('sticky')
         }
       }
-    };
+    }
 
     const updateIsMega = () => {
-      setIsMega(location.asPath === "/");
-    };
+      setIsMega(location.asPath === '/')
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    updateIsMega();
+    window.addEventListener('scroll', handleScroll)
+    updateIsMega()
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [location]);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [location])
   return (
     <Fragment>
-      <header className="header-center-home header-default header-sticky">
+      <header className='header-center-home header-default header-sticky'>
         <Navbar
-          expand="xl"
-          className="nav navbar-light iq-navbar header-hover-menu py-xl-0"
+          expand='xl'
+          className='nav navbar-light iq-navbar header-hover-menu py-xl-0'
         >
-          <Container fluid className="navbar-inner">
-            <div className="d-flex align-items-center justify-content-between w-100 landing-header">
-              <div className="d-flex gap-3 gap-xl-0 align-items-center">
+          <Container
+            fluid
+            className='navbar-inner'
+          >
+            <div className='d-flex align-items-center justify-content-between w-100 landing-header'>
+              <div className='d-flex gap-3 gap-xl-0 align-items-center'>
                 <div>
                   <button
-                    type="button"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#navbar_main"
-                    aria-controls="navbar_main"
-                    className="d-xl-none btn btn-primary rounded-pill p-1 pt-0 toggle-rounded-btn"
+                    type='button'
+                    data-bs-toggle='offcanvas'
+                    data-bs-target='#navbar_main'
+                    aria-controls='navbar_main'
+                    className='d-xl-none btn btn-primary rounded-pill p-1 pt-0 toggle-rounded-btn'
                     onClick={() => setShow1(!show1)}
                   >
-                    <svg width="20px" className="icon-20" viewBox="0 0 24 24">
+                    <svg
+                      width='20px'
+                      className='icon-20'
+                      viewBox='0 0 24 24'
+                    >
                       <path
-                        fill="currentColor"
-                        d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
+                        fill='currentColor'
+                        d='M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z'
                       ></path>
                     </svg>
                   </button>
@@ -83,40 +96,47 @@ const HeaderDefault = memo(() => {
                 <Logo></Logo>
               </div>
               <Navbar
-                expand="xl"
-                className={`offcanvas mobile-offcanvas nav hover-nav horizontal-nav py-xl-0 ${show1 === true ? "show" : ""
-                  } ${isMega ? "mega-menu-content" : ""}`}
+                expand='xl'
+                className={`offcanvas mobile-offcanvas nav hover-nav horizontal-nav py-xl-0 ${
+                  show1 === true ? 'show' : ''
+                } ${isMega ? 'mega-menu-content' : ''}`}
                 style={{
-                  visibility: `${show1 === true ? "visible" : "hidden"}`,
+                  visibility: `${show1 === true ? 'visible' : 'hidden'}`,
                 }}
-                id="navbar_main"
+                id='navbar_main'
               >
-                <Container fluid className="container-fluid p-lg-0">
-                  <Offcanvas.Header className="px-0" closeButton>
-                    <div className="navbar-brand ms-3">
+                <Container
+                  fluid
+                  className='container-fluid p-lg-0'
+                >
+                  <Offcanvas.Header
+                    className='px-0'
+                    closeButton
+                  >
+                    <div className='navbar-brand ms-3'>
                       <Logo></Logo>
                     </div>
                   </Offcanvas.Header>
                   <ul
-                    className="navbar-nav iq-nav-menu list-unstyled"
-                    id="header-menu"
+                    className='navbar-nav iq-nav-menu list-unstyled'
+                    id='header-menu'
                   >
-                    <Nav.Item as="li">
-                      <Nav.Link
-                        aria-expanded={open}
-                        onClick={() => setOpen(!open)}
-                        className={`${location.asPath === "/" ||
-                          location.asPath === "/home" ||
-                          location.asPath === "/movies" ||
-                          location.asPath === "/tv-shows" ||
-                          location.asPath === "/videos" ||
-                          location.asPath === "/merchandise"
-                          ? "active"
-                          : ""
-                          }`}
+                    <Nav.Item as='li'>
+                      <Link
+                        href='/'
+                        className={`nav-link ${
+                          location.asPath === '/' ||
+                          location.asPath === '/home' ||
+                          location.asPath === '/movies' ||
+                          location.asPath === '/tv-shows' ||
+                          location.asPath === '/videos' ||
+                          location.asPath === '/merchandise'
+                            ? 'active'
+                            : ''
+                        }`}
                       >
-                        <span className="item-name">Home</span>
-                        <span className="menu-icon ms-2">
+                        <span className='item-name'>Home</span>
+                        {/* <span className="menu-icon ms-2">
                           <i
                             className="fa fa-caret-down toggledrop-desktop right-icon"
                             aria-hidden="true"
@@ -131,9 +151,9 @@ const HeaderDefault = memo(() => {
                               aria-hidden="true"
                             ></i>
                           </span>
-                        </span>
-                      </Nav.Link>
-                      <Collapse
+                        </span> */}
+                      </Link>
+                      {/* <Collapse
                         className={`sub-nav justify-content-center list-unstyled ${isMega ? " mega-menu-item" : ""
                           }`}
                       >
@@ -253,25 +273,25 @@ const HeaderDefault = memo(() => {
                             </Link>
                           </Nav.Item>
                         </ul>
-                      </Collapse>
+                      </Collapse> */}
                     </Nav.Item>
-                    <Nav.Item as="li">
-                      <Nav.Link
-                        aria-expanded={open1}
-                        href=""
-                        onClick={() => setOpen1(!open1)}
-                        className={`${location.asPath === "/movies/related" ||
-                          location.asPath === "/movies/restricted" ||
-                          location.asPath === "/play-list" ||
-                          location.asPath === "/genres" ||
-                          location.asPath === "/cast" ||
-                          location.asPath === "/tags" || location.asPath === "/watchlist-detail"
-                          ? "active"
-                          : ""
-                          }`}
+                    <Nav.Item as='li'>
+                      <Link
+                        href='/watchlist-detail'
+                        className={`nav-link ${
+                          location.asPath === '/movies/related' ||
+                          location.asPath === '/movies/restricted' ||
+                          location.asPath === '/play-list' ||
+                          location.asPath === '/genres' ||
+                          location.asPath === '/cast' ||
+                          location.asPath === '/tags' ||
+                          location.asPath === '/watchlist-detail'
+                            ? 'active'
+                            : ''
+                        }`}
                       >
-                        <span className="item-name">Features</span>
-                        <span className="menu-icon ms-2">
+                        <span className='item-name'>Streams</span>
+                        {/* <span className="menu-icon ms-2">
                           <i
                             className="fa fa-caret-down toggledrop-desktop right-icon"
                             aria-hidden="true"
@@ -286,9 +306,9 @@ const HeaderDefault = memo(() => {
                               aria-hidden="true"
                             ></i>
                           </span>
-                        </span>
-                      </Nav.Link>
-                      <Collapse in={open1} className="sub-nav list-unstyled">
+                        </span> */}
+                      </Link>
+                      {/* <Collapse in={open1} className="sub-nav list-unstyled">
                         <ul>
                           <Nav.Item as="li">
                             <Link
@@ -357,576 +377,509 @@ const HeaderDefault = memo(() => {
                             </Link>
                           </Nav.Item>
                         </ul>
-                      </Collapse>
+                      </Collapse> */}
                     </Nav.Item>
-                    <Nav.Item as="li">
-                      <Nav.Link
-                        aria-expanded={open2}
-                        href=""
-                        onClick={() => setOpen2(!open2)}
-                        className={`${location.asPath.split('/').includes('extra')
-                          ? "active"
-                          : ""
-                          }`}
+                    <Nav.Item as='li'>
+                      <Link
+                        href='/videos'
+                        className={`nav-link ${
+                          location.asPath.split('/').includes('extra')
+                            ? 'active'
+                            : ''
+                        }`}
                       >
-                        <span className="item-name">Pages</span>
-                        <span className="menu-icon ms-2">
+                        <span className='item-name'>Videos</span>
+                        {/* <span className='menu-icon ms-2'>
                           <i
-                            className="fa fa-caret-down toggledrop-desktop right-icon"
-                            aria-hidden="true"
+                            className='fa fa-caret-down toggledrop-desktop right-icon'
+                            aria-hidden='true'
                           ></i>
-                          <span className="toggle-menu">
+                          <span className='toggle-menu'>
                             <i
-                              className="fa fa-plus  arrow-active text-white"
-                              aria-hidden="true"
+                              className='fa fa-plus  arrow-active text-white'
+                              aria-hidden='true'
                             ></i>
                             <i
-                              className="fa fa-minus  arrow-hover text-white"
-                              aria-hidden="true"
+                              className='fa fa-minus  arrow-hover text-white'
+                              aria-hidden='true'
                             ></i>
                           </span>
-                        </span>
-                      </Nav.Link>
-                      <Collapse in={open2} className="sub-nav list-unstyled">
+                        </span> */}
+                      </Link>
+                      {/* <Collapse
+                        in={open2}
+                        className='sub-nav list-unstyled'
+                      >
                         <ul>
-                          <Nav.Item as="li">
+                          <Nav.Item as='li'>
                             <Link
-                              href="/extra/about-us"
-                              className={`${location.asPath === "/extra/about-us"
-                                ? "active"
-                                : ""
-                                } nav-link`}
+                              href='/extra/about-us'
+                              className={`${
+                                location.asPath === '/extra/about-us'
+                                  ? 'active'
+                                  : ''
+                              } nav-link`}
                             >
-                              {" "}
-                              About Us{" "}
+                              {' '}
+                              About Us{' '}
                             </Link>
                           </Nav.Item>
-                          <Nav.Item as="li">
+                          <Nav.Item as='li'>
                             <Link
-                              href="/extra/contact-us"
-                              className={`${location.asPath === "/extra/contact-us"
-                                ? "active"
-                                : ""
-                                } nav-link`}
+                              href='/extra/contact-us'
+                              className={`${
+                                location.asPath === '/extra/contact-us'
+                                  ? 'active'
+                                  : ''
+                              } nav-link`}
                             >
-                              {" "}
-                              Contact Us{" "}
+                              {' '}
+                              Contact Us{' '}
                             </Link>
                           </Nav.Item>
-                          <Nav.Item as="li">
+                          <Nav.Item as='li'>
                             <Link
-                              href="/extra/faq"
-                              className={`${location.asPath === "/extra/faq" ? "active" : ""
-                                } nav-link`}
+                              href='/extra/faq'
+                              className={`${
+                                location.asPath === '/extra/faq' ? 'active' : ''
+                              } nav-link`}
                             >
-                              {" "}
-                              FAQ{" "}
+                              {' '}
+                              FAQ{' '}
                             </Link>
                           </Nav.Item>
-                          <Nav.Item as="li">
+                          <Nav.Item as='li'>
                             <Link
-                              href="/extra/privacy-policy"
-                              className={`${location.asPath === "/extra/privacy-policy"
-                                ? "active"
-                                : ""
-                                } nav-link`}
+                              href='/extra/privacy-policy'
+                              className={`${
+                                location.asPath === '/extra/privacy-policy'
+                                  ? 'active'
+                                  : ''
+                              } nav-link`}
                             >
-                              {" "}
-                              Privacy Policy{" "}
+                              {' '}
+                              Privacy Policy{' '}
                             </Link>
                           </Nav.Item>
-                          <Nav.Item as="li">
+                          <Nav.Item as='li'>
                             <Link
-                              href="/extra/pricing-plan"
-                              className={`${location.asPath === "/extra/pricing-plan" ? "active" : ""
-                                } nav-link`}
+                              href='/extra/pricing-plan'
+                              className={`${
+                                location.asPath === '/extra/pricing-plan'
+                                  ? 'active'
+                                  : ''
+                              } nav-link`}
                             >
-                              {" "}
-                              Pricing Plan{" "}
+                              {' '}
+                              Pricing Plan{' '}
                             </Link>
                           </Nav.Item>
-                          <Nav.Item as="li">
+                          <Nav.Item as='li'>
                             <Link
-                              href="/extra/coming-soon"
+                              href='/extra/coming-soon'
                               className={`nav-link`}
                             >
-                              {" "}
-                              Coming Soon{" "}
+                              {' '}
+                              Coming Soon{' '}
                             </Link>
                           </Nav.Item>
-                          <Nav.Item as="li">
+                          <Nav.Item as='li'>
                             <Nav.Link
                               aria-expanded={open3}
-                              href=""
+                              href=''
                               onClick={() => setOpen3(!open3)}
                             >
-                              <span className="item-name">Error Pages</span>
-                              <span className="menu-icon">
+                              <span className='item-name'>Error Pages</span>
+                              <span className='menu-icon'>
                                 <i
-                                  className="fa fa-caret-right toggledrop-desktop right-icon"
-                                  aria-hidden="true"
+                                  className='fa fa-caret-right toggledrop-desktop right-icon'
+                                  aria-hidden='true'
                                 ></i>
-                                <span className="toggle-menu">
+                                <span className='toggle-menu'>
                                   <i
-                                    className="fa fa-plus  arrow-active text-white"
-                                    aria-hidden="true"
+                                    className='fa fa-plus  arrow-active text-white'
+                                    aria-hidden='true'
                                   ></i>
                                   <i
-                                    className="fa fa-minus  arrow-hover text-white"
-                                    aria-hidden="true"
+                                    className='fa fa-minus  arrow-hover text-white'
+                                    aria-hidden='true'
                                   ></i>
                                 </span>
                               </span>
                             </Nav.Link>
                             <Collapse
                               in={open3}
-                              className="sub-nav list-unstyled"
+                              className='sub-nav list-unstyled'
                             >
                               <ul>
-                                <Nav.Item as="li">
+                                <Nav.Item as='li'>
                                   <Link
-                                    href="/extra/error-page-one"
+                                    href='/extra/error-page-one'
                                     className={`nav-link`}
                                   >
-                                    {" "}
-                                    Error Page 1{" "}
+                                    {' '}
+                                    Error Page 1{' '}
                                   </Link>
                                 </Nav.Item>
-                                <Nav.Item as="li">
+                                <Nav.Item as='li'>
                                   <Link
-                                    href="/extra/error-page-two"
+                                    href='/extra/error-page-two'
                                     className={`nav-link`}
                                   >
-                                    {" "}
-                                    Error Page 2{" "}
+                                    {' '}
+                                    Error Page 2{' '}
                                   </Link>
                                 </Nav.Item>
                               </ul>
                             </Collapse>
                           </Nav.Item>
                         </ul>
-                      </Collapse>
+                      </Collapse> */}
                     </Nav.Item>
-                    <Nav.Item as="li">
-                      <Nav.Link
-                        aria-expanded={open4}
-                        href=""
-                        onClick={() => setOpen4(!open4)}
-                        className={`${location.asPath.split('/').includes('blogs')
-                          ? "active"
-                          : ""
-                          }`}
+                    <Nav.Item as='li'>
+                      <Link
+                        href='/extra/about-us'
+                        className={`nav-link ${
+                          location.asPath.split('/').includes('blogs')
+                            ? 'active'
+                            : ''
+                        }`}
                       >
-                        <span className="item-name">Blog</span>
-                        <span className="menu-icon ms-2">
+                        <span className='item-name'>About</span>
+                        {/* <span className='menu-icon ms-2'>
                           <i
-                            className="fa fa-caret-down toggledrop-desktop right-icon"
-                            aria-hidden="true"
+                            className='fa fa-caret-down toggledrop-desktop right-icon'
+                            aria-hidden='true'
                           ></i>
-                          <span className="toggle-menu">
+                          <span className='toggle-menu'>
                             <i
-                              className="fa fa-plus  arrow-active text-white"
-                              aria-hidden="true"
+                              className='fa fa-plus  arrow-active text-white'
+                              aria-hidden='true'
                             ></i>
                             <i
-                              className="fa fa-minus  arrow-hover text-white"
-                              aria-hidden="true"
+                              className='fa fa-minus  arrow-hover text-white'
+                              aria-hidden='true'
                             ></i>
                           </span>
-                        </span>
-                      </Nav.Link>
-                      <Collapse in={open4} className="sub-nav list-unstyled">
+                        </span> */}
+                      </Link>
+                      {/* <Collapse
+                        in={open4}
+                        className='sub-nav list-unstyled'
+                      >
                         <ul>
-                          <Nav.Item as="li">
+                          <Nav.Item as='li'>
                             <Link
-                              href="/blogs"
-                              className={`${location.asPath === "/blogs" ? "active" : ""
-                                } nav-link`}
+                              href='/blogs'
+                              className={`${
+                                location.asPath === '/blogs' ? 'active' : ''
+                              } nav-link`}
                             >
-                              {" "}
-                              Listing{" "}
+                              {' '}
+                              Listing{' '}
                             </Link>
                           </Nav.Item>
-                          <Nav.Item as="li">
+                          <Nav.Item as='li'>
                             <Nav.Link
-                              className={`${location.asPath.split('/').includes('blogs') && location.asPath.split('/').includes('grid')
-                                ? "active"
-                                : ""
-                                }`}
+                              className={`${
+                                location.asPath.split('/').includes('blogs') &&
+                                location.asPath.split('/').includes('grid')
+                                  ? 'active'
+                                  : ''
+                              }`}
                               aria-expanded={open5}
-                              href=""
+                              href=''
                               onClick={() => setOpen5(!open5)}
                             >
-                              <span className="item-name">Blog grid</span>
-                              <span className="menu-icon">
+                              <span className='item-name'>Blog grid</span>
+                              <span className='menu-icon'>
                                 <i
-                                  className="fa fa-caret-right toggledrop-desktop right-icon"
-                                  aria-hidden="true"
+                                  className='fa fa-caret-right toggledrop-desktop right-icon'
+                                  aria-hidden='true'
                                 ></i>
-                                <span className="toggle-menu">
+                                <span className='toggle-menu'>
                                   <i
-                                    className="fa fa-plus  arrow-active text-white"
-                                    aria-hidden="true"
+                                    className='fa fa-plus  arrow-active text-white'
+                                    aria-hidden='true'
                                   ></i>
                                   <i
-                                    className="fa fa-minus  arrow-hover text-white"
-                                    aria-hidden="true"
+                                    className='fa fa-minus  arrow-hover text-white'
+                                    aria-hidden='true'
                                   ></i>
                                 </span>
                               </span>
                             </Nav.Link>
                             <Collapse
                               in={open5}
-                              className="sub-nav list-unstyled"
+                              className='sub-nav list-unstyled'
                             >
                               <ul>
-                                <Nav.Item as="li">
+                                <Nav.Item as='li'>
                                   <Link
-                                    href="/blogs/grid/one-column"
-                                    className={`${location.asPath === "/blogs/grid/one-column"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    href='/blogs/grid/one-column'
+                                    className={`${
+                                      location.asPath ===
+                                      '/blogs/grid/one-column'
+                                        ? 'active'
+                                        : ''
+                                    } nav-link`}
                                   >
-                                    {" "}
-                                    1 Column{" "}
+                                    {' '}
+                                    1 Column{' '}
                                   </Link>
                                 </Nav.Item>
-                                <Nav.Item as="li">
+                                <Nav.Item as='li'>
                                   <Link
-                                    href="/blogs/grid/two-column"
-                                    className={`${location.asPath === "/blogs/grid/two-column"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    href='/blogs/grid/two-column'
+                                    className={`${
+                                      location.asPath ===
+                                      '/blogs/grid/two-column'
+                                        ? 'active'
+                                        : ''
+                                    } nav-link`}
                                   >
-                                    {" "}
+                                    {' '}
                                     2 column
                                   </Link>
                                 </Nav.Item>
-                                <Nav.Item as="li">
+                                <Nav.Item as='li'>
                                   <Link
-                                    href="/blogs/grid/three-column"
-                                    className={`${location.asPath === "/blogs/grid/three-column"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    href='/blogs/grid/three-column'
+                                    className={`${
+                                      location.asPath ===
+                                      '/blogs/grid/three-column'
+                                        ? 'active'
+                                        : ''
+                                    } nav-link`}
                                   >
-                                    {" "}
-                                    3 column{" "}
+                                    {' '}
+                                    3 column{' '}
                                   </Link>
                                 </Nav.Item>
-                                <Nav.Item as="li">
+                                <Nav.Item as='li'>
                                   <Link
-                                    href="/blogs/grid/four-column"
-                                    className={`${location.asPath === "/blogs/grid/four-column"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    href='/blogs/grid/four-column'
+                                    className={`${
+                                      location.asPath ===
+                                      '/blogs/grid/four-column'
+                                        ? 'active'
+                                        : ''
+                                    } nav-link`}
                                   >
-                                    {" "}
-                                    4 column{" "}
+                                    {' '}
+                                    4 column{' '}
                                   </Link>
                                 </Nav.Item>
                               </ul>
                             </Collapse>
                           </Nav.Item>
-                          <Nav.Item as="li">
+                          <Nav.Item as='li'>
                             <Nav.Link
                               aria-expanded={open6}
-                              href=""
+                              href=''
                               onClick={() => setOpen6(!open6)}
-                              className={`${location.asPath.split('/').includes('blogs') && location.asPath.split('/').includes('sidebar')
-                                ? "active"
-                                : ""
-                                }`}
+                              className={`${
+                                location.asPath.split('/').includes('blogs') &&
+                                location.asPath.split('/').includes('sidebar')
+                                  ? 'active'
+                                  : ''
+                              }`}
                             >
-                              <span className="item-name">Blog Sidebar</span>
-                              <span className="menu-icon">
+                              <span className='item-name'>Blog Sidebar</span>
+                              <span className='menu-icon'>
                                 <i
-                                  className="fa fa-caret-right toggledrop-desktop right-icon"
-                                  aria-hidden="true"
+                                  className='fa fa-caret-right toggledrop-desktop right-icon'
+                                  aria-hidden='true'
                                 ></i>
-                                <span className="toggle-menu">
+                                <span className='toggle-menu'>
                                   <i
-                                    className="fa fa-plus  arrow-active text-white"
-                                    aria-hidden="true"
+                                    className='fa fa-plus  arrow-active text-white'
+                                    aria-hidden='true'
                                   ></i>
                                   <i
-                                    className="fa fa-minus  arrow-hover text-white"
-                                    aria-hidden="true"
+                                    className='fa fa-minus  arrow-hover text-white'
+                                    aria-hidden='true'
                                   ></i>
                                 </span>
                               </span>
                             </Nav.Link>
                             <Collapse
                               in={open6}
-                              className="sub-nav list-unstyled"
+                              className='sub-nav list-unstyled'
                             >
                               <ul>
-                                <Nav.Item as="li">
+                                <Nav.Item as='li'>
                                   <Link
-                                    href="/blogs/sidebar/left"
-                                    className={`${location.asPath ===
-                                      "/blogs/sidebar/left"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    href='/blogs/sidebar/left'
+                                    className={`${
+                                      location.asPath === '/blogs/sidebar/left'
+                                        ? 'active'
+                                        : ''
+                                    } nav-link`}
                                   >
-                                    {" "}
-                                    Left Sidebar{" "}
+                                    {' '}
+                                    Left Sidebar{' '}
                                   </Link>
                                 </Nav.Item>
-                                <Nav.Item as="li">
+                                <Nav.Item as='li'>
                                   <Link
-                                    href="/blogs/sidebar/right"
-                                    className={`${location.asPath ===
-                                      "/blogs/sidebar/right"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    href='/blogs/sidebar/right'
+                                    className={`${
+                                      location.asPath === '/blogs/sidebar/right'
+                                        ? 'active'
+                                        : ''
+                                    } nav-link`}
                                   >
-                                    {" "}
-                                    Right Sidebar{" "}
+                                    {' '}
+                                    Right Sidebar{' '}
                                   </Link>
                                 </Nav.Item>
                               </ul>
                             </Collapse>
                           </Nav.Item>
-                          <Nav.Item as="li">
+                          <Nav.Item as='li'>
                             <Nav.Link
                               aria-expanded={open7}
-                              href=""
+                              href=''
                               onClick={() => setOpen7(!open7)}
-                              className={`${location.asPath ===
-                                "/blogs/template" ||
-                                location.asPath ===
-                                "/blogs/detail" ||
-                                location.asPath.split('/').includes('blogs') && location.asPath.split('/').includes('single')
-                                ? "active"
-                                : ""
-                                }`}
+                              className={`${
+                                location.asPath === '/blogs/template' ||
+                                location.asPath === '/blogs/detail' ||
+                                (location.asPath.split('/').includes('blogs') &&
+                                  location.asPath.split('/').includes('single'))
+                                  ? 'active'
+                                  : ''
+                              }`}
                             >
-                              <span className="item-name">Blog Single</span>
-                              <span className="menu-icon">
+                              <span className='item-name'>Blog Single</span>
+                              <span className='menu-icon'>
                                 <i
-                                  className="fa fa-caret-right toggledrop-desktop right-icon"
-                                  aria-hidden="true"
+                                  className='fa fa-caret-right toggledrop-desktop right-icon'
+                                  aria-hidden='true'
                                 ></i>
-                                <span className="toggle-menu">
+                                <span className='toggle-menu'>
                                   <i
-                                    className="fa fa-plus  arrow-active text-white"
-                                    aria-hidden="true"
+                                    className='fa fa-plus  arrow-active text-white'
+                                    aria-hidden='true'
                                   ></i>
                                   <i
-                                    className="fa fa-minus  arrow-hover text-white"
-                                    aria-hidden="true"
+                                    className='fa fa-minus  arrow-hover text-white'
+                                    aria-hidden='true'
                                   ></i>
                                 </span>
                               </span>
                             </Nav.Link>
                             <Collapse
                               in={open7}
-                              className="sub-nav list-unstyled"
+                              className='sub-nav list-unstyled'
                             >
                               <ul>
-                                <Nav.Item as="li">
+                                <Nav.Item as='li'>
                                   <Link
-                                    href="/blogs/template"
-                                    className={`${location.asPath ===
-                                      "/blogs/template"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    href='/blogs/template'
+                                    className={`${
+                                      location.asPath === '/blogs/template'
+                                        ? 'active'
+                                        : ''
+                                    } nav-link`}
                                   >
-                                    {" "}
-                                    Blog Template{" "}
+                                    {' '}
+                                    Blog Template{' '}
                                   </Link>
                                 </Nav.Item>
-                                <Nav.Item as="li">
+                                <Nav.Item as='li'>
                                   <Link
-                                    href="/blogs/detail"
-                                    className={`${location.asPath ===
-                                      "/blogs/detail"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    href='/blogs/detail'
+                                    className={`${
+                                      location.asPath === '/blogs/detail'
+                                        ? 'active'
+                                        : ''
+                                    } nav-link`}
                                   >
-                                    {" "}
-                                    Standard{" "}
+                                    {' '}
+                                    Standard{' '}
                                   </Link>
                                 </Nav.Item>
-                                <Nav.Item as="li">
+                                <Nav.Item as='li'>
                                   <Link
-                                    href="/blogs/single/audio"
-                                    className={`${location.asPath === "/blogs/single/audio"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    href='/blogs/single/audio'
+                                    className={`${
+                                      location.asPath === '/blogs/single/audio'
+                                        ? 'active'
+                                        : ''
+                                    } nav-link`}
                                   >
-                                    {" "}
-                                    Audio{" "}
+                                    {' '}
+                                    Audio{' '}
                                   </Link>
                                 </Nav.Item>
-                                <Nav.Item as="li">
+                                <Nav.Item as='li'>
                                   <Link
-                                    href="/blogs/single/video"
-                                    className={`${location.asPath === "/blogs/single/video"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    href='/blogs/single/video'
+                                    className={`${
+                                      location.asPath === '/blogs/single/video'
+                                        ? 'active'
+                                        : ''
+                                    } nav-link`}
                                   >
-                                    {" "}
-                                    Video{" "}
+                                    {' '}
+                                    Video{' '}
                                   </Link>
                                 </Nav.Item>
-                                <Nav.Item as="li">
+                                <Nav.Item as='li'>
                                   <Link
-                                    href="/blogs/single/link"
-                                    className={`${location.asPath === "/blogs/single/link"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    href='/blogs/single/link'
+                                    className={`${
+                                      location.asPath === '/blogs/single/link'
+                                        ? 'active'
+                                        : ''
+                                    } nav-link`}
                                   >
-                                    {" "}
-                                    Link{" "}
+                                    {' '}
+                                    Link{' '}
                                   </Link>
                                 </Nav.Item>
-                                <Nav.Item as="li">
+                                <Nav.Item as='li'>
                                   <Link
-                                    href="/blogs/single/quote"
-                                    className={`${location.asPath === "/blogs/single/quote"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    href='/blogs/single/quote'
+                                    className={`${
+                                      location.asPath === '/blogs/single/quote'
+                                        ? 'active'
+                                        : ''
+                                    } nav-link`}
                                   >
-                                    {" "}
-                                    Quote{" "}
+                                    {' '}
+                                    Quote{' '}
                                   </Link>
                                 </Nav.Item>
-                                <Nav.Item as="li">
+                                <Nav.Item as='li'>
                                   <Link
-                                    href="/blogs/single/gallery"
-                                    className={`${location.asPath ===
-                                      "/blogs/single/gallery"
-                                      ? "active"
-                                      : ""
-                                      } nav-link`}
+                                    href='/blogs/single/gallery'
+                                    className={`${
+                                      location.asPath ===
+                                      '/blogs/single/gallery'
+                                        ? 'active'
+                                        : ''
+                                    } nav-link`}
                                   >
-                                    {" "}
-                                    Gallery{" "}
+                                    {' '}
+                                    Gallery{' '}
                                   </Link>
                                 </Nav.Item>
                               </ul>
                             </Collapse>
                           </Nav.Item>
                         </ul>
-                      </Collapse>
-                    </Nav.Item>
-                    <Nav.Item as="li">
-                      <Nav.Link
-                        aria-expanded={open8}
-                        href=""
-                        onClick={() => setOpen8(!open8)}
-                        className={`${location.asPath.split('/').includes('merchandise') && location.asPath.split('/').length > 2
-                          ? "active"
-                          : ""
-                          }`}
-                      >
-                        <span className="item-name">Shop</span>
-                        <span className="menu-icon ms-2">
-                          <i
-                            className="fa fa-caret-down toggledrop-desktop right-icon"
-                            aria-hidden="true"
-                          ></i>
-                          <span className="toggle-menu">
-                            <i
-                              className="fa fa-plus arrow-active text-white"
-                              aria-hidden="true"
-                            ></i>
-                            <i
-                              className="fa fa-minus arrow-hover text-white"
-                              aria-hidden="true"
-                            ></i>
-                          </span>
-                        </span>
-                      </Nav.Link>
-                      <Collapse in={open8} className="sub-nav list-unstyled">
-                        <ul>
-                          <Nav.Item as="li">
-                            <Link
-                              href="/merchandise/shop"
-                              className={`${location.asPath === "/merchandise/shop" ? "active" : ""
-                                } nav-link`}
-                            >
-                              {" "}
-                              Shop{" "}
-                            </Link>
-                          </Nav.Item>
-                          <Nav.Item as="li">
-                            <Link
-                              href="/merchandise/account"
-                              className={`${location.asPath === "/merchandise/account" ? "active" : ""
-                                } nav-link`}
-                            >
-                              {" "}
-                              My Account Page{" "}
-                            </Link>
-                          </Nav.Item>
-                          <Nav.Item as="li">
-                            <Link
-                              href="/merchandise/cart"
-                              className={`${location.asPath === "/merchandise/cart" ? "active" : ""
-                                } nav-link`}
-                            >
-                              {" "}
-                              Cart Page{" "}
-                            </Link>
-                          </Nav.Item>
-                          <Nav.Item as="li">
-                            <Link
-                              href="/merchandise/wishlist"
-                              className={`${location.asPath === "/merchandise/wishlist"
-                                ? "active"
-                                : ""
-                                } nav-link`}
-                            >
-                              {" "}
-                              Wishlist Page{" "}
-                            </Link>
-                          </Nav.Item>
-                          <Nav.Item as="li">
-                            <Link
-                              href="/merchandise/checkout"
-                              className={`${location.asPath === "/merchandise/checkout"
-                                ? "active"
-                                : ""
-                                } nav-link`}
-                            >
-                              {" "}
-                              Checkout Page{" "}
-                            </Link>
-                          </Nav.Item>
-                          <Nav.Item as="li">
-                            <Link
-                              href="/merchandise/track-order"
-                              className={`${location.asPath === "/merchandise/track-order"
-                                ? "active"
-                                : ""
-                                } nav-link`}
-                            >
-                              {" "}
-                              Order Tracking{" "}
-                            </Link>
-                          </Nav.Item>
-                        </ul>
-                      </Collapse>
+                      </Collapse> */}
                     </Nav.Item>
                   </ul>
                 </Container>
               </Navbar>
-              {/* <div className="right-panel">
-                <Button
+              <div className='right-panel'>
+                <Link href='/auth/login'>
+                  <span className='item-name'>Log in</span>
+                </Link>
+                {/*    <Button
                   id="navbar-toggle"
                   bsPrefix="navbar-toggler"
                   type="button"
@@ -1208,15 +1161,15 @@ const HeaderDefault = memo(() => {
                       </Dropdown.Menu>
                     </Dropdown>
                   </ul>
-                </div>
-              </div> */}
+                </div>*/}
+              </div>
             </div>
           </Container>
         </Navbar>
       </header>
     </Fragment>
-  );
-});
+  )
+})
 
-HeaderDefault.displayName = "HeaderDefault";
-export default HeaderDefault;
+HeaderDefault.displayName = 'HeaderDefault'
+export default HeaderDefault

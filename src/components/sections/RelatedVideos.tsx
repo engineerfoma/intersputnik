@@ -15,7 +15,7 @@ const RelatedVideos = memo(() => {
       <SectionSlider
         title={title}
         list={RelatedVideos}
-        className="streamit-block"
+        className="fara-block"
       >
         {(data) => (
           <CardStyle

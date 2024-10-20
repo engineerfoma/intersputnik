@@ -13,7 +13,7 @@ const BrandLogo = memo(() => {
             className="img-fluid logo"
             src="/assets/images/logo.webp"
             loading="lazy"
-            alt="streamit"
+            alt="fara"
           />
         </Link>
       </div>
@@ -23,7 +23,7 @@ const BrandLogo = memo(() => {
             className="img-fluid logo"
             src="/assets/images/logo-hotstar.webp"
             loading="lazy"
-            alt="streamit"
+            alt="fara"
           />
         </Link>
       </div>
@@ -33,7 +33,7 @@ const BrandLogo = memo(() => {
             className="img-fluid logo"
             src="/assets/images/logo-prime.webp"
             loading="lazy"
-            alt="streamit"
+            alt="fara"
           />
         </Link>
       </div>
@@ -43,7 +43,7 @@ const BrandLogo = memo(() => {
             className="img-fluid logo"
             src="/assets/images/logo-hulu.webp"
             loading="lazy"
-            alt="streamit"
+            alt="fara"
           />
         </Link>
       </div>

@@ -34,6 +34,8 @@
     "swiper": "~8.4.7",
     "video.js": "^7.21.6",
     "videojs-contrib-hls": "^5.15.0",
+    "videojs-contrib-quality-levels": "^4.1.0",
+    "videojs-http-source-selector": "^1.1.6",
     "videojs-youtube": "^3.0.1"
   },
   "devDependencies": {

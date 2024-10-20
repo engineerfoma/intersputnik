@@ -16,7 +16,7 @@ const TopPicsForYou = memo(() => {
       <SectionSlider
         title={title}
         list={topTen}
-        className="recommended-block streamit-block"
+        className="recommended-block fara-block"
         slidesPerView={6}
       >
         {(data) => (

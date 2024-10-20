@@ -15,7 +15,7 @@ const BestOfInternationalShows = memo(()=> {
       <SectionSlider
         title={title}
         list={latestMovie}
-        className="recommended-block section-top-spacing streamit-block"
+        className="recommended-block section-top-spacing fara-block"
       >
         {(data) => (
           <CardStyle

@@ -299,7 +299,7 @@ const Trending = memo(() => {
                                             </select>
                                           </div>
                                           <div
-                                            className="position-relative swiper swiper-card streamit-block"
+                                            className="position-relative swiper swiper-card fara-block"
                                             data-slide="4"
                                             data-laptop="3"
                                             data-tab="2"
@@ -423,7 +423,7 @@ const Trending = memo(() => {
                                             Recommended For You
                                           </h3>
                                           <div
-                                            className="position-relative swiper swiper-card streamit-block"
+                                            className="position-relative swiper swiper-card fara-block"
                                             data-slide="4"
                                             data-laptop="3"
                                             data-tab="2"

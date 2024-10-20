@@ -17,7 +17,7 @@ const PopularMovies = memo(()=> {
       <SectionSlider
         title={title}
         list={populerSlider}
-        className="popular-movies-block streamit-block"
+        className="popular-movies-block fara-block"
       >
         {(data) => (
           <CardStyle

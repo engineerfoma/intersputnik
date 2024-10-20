@@ -2,18 +2,18 @@ import { configureStore } from '@reduxjs/toolkit'
 import { createWrapper } from 'next-redux-wrapper'
 
 import settingReducer from './setting/reducers'
-import streamitReducer from './streamit/reducers'
+import faraReducer from './fara/reducers'
 import streamingReducer from './streaming/reducers'
-import streamitShop from './shop/reducers'
-import streamitMedia from './media/reducers'
+import faraShop from './shop/reducers'
+import faraMedia from './media/reducers'
 export const store = () =>
   configureStore({
     reducer: {
       setting: settingReducer,
-      streamit: streamitReducer,
+      fara: faraReducer,
       streaming: streamingReducer,
-      shop: streamitShop,
-      media: streamitMedia,
+      shop: faraShop,
+      media: faraMedia,
     },
   })
 export type AppStore = ReturnType<typeof store>

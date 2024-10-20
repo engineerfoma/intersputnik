@@ -15,7 +15,7 @@ const SuggestedBlock = memo(() => {
       <SectionSlider
         title={title}
         list={suggested}
-        className="suggested-block streamit-block"
+        className="suggested-block fara-block"
         slidesPerView={6}
       >
         {(data) => (

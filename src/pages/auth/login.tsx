@@ -14,7 +14,7 @@ const Login = () => {
   return (
     <Fragment>
       <main className='main-content'>
-        <div className='vh-100' style={{ backgroundImage: "url(/assets/images/pages/01.webp)", backgroundSize: 'cover', backgroundRepeat: "no-repeat", position: 'relative', minHeight: '500px' }}>
+        <div className='vh-100' style={{ backgroundImage: "url(/assets/images/home-bg.png)", backgroundSize: 'cover', backgroundRepeat: "no-repeat", position: 'relative', minHeight: '500px' }}>
           <Container>
             <Row className='justify-content-center align-items-center height-self-center vh-100'>
               <Col lg="5" md="12" className='align-self-center'>
@@ -24,34 +24,34 @@ const Login = () => {
                   </div>
                   <Form action='post'>
                     <Form.Group className='mb-3'>
-                      <Form.Label className='text-white fw-500 mb-2'>Username or Email Address</Form.Label>
-                      <Form.Control type='text' className='rounded-0' required />
+                      <Form.Label className='text-black fw-500 mb-2'>Username or Email Address</Form.Label>
+                      <Form.Control type='text' className='rounded-0' style={{background: 'white', color: 'black'}} required />
                     </Form.Group>
                     <Form.Group className='mb-3'>
-                      <Form.Label className='text-white fw-500 mb-2'>PassWord</Form.Label>
-                      <Form.Control type='password' className='rounded-0' required />
+                      <Form.Label className='text-black fw-500 mb-2'>PassWord</Form.Label>
+                      <Form.Control type='password' className='rounded-0' style={{background: 'white', color: 'black'}} required />
                     </Form.Group>
                     <Form.Group className="text-end mb-3">
                       <Link href="/auth/lost-password" className="text-primary fw-semibold fst-italic">Forgot
                         Password?</Link>
                     </Form.Group>
-                    <Form.Label className='list-group-item d-flex align-items-center mb-3 font-size-14 text-white fw-500'>
+                    <Form.Label className='list-group-item d-flex align-items-center mb-3 font-size-14 text-black fw-500'>
                       <Form.Check.Input type='checkbox' className='m-0 me-2' />
                       Remember Me
                     </Form.Label>
                     <div className="full-button">
                       <div className="iq-button">
-                        <Link href="#" className="btn text-uppercase position-relative">
+                        <Link href="/" className="btn text-uppercase position-relative">
                           <span className="button-text">log in</span>
                           <i className="fa-solid fa-play"></i>
                         </Link>
                       </div>
                     </div>
                   </Form>
-                  <p className="my-4 text-center fw-500 text-white">New to Streamit? <Link href="/auth/sign-up" className="text-primary ms-1">Register</Link></p>
+                  <p className="my-4 text-center fw-500 text-black">New to fara? <Link href="/auth/sign-up" className="text-primary ms-1">Register</Link></p>
                   <div className="seperator d-flex justify-content-center align-items-center">
                     <span className="line"></span>
-                    <span className="mx-2">OR</span>
+                    <span className="mx-2 text-primary">OR</span>
                     <span className="line"></span>
                   </div>
                   <ul className="p-0 pt-4 m-0 list-unstyled widget_social_media text-center">

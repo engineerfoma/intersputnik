@@ -181,7 +181,7 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
           </Col>
         </Row>
         <div className="tab-content">
-          <div className="streamit-content-details content-details trending-info g-border iq-rtl-direction">
+          <div className="fara-content-details content-details trending-info g-border iq-rtl-direction">
             <Tab.Container defaultActiveKey="first">
               <Nav
                 as="ul"
@@ -244,7 +244,7 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
                   data-attibute="rate"
                   data-options="infinite_scroll"
                 >
-                  <div id="additional-info" className="streamit-reviews">
+                  <div id="additional-info" className="fara-reviews">
                     <div className="description-content">
                       <table className="addtable mb-5">
                         <tbody>
@@ -299,7 +299,7 @@ const ProductDetailCard = memo((props:ProductDetailCardProps) => {
                 >
                   <div
                     id="reviews"
-                    className="streamit-reviews"
+                    className="fara-reviews"
                     style={{ fontSize: "1.1em" }}
                   >
                     <h2>Reviews</h2>

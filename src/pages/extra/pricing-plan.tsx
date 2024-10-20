@@ -34,7 +34,7 @@ const PricingPage = memo(() => {
                       </li>
                       <li>
                         <i className="fas fa-times"></i>
-                        <span className="font-size-18 fw-500">Streamit Special</span>
+                        <span className="font-size-18 fw-500">fara Special</span>
                       </li>
                       <li>
                         <i className="fas fa-times"></i>
@@ -77,7 +77,7 @@ const PricingPage = memo(() => {
                       </li>
                       <li>
                         <i className="fas fa-check text-primary"></i>
-                        <span className="font-size-18 fw-500">Streamit Special</span>
+                        <span className="font-size-18 fw-500">fara Special</span>
                       </li>
                       <li>
                         <i className="fas fa-check text-primary"></i>
@@ -116,7 +116,7 @@ const PricingPage = memo(() => {
                       </li>
                       <li>
                         <i className="fas fa-check text-primary"></i>
-                        <span className="font-size-18 fw-500">Streamit Special</span>
+                        <span className="font-size-18 fw-500">fara Special</span>
                       </li>
                       <li>
                         <i className="fas fa-check text-primary"></i>

@@ -15,7 +15,7 @@ const ShowsWeRecommend = memo(() => {
       <SectionSlider
         title={title}
         list={recommendedforYou}
-        className="recommended-block streamit-block"
+        className="recommended-block fara-block"
       >
         {(data) => (
           <CardStyle

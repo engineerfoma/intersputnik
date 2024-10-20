@@ -15,7 +15,7 @@ const SpecialsLatestMovies = memo(() => {
       <SectionSlider
         title={title}
         list={spacialLatestMovie}
-        className="recommended-block streamit-block"
+        className="recommended-block fara-block"
       >
         {(data) => (
           <CardStyle

@@ -1,4 +1,4 @@
-import { Fragment, memo } from "react";
+import { memo, useRef } from "react";
 
 //react-bootstrap
 import { Nav, Tab } from "react-bootstrap";
@@ -20,27 +20,30 @@ import { theme_scheme_direction } from "../../store/setting/selectors";
 
 const TabSlider = memo(() => {
   const themeSchemeDirection = useSelector(theme_scheme_direction);
+  const swiperRef = useRef<any>(null);
   return (
-    <Fragment>
+    <>
       <div className="tab-slider">
         <div className="slider">
           <Swiper
+            ref={swiperRef}
             key={String(themeSchemeDirection)}
             dir={String(themeSchemeDirection)}
-            watchSlidesProgress={true}
+            watchSlidesProgress
             className="position-relative swiper swiper-card"
             navigation={{
               prevEl: ".swiper-button-prev",
               nextEl: ".swiper-button-next",
             }}
+            rewind={false} 
             slidesPerView={1}
-            modules={[Navigation, Pagination]}
+            modules={[Navigation]}
           >
             {tabSlider.map((data) => (
               <SwiperSlide
                 tag="li"
                 className="tab-slider-banner"
-                key={data.image}
+                key={data.image + Math.random()}
               >
                 <div className="tab-slider-banner-images">
                   <img src={data.image} alt="tab-slider-background" />
@@ -53,27 +56,21 @@ const TabSlider = memo(() => {
                           <div className="d-flex align-items-center gap-3 mb-4">
                             <Link href="#">
                               <img
-                                src="/assets/images/movies/trending-label.webp"
-                                className="img-fluid"
+                                src="/assets/images/logo.webp"
+                                className="img-fluid img-fluid__slider"
                                 alt=""
                               />
                             </Link>
-                            <h5 className="text-gold">
-                              <span className="text-primary">#4</span>{" "}
-                              {data.movieTime}
-                            </h5>
                           </div>
                           <h1 className="mb-2 fw-500 text-capitalize texture-text">
                             {data.title}
                           </h1>
                           <p className="mb-0 font-size-14 line-count-2">
-                            Sand and dust storms (SDS), also known as sirocco,
-                            haboob, yellow dust, white storms, and the
-                            harmattan, are a natural phenomenon linked with land
+                            {data.description}
                           </p>
                           <ul className="d-flex align-items-center list-inline gap-2 movie-tag p-0 mt-3 mb-40">
-                            <li className="font-size-18">Nov 2022</li>
-                            <li className="font-size-18">Season 1</li>
+                            <li className="font-size-18">more data</li>
+                            <li className="font-size-18">more data</li>
                           </ul>
                           <div className="iq-button">
                             <Link
@@ -89,9 +86,6 @@ const TabSlider = memo(() => {
                       <div className="col-md-1 col-lg-2 col-xxl-3"></div>
                       <div className="col-md-6 col-lg-5 col-xxl-4 mt-5 mt-md-0">
                         <div className="tab-block">
-                          <h4 className="tab-title text-capitalize mb-0">
-                            All Episode
-                          </h4>
                           <div className="tab-bottom-bordered border-0 trending-custom-tab">
                             <Tab.Container
                               id="left-tabs-example"
@@ -104,7 +98,7 @@ const TabSlider = memo(() => {
                                 {data.seasons.map((episodes, index) => (
                                   <Nav.Item key={"nav" + index}>
                                     <Nav.Link eventKey={index + "season"}>
-                                      {episodes.title}
+                                      {index + 1}
                                     </Nav.Link>
                                   </Nav.Item>
                                 ))}
@@ -129,13 +123,10 @@ const TabSlider = memo(() => {
                                             />
                                           </div>
                                           <div className="image-details">
-                                            <h6 className="mb-1 text-capitalize">
-                                              <span className="text-primary">
-                                                E{index + 1}
-                                              </span>{" "}
-                                              - {episode.title}
+                                            <h6 className="mb-1 text-capitalize base-text-color">
+                                              {episode.title}
                                             </h6>
-                                            <small>45 minute</small>
+                                            <small className="base-subtext-color">{episode.movieTime}</small>
                                           </div>
                                         </li>
                                       ))}
@@ -159,7 +150,7 @@ const TabSlider = memo(() => {
           </Swiper>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 })
 

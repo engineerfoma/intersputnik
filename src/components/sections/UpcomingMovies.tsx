@@ -15,7 +15,7 @@ const UpcomingMovies = memo(() => {
       <SectionSlider
         title={title}
         list={upcommingMovie}
-        className="upcomimg-block streamit-block"
+        className="upcomimg-block fara-block"
         slidesPerView={6}
       >
         {(data) => (

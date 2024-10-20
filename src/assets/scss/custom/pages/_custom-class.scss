@@ -2,6 +2,10 @@
   object-fit: cover;
 }
 
+.object-contain {
+  object-fit: contain;
+}
+
 .container-fluid {
   padding: 0 6.25em;
 }
@@ -125,11 +129,11 @@
 }
 
 .swiper-wrapper {
-  margin: 0 -0.9375rem;
+  // margin: 0 -0.9375rem;
 }
 
 .swiper-wrapper .swiper-slide {
-  padding: 0 0.9375rem;
+  // padding: 0 0.9375rem;
 }
 
 .swiper-slide-space-0 {
@@ -141,11 +145,11 @@
 }
 
 .texture-text {
-  color: transparent;
+  color: #c9c9c9;
   background-clip: text;
   -webkit-background-clip: text;
   line-height: normal;
-  background-image: url("/assets/images/pages/texure.webp");
+  // background-image: url("/assets/images/pages/texure.webp");
 }
 
 .big-font-5 {

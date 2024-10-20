@@ -14,7 +14,7 @@ const PrivacyPolicy = memo(() => {
         <Container>
           <div className="title-box">
             <h4 className="mb-4">
-              1. What Personal Information About Users Does streamit
+              1. What Personal Information About Users Does fara
               Collect?
             </h4>
             <p className="mb-0">

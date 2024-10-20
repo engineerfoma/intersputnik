@@ -160,7 +160,7 @@ const HomeTrendingslider = () => {
                                               <Image
                                                 src={logo}
                                                 className="c-logo"
-                                                alt="streamit"
+                                                alt="fara"
                                               />
                                             </div>
                                           </div>
@@ -251,7 +251,7 @@ const HomeTrendingslider = () => {
                                               <Image
                                                 src={logo}
                                                 className="c-logo"
-                                                alt="streamit"
+                                                alt="fara"
                                               />
                                             </div>
                                           </div>

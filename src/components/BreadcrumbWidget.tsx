@@ -8,7 +8,7 @@ import { generateImgPath } from "../StaticData/data";
 
 //react-redux
 import { useSelector } from "react-redux";
-import { getBreadcrumb } from "@/store/streamit/selectors";
+import { getBreadcrumb } from "@/store/fara/selectors";
 
 //img
 const imagePath = generateImgPath("/assets/images/pages/01.webp");

@@ -23,7 +23,7 @@ const ContactPage = memo(() => {
               <div className="title-box">
                 <h2>Create With Us</h2>
                 <p className="mb-0">
-                  To learn more about how Streamit can help you, contact us.
+                  To learn more about how fara can help you, contact us.
                 </p>
               </div>
               <Form className="mb-5 mb-lg-0">
@@ -90,7 +90,7 @@ const ContactPage = memo(() => {
               </div>
               <div className="border-bottom pb-4 mb-4">
                 <h5>Get In Touch</h5>
-                <Link href="" className="text-primary">support@streamit.com</Link>
+                <Link href="" className="text-primary">support@fara.com</Link>
                 <p className="mb-0">(144) 1234 4567</p>
               </div>
               <div>
@@ -146,7 +146,7 @@ const ContactPage = memo(() => {
           <Row className="row">
             <Col lg="10" >
               <div className="title-box">
-                <h3 className="fw-500">To Learn More About How Streamit Can Help You, Contact Us. We'd Be Happy To Take On The Challenge!</h3>
+                <h3 className="fw-500">To Learn More About How fara Can Help You, Contact Us. We'd Be Happy To Take On The Challenge!</h3>
               </div>
             </Col>
             <Col lg="2" className="d-none d-lg-block"></Col>

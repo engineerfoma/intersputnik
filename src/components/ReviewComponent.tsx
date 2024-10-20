@@ -6,7 +6,7 @@ import { Button, Form, Row, Col } from 'react-bootstrap'
 const ReviewComponent = memo(() => {
   return (
     <>
-      <div className='streamit-reviews'>
+      <div className='fara-reviews'>
         <div
           id='comments'
           className='comments-area validate-form'

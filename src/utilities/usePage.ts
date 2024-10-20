@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useDispatch } from 'react-redux';
 
 // import state selectors
-import { set_breadcrumb } from '@/store/streamit/actions'
+import { set_breadcrumb } from '@/store/fara/actions'
 
 export const useEnterExit = () => {
   useEffect(() => {

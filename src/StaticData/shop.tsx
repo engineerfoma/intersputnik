@@ -840,7 +840,7 @@ export const products = [
   },
   {
     id: 28,
-    slug: "streamit-tshirt",
+    slug: "fara-tshirt",
     product_name: "Sreamit T-Shirt",
     thumbnail: generateImgPath("/assets/images/shop/product/30.png"),
     descriptio:

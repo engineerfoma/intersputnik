@@ -507,7 +507,7 @@ const RelatedPage = memo(() => {
       <RelatedMovies />
       <RelatedVideos />
       <UpcomingMovies />
-      <div className="newest-product-block section-padding-top streamit-block">
+      <div className="newest-product-block section-padding-top fara-block">
         <Container fluid>
           <div className="overflow-hidden">
             <div className="d-flex align-items-center justify-content-between px-3 my-4">

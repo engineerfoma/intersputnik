@@ -1,18 +1,9 @@
-/*!
-* Version: 2.0.0
-* Template: Streamit - Responsive Bootstrap 5.3.2 Template
-* Author: iqonic.design
-* Design and Developed by: iqonic.design
-* NOTE: This file contains the styling for Template.
-*
-*/
-
 // scss-docs-start import-stack
 // Configuration
 @import "./bootstrap/functions";
-// Streamit Design system
-@import "./streamit-design-system/variables";
-@import "./streamit-design-system/variables-dark";
+// fara Design system
+@import "./fara-design-system/variables";
+@import "./fara-design-system/variables-dark";
 @import "./bootstrap/variables";
 @import "./bootstrap/variables-dark";
 @import "./bootstrap/maps";
@@ -20,9 +11,9 @@
 @import "./bootstrap/utilities";
 
 // Custom Mixin And Helper
-@import "./streamit-design-system/helper/mixins";
-@import "./streamit-design-system/helper/reboot";
-@import "./streamit-design-system/helper/root";
+@import "./fara-design-system/helper/mixins";
+@import "./fara-design-system/helper/reboot";
+@import "./fara-design-system/helper/root";
 
 // ui kit
 @import "custom/ui-kit/ui-kit";
@@ -37,4 +28,4 @@
 @import "./custom/pages/index";
 
 // Plugin
-@import "./streamit-design-system/plugins/prism";
+@import "./fara-design-system/plugins/prism";

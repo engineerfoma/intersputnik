@@ -45,81 +45,41 @@ const FooterMega = memo(() => {
         <footer className="footer footer-default">
           <Container fluid>
             <div className="footer-top">
-              <Row>
+              <Row className="justify-content-between">
                 <Col xl={3} lg={6} className="mb-5 mb-lg-0">
                   <div className="footer-logo">
                     <Logo></Logo>
                   </div>
                   <p className="mb-4 font-size-14">
                     Email us:{" "}
-                    <span className="text-white">customer@streamit.com</span>
+                    <span className="text-white">fara@fara.com</span>
                   </p>
                   <p className="text-uppercase letter-spacing-1 font-size-14 mb-1">
                     customer services
                   </p>
-                  <p className="mb-0 contact text-white">+ (480) 555-0103</p>
+                  <p className="mb-0 contact text-white">+ (777) 555-4444</p>
                 </Col>
                 <Col xl={2} lg={6} className="mb-5 mb-lg-0">
-                  <h4 className="footer-link-title">Quick Links</h4>
+                  <h4 className="footer-link-title">Navigation Links</h4>
                   <ul className="list-unstyled footer-menu">
                     <li className="mb-3">
+                      <Link href="/" className="ms-3">
+                        Home
+                      </Link>
+                    </li>
+                    <li className="mb-3">
+                      <Link href="/watchlist-detail" className="ms-3">
+                        Streams
+                      </Link>
+                    </li>
+                    <li className="mb-3">
+                      <Link href="/videos" className="ms-3">
+                        Videos
+                      </Link>
+                    </li>
+                    <li>
                       <Link href="/extra/about-us" className="ms-3">
-                        about us
-                      </Link>
-                    </li>
-                    <li className="mb-3">
-                      <Link href="/blogs" className="ms-3">
-                        Blog
-                      </Link>
-                    </li>
-                    <li className="mb-3">
-                      <Link href="/extra/pricing-plan" className="ms-3">
-                        Pricing Plan
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/extra/faq" className="ms-3">
-                        FAQ
-                      </Link>
-                    </li>
-                  </ul>
-                </Col>
-                <Col xl={2} lg={6} className="mb-5 mb-lg-0">
-                  <h4 className="footer-link-title">Movies to watch</h4>
-                  <ul className="list-unstyled footer-menu">
-                    <li className="mb-3">
-                      <Link href="/view-all" className="ms-3">
-                        Top trending
-                      </Link>
-                    </li>
-                    <li className="mb-3">
-                      <Link href="/view-all" className="ms-3">
-                        Recommended
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/view-all" className="ms-3">
-                        Popular
-                      </Link>
-                    </li>
-                  </ul>
-                </Col>
-                <Col xl={2} lg={6} className="mb-5 mb-lg-0">
-                  <h4 className="footer-link-title">About company</h4>
-                  <ul className="list-unstyled footer-menu">
-                    <li className="mb-3">
-                      <Link href="/extra/contact-us" className="ms-3">
-                        contact us
-                      </Link>
-                    </li>
-                    <li className="mb-3">
-                      <Link href="/extra/privacy-policy" className="ms-3">
-                        privacy policy
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/extra/terms-of-use" className="ms-3">
-                        Terms of use
+                        About
                       </Link>
                     </li>
                   </ul>
@@ -144,84 +104,6 @@ const FooterMega = memo(() => {
                         </button>
                       </div>
                     </div>
-                  </div>
-                  <div className="d-flex align-items-center mt-5">
-                    <span className="font-size-14 me-2">Follow Us:</span>
-                    <ul className="p-0 m-0 list-unstyled widget_social_media">
-                      <li className="">
-                        <Link
-                          href="https://www.facebook.com/"
-                          className="position-relative"
-                        >
-                          <i className="fab fa-facebook"></i>
-                        </Link>
-                      </li>
-                      <li className="">
-                        <Link
-                          href="https://twitter.com/"
-                          className="position-relative"
-                        >
-                          <i className="fab fa-twitter"></i>
-                        </Link>
-                      </li>
-                      <li className="">
-                        <Link
-                          href="https://github.com/"
-                          className="position-relative"
-                        >
-                          <i className="fab fa-github"></i>
-                        </Link>
-                      </li>
-                      <li className="">
-                        <Link
-                          href="https://www.instagram.com/"
-                          className="position-relative"
-                        >
-                          <i className="fab fa-instagram"></i>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </Col>
-              </Row>
-            </div>
-            <div className="footer-bottom border-top">
-              <Row className="align-items-center">
-                <Col md={6}>
-                  <ul className="menu list-inline p-0 d-flex flex-wrap align-items-center">
-                    <li className="menu-item">
-                      <Link href="/extra/terms-of-use"> Terms Of Use </Link>
-                    </li>
-                    <li id="menu-item-7316" className="menu-item">
-                      <Link href="/extra/privacy-policy"> Privacy-Policy </Link>
-                    </li>
-                    <li className="menu-item">
-                      <Link href="/faq"> FAQ </Link>
-                    </li>
-                    <li className="menu-item">
-                      <Link href="/play-list"> Watch List </Link>
-                    </li>
-                  </ul>
-                  <p className="font-size-14">
-                    © <span className="currentYear">2023</span>{" "}
-                    <span className="text-primary">STREAMIT</span>. All Rights
-                    Reserved. All videos and shows on this platform are
-                    trademarks of, and all related images and content are the
-                    property of, Streamit Inc. Duplication and copy of this is
-                    strictly prohibited. All rights reserved.
-                  </p>
-                </Col>
-                <Col md={3}></Col>
-                <Col md={3}>
-                  <h6 className="font-size-14 pb-1">Download Streamit Apps</h6>
-                  <div className="d-flex align-items-center">
-                    <Link className="app-image" href="#">
-                      <img src="/assets/images/footer/google-play.webp" loading="lazy" alt="play-store" />
-                    </Link>
-                    <br />
-                    <Link className="ms-3 app-image" href="#">
-                      <img src="/assets/images/footer/apple.webp" loading="lazy" alt="app-store" />
-                    </Link>
                   </div>
                 </Col>
               </Row>

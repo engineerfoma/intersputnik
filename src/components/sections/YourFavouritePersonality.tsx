@@ -76,7 +76,7 @@ const YourFavouritePersonality = memo(() => {
       <SectionSlider
         title={title}
         list={personality}
-        className="streamit-block"
+        className="fara-block"
         slidesPerView={11}
         link="/cast/all-personality"
       >
