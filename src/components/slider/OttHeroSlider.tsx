@@ -116,7 +116,7 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                             </div>
                             <CustomButton
                               buttonTitle='Stream Now '
-                              link='/streams'
+                              link='/watchlist-detail'
                               linkButton='false'
                             />
                           </div>

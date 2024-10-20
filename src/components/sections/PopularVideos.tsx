@@ -23,7 +23,7 @@ const PopularVideos = memo(()=> {
             title={data.title}
             movieTime={data.movieTime}
             watchlistLink="/play-list"
-            link="/movies/detail"
+            link="/videos"
           />
         )}
       </SectionSlider>

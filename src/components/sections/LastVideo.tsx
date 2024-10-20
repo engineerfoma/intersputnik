@@ -27,7 +27,7 @@ const ContinueWatching = memo(({ videos }: OttHeroSliderProps) => {
             imagePath={data.poster.original}
             duration={Math.round(data.duration)}
             progress={20}
-            link="/movies/detail"
+            link="/videos"
           />
         )}
       </SectionSlider>

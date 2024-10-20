@@ -77,7 +77,7 @@ const TabSlider = memo(() => {
                           </ul>
                           <div className='iq-button'>
                             <Link
-                              href='/movies/detail'
+                              href='/videos'
                               className='btn text-uppercase position-relative'
                             >
                               <span className='button-text'>stream now</span>
