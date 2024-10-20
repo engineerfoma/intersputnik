@@ -18,9 +18,10 @@ SwiperCore.use([Navigation, Thumbs])
 
 interface OttHeroSliderProps {
   streams: Stream[]
+  setThumbsSwiper: any
+  thumbsSwiper: any
 }
-const OttHeroSliderThumbs = ({ streams }: OttHeroSliderProps) => {
-  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null)
+const OttHeroSliderThumbs = ({ streams, setThumbsSwiper, thumbsSwiper }: OttHeroSliderProps) => {
   const themeSchemeDirection = useSelector(theme_scheme_direction)
   return (
     <div className='position-relative my-auto'>

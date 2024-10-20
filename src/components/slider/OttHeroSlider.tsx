@@ -44,7 +44,7 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
       <div className='iq-banner-thumb-slider'>
         <div className='slider'>
           <div className='position-relative slider-bg d-flex justify-content-end'>
-            <OttHeroSliderThumbs streams={streams} />
+            <OttHeroSliderThumbs streams={streams} setThumbsSwiper={setThumbsSwiper} thumbsSwiper={thumbsSwiper} />
             <div
               className='slider-images'
               data-swiper='slider-images-ott'
@@ -66,6 +66,7 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                       controls: false,
                       autoplay: true,
                       muted: true,
+                      playsinline: true,
                       preload: 'auto',
                       sources: [
                         {
