@@ -11,11 +11,11 @@
 
       &::before {
         position: absolute;
-        content: "";
+        content: '';
         top: 0;
         left: 0;
         right: 0;
-        background: linear-gradient(0deg, #0c0b11 8.71%, rgba(12, 11, 17, 0) 72.11%);
+        // background: linear-gradient(0deg, #0c0b11 8.71%, rgba(12, 11, 17, 0) 72.11%);
         border-radius: 0.1875rem;
         width: 100%;
         height: 100%;
@@ -44,7 +44,7 @@
       .cart-content {
         a {
           font-size: inherit;
-          color: inherit;
+          color: #f0e7dc;
           text-decoration: none;
         }
 
@@ -66,8 +66,8 @@
 
     &::after {
       position: absolute;
-      content: "";
-      border: 1.25rem solid var(--bs-gray-900);
+      content: '';
+      border: 1.25rem solid #1b4157;
       bottom: -5rem;
       left: -1.25rem;
       right: -1.25rem;
@@ -102,11 +102,11 @@
     position: absolute;
     left: 1.25rem;
     right: 1.25rem;
-    bottom: 1.25rem;
+    bottom: 6.25rem;
     z-index: 999;
     display: flex;
     opacity: 0;
-    justify-content: space-between;
+    justify-content: center;
     top: inherit;
     transition: opacity 0.2s ease-in-out;
 
@@ -151,7 +151,7 @@
         }
       }
 
-      .share>span {
+      .share > span {
         width: 100%;
         height: 100%;
         display: inline-block;
@@ -230,7 +230,7 @@
       }
 
       .card-description {
-        background: var(--bs-gray-900);
+        background: #1b4157;
 
         &.with-transition {
           opacity: 1;
@@ -274,6 +274,9 @@
 
 .card-hover {
   &:hover {
+    .img-box {
+      border-radius: 0;
+    }
     .block-images {
       z-index: 99;
       transform: scale3d(1.1, 1.1, 1) translate3d(0, 0, 0) perspective(31.25rem);
@@ -293,7 +296,8 @@
       .card-hover {
         &:hover {
           .block-images {
-            transform: scale3d(1.1, 1.1, 1) translate3d(12%, 0, 0) perspective(31.25rem);
+            transform: scale3d(1.1, 1.1, 1) translate3d(12%, 0, 0)
+              perspective(31.25rem);
           }
         }
       }
@@ -303,7 +307,8 @@
       .card-hover {
         &:hover {
           .block-images {
-            transform: scale3d(1.1, 1.1, 1) translate3d(-12%, 0, 0) perspective(31.25rem);
+            transform: scale3d(1.1, 1.1, 1) translate3d(-12%, 0, 0)
+              perspective(31.25rem);
           }
         }
       }
@@ -323,7 +328,10 @@
   }
 
   .card-hover:hover .block-images,
-  .card-style-slider li.swiper-slide.swiper-slide-active .card-hover:hover .block-images {
+  .card-style-slider
+    li.swiper-slide.swiper-slide-active
+    .card-hover:hover
+    .block-images {
     transform: scale3d(1.1, 1.1, 1) translate3d(5%, 0, 0) perspective(31.25em);
   }
 
@@ -388,7 +396,8 @@
     &:hover {
       .img-box {
         z-index: 99;
-        transform: scale3d(1.1, 1.1, 1) translate3d(0, 0, 0) perspective(31.25em);
+        transform: scale3d(1.1, 1.1, 1) translate3d(0, 0, 0)
+          perspective(31.25em);
         transform-origin: 50% 50%;
         transition: all 0.6s ease 0s;
       }
@@ -401,7 +410,8 @@ li.swiper-slide-active {
     .block-images {
       &:hover {
         .img-box {
-          transform: scale3d(1.1, 1.1, 1) translate3d(6%, 0, 0) perspective(31.25em);
+          transform: scale3d(1.1, 1.1, 1) translate3d(6%, 0, 0)
+            perspective(31.25em);
         }
       }
     }
@@ -413,7 +423,8 @@ li.swiper-active.last {
     .block-images {
       &:hover {
         .img-box {
-          transform: scale3d(1.1, 1.1, 1) translate3d(-6%, 0, 0) perspective(31.25em);
+          transform: scale3d(1.1, 1.1, 1) translate3d(-6%, 0, 0)
+            perspective(31.25em);
         }
       }
     }
@@ -425,7 +436,8 @@ li.swiper-active.last {
     .block-images {
       &:hover {
         .img-box {
-          transform: scale3d(1.1, 1.1, 1) translate3d(6%, 0, 0) perspective(31.25em);
+          transform: scale3d(1.1, 1.1, 1) translate3d(6%, 0, 0)
+            perspective(31.25em);
         }
       }
     }

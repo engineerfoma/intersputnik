@@ -8,6 +8,10 @@ import LastVideo from '@/components/sections/LastVideo'
 import TabSlider from '@/components/sections/TabSlider'
 import { type Stream } from '@/types/streams'
 import { streams } from '@/service/api.service'
+import OnlyOnfara from '@/components/sections/OnlyOnFara'
+
+//static data
+import { sectionMainSliders1, sectionMainSliders2 } from "@/StaticData/data";
 
 interface OTTProps {
   streams: Stream[]
@@ -31,8 +35,12 @@ const OTT = memo(({ streams }: OTTProps) => {
   return (
     <>
       <OttHeroSlider streams={streams} />
-      <TabSlider />
-      <LastVideo videos={streams}/>
+      <OnlyOnfara staticData={sectionMainSliders1} header={'Category 1'}/>
+      <OnlyOnfara staticData={sectionMainSliders2} header={'Category 2'}/>
+      <OnlyOnfara staticData={sectionMainSliders1} header={'Category 3'}/>
+      <OnlyOnfara staticData={sectionMainSliders2} header={'Category 4'}/>
+      {/* <TabSlider /> */}
+      {/* <LastVideo videos={streams}/> */}
     </>
   )
 })

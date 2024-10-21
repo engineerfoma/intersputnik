@@ -76,6 +76,11 @@
 
           .iq-button {
             margin-top: 2.8125rem;
+
+            @media (max-width: 1000px) {
+              margin-top: 0;
+              margin-bottom: 19px;
+            }
           }
         }
       }
@@ -232,6 +237,34 @@
         }
       }
     }
+  }
+}
+@media (max-width: 600px) {
+  .iq-banner-thumb-slider {
+    .slider {
+      .slider-bg {
+        height: 21.125rem;
+      }
+    }
+  }
+
+  .ott-hero-pt {
+    padding-top: 55px!important;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .iq-banner-thumb-slider {
+    .slider {
+      .slider-bg {
+        height: 16.125rem;
+      }
+    }
+  }
+
+  .ott-hero-pt {
+    padding-top: 55px!important;
   }
 }
 

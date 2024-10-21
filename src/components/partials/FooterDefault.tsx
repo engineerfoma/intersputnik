@@ -48,7 +48,7 @@ const FooterMega = memo(() => {
               <Row className="justify-content-between">
                 <Col xl={3} lg={6} className="mb-5 mb-lg-0">
                   <div className="footer-logo">
-                    <Logo></Logo>
+                    <Logo imagePath={'/assets/images/logo.svg'}></Logo>
                   </div>
                   <p className="mb-4 font-size-14">
                     Email us:{" "}

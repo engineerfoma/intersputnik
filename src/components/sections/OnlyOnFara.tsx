@@ -4,16 +4,18 @@ import { memo, Fragment, useState } from "react";
 import SectionSlider from "../slider/SectionSlider";
 import CardStyle from "../cards/CardStyle";
 
-//static data
-import { sectionSliders } from "../../StaticData/data";
+interface OnlyOnFara {
+  staticData: any
+  header: string
+}
 
-const OnlyOnfara = memo(() => {
+const OnlyOnfara = memo(({staticData, header}: OnlyOnFara) => {
   const [title] = useState("Only On fara");
-  const [onlyonfara] = useState(sectionSliders);
+  const [onlyonfara] = useState(staticData);
   return (
     <Fragment>
       <SectionSlider
-        title={title}
+        title={header}
         list={onlyonfara}
         className="fara-block"
       >
@@ -22,8 +24,7 @@ const OnlyOnfara = memo(() => {
             image={data.image}
             title={data.title}
             movieTime={data.movieTime}
-            watchlistLink="/play-list"
-            link="/movies/detail"
+            link={data.path}
           />
         )}
       </SectionSlider>

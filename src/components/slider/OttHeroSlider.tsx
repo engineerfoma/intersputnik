@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 
 import dynamic from 'next/dynamic'
 
@@ -39,6 +39,15 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
   //   setColor(color === '' ? 'red-button' : '')
   // }, [color])
 
+  const [render, setRender] = useState(true)
+  useEffect(() => {
+    setRender(false)
+    setTimeout(() => {
+      setRender(true)
+    }, 100)
+    return () => {}
+  }, [])
+
   return (
     <>
       <div className='iq-banner-thumb-slider'>
@@ -57,23 +66,17 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                 key={String(themeSchemeDirection)}
                 dir={String(themeSchemeDirection)}
                 tag='ul'
-                modules={[Navigation]}
                 onSwiper={setThumbsSwiper}
                 slidesPerView={1}
                 watchSlidesProgress={true}
-                allowTouchMove={false}
-                loop={true}
+                allowTouchMove={true}
                 className='swiper-container'
-                navigation={{
-                  prevEl: '.swiper-button-prev',
-                  nextEl: '.swiper-button-next',
-                }}
               >
                 {streams.map((stream, index) => {
                   const videoJsOptions = useMemo(() => {
                     return {
                       controls: false,
-                      autoplay: true,
+                      autoplay: false,
                       muted: true,
                       playsinline: true,
                       preload: 'auto',
@@ -88,7 +91,7 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
 
                   return (
                     <SwiperSlide
-                      className='p-0'
+                      className='ott-hero-pt'
                       key={index}
                     >
                       <div className='slider--image block-images'>
@@ -110,7 +113,7 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                               <h1 className='texture-text big-font letter-spacing-1 line-count-1 text-capitalize RightAnimate-two'>
                                 {stream.title || 'Title text'}
                               </h1>
-                              <p className='line-count-3 RightAnimate-two'>
+                              <p className='line-count-3 RightAnimate-two texture-subtitle'>
                                 {stream.title || 'Description text'}
                               </p>
                             </div>

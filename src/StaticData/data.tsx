@@ -808,41 +808,93 @@ export const videoTags = [
   },
 ]
 
-export const sectionSliders = [
+export const sectionMainSliders1 = [
   {
-    image: generateImgPath('/assets/images/movies/related/01.webp'),
-    title: 'Giikre',
+    image: generateImgPath('/assets/images/space-1.png'),
+    title: 'Open space',
     movieTime: '2hr: 12mins',
+    path: '/videos'
   },
   {
-    image: generateImgPath('/assets/images/movies/related/02.webp'),
-    title: 'YoShi',
+    image: generateImgPath('/assets/images/space-2.png'),
+    title: 'Open space: Part II',
     movieTime: '1hr: 22mins',
+    path: '/videos'
   },
   {
-    image: generateImgPath('/assets/images/movies/related/03.webp'),
-    title: 'We Gare',
+    image: generateImgPath('/assets/images/sputnik.jpg'),
+    title: 'The Sputnik',
     movieTime: '1hr: 30mins',
+    path: '/videos'
   },
   {
-    image: generateImgPath('/assets/images/movies/related/04.webp'),
-    title: 'Avengers',
+    image: generateImgPath('/assets/images/astronaut.jpg'),
+    title: 'Astronaut in the ocean',
     movieTime: '1hr: 45mins',
+    path: '/videos'
   },
   {
-    image: generateImgPath('/assets/images/movies/related/05.webp'),
-    title: 'Chosfies',
+    image: generateImgPath('/assets/images/virtual.jpg'),
+    title: 'virtual sience',
     movieTime: '1hr: 30mins',
+    path: '/videos'
   },
   {
-    image: generateImgPath('/assets/images/movies/related/06.webp'),
-    title: 'Tf Oaler',
+    image: generateImgPath('/assets/images/galaxy-conquest.jpg'),
+    title: 'galaxy conquest',
     movieTime: '1hr: 30mins',
+    path: '/videos'
   },
   {
-    image: generateImgPath('/assets/images/movies/related/07.webp'),
-    title: 'Another Danger',
+    image: generateImgPath('/assets/images/robot.jpg'),
+    title: 'Robots: the beginning',
     movieTime: '1hr: 30mins',
+    path: '/videos'
+  },
+]
+
+export const sectionMainSliders2 = [
+  {
+    image: generateImgPath('/assets/images/virtual.jpg'),
+    title: 'virtual sience',
+    movieTime: '1hr: 30mins',
+    path: '/videos'
+  },
+  {
+    image: generateImgPath('/assets/images/science.jpg'),
+    title: 'The Sputnik',
+    movieTime: '1hr: 30mins',
+    path: '/videos'
+  },
+  {
+    image: generateImgPath('/assets/images/space-1.png'),
+    title: 'Open space',
+    movieTime: '2hr: 12mins',
+    path: '/videos'
+  },
+  {
+    image: generateImgPath('/assets/images/space-2.png'),
+    title: 'Open space: Part II',
+    movieTime: '1hr: 22mins',
+    path: '/videos'
+  },
+  {
+    image: generateImgPath('/assets/images/galaxy-conquest.jpg'),
+    title: 'galaxy conquest',
+    movieTime: '1hr: 30mins',
+    path: '/videos'
+  },
+  {
+    image: generateImgPath('/assets/images/astronaut.jpg'),
+    title: 'Astronaut in the ocean',
+    movieTime: '1hr: 45mins',
+    path: '/videos'
+  },
+  {
+    image: generateImgPath('/assets/images/robot.jpg'),
+    title: 'Robots: the beginning',
+    movieTime: '1hr: 30mins',
+    path: '/videos'
   },
 ]
 

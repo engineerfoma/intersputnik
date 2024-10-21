@@ -3,14 +3,18 @@ import React, { memo, Fragment } from "react";
 //router
 import Link from "next/link";
 
-const Logo = memo(() => {
+interface LogoProps {
+  imagePath: string
+}
+
+const Logo = memo(({ imagePath }: LogoProps) => {
   return (
     <Fragment>
       <div className="logo-default">
         <Link className="navbar-brand text-primary" href="/">
           <img
             className="img-fluid logo"
-            src="/assets/images/logo.webp"
+            src={imagePath}
             loading="lazy"
             alt="fara"
           />

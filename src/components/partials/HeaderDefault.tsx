@@ -72,7 +72,7 @@ const HeaderDefault = memo(() => {
           >
             <div className='d-flex align-items-center justify-content-between w-100 landing-header'>
               <div className='d-flex gap-3 gap-xl-0 align-items-center'>
-                <Logo></Logo>
+              <Logo imagePath={'/assets/images/logo.webp'}></Logo>
               </div>
               <Navbar
                 expand='xl'
