@@ -1,7 +1,13 @@
 @keyframes click-effect {
-  0% { transform: scale(1); }
-  50% { transform: scale(0.8); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .mobile-bar {
@@ -35,9 +41,13 @@
     border: none;
     outline: none;
 
-    &:hover {
+    &:active {
       color: #c43d30;
-      animation: click-effect 1.2s ease; /* Анимация при нажатии */
+      animation: click-effect 0.3s ease; /* Анимация при нажатии */
+
+      svg {
+        fill: #c43d30;
+      }
     }
   }
 
@@ -58,11 +68,7 @@
       height: 21px;
       margin-bottom: 2px;
       width: 21px;
-      transition: fill .1s ease-in-out;
-
-      &:hover {
-        fill: #c43d30;
-      }
+      transition: fill .2s ease-in-out;
     }
 
     &-first {
