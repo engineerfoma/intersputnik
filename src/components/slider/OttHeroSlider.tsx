@@ -1,4 +1,5 @@
-import React, { useState, useMemo, useEffect } from 'react'
+'use client'
+import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react'
 
 import dynamic from 'next/dynamic'
 
@@ -32,21 +33,34 @@ interface OttHeroSliderProps {
 const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
   const themeSchemeDirection = useSelector(theme_scheme_direction)
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null)
-
+  const [activeSlide, setActiveSlide] = useState(0)
   // const [color, setColor] = useState('')
-
+  const isFirstRender = useRef(true) // Используем useRef для отслеживания первого рендера
   // const handleClick = useCallback(() => {
   //   setColor(color === '' ? 'red-button' : '')
   // }, [color])
 
-  const [render, setRender] = useState(true)
+  const handleSlideChange = useCallback(
+    (swiper: any) => {
+      if (!isFirstRender.current) {
+        setActiveSlide(swiper.realIndex)
+        console.log(swiper)
+        console.log(activeSlide)
+      }
+    },
+    [isFirstRender]
+  )
+
   useEffect(() => {
-    setRender(false)
-    setTimeout(() => {
-      setRender(true)
-    }, 100)
-    return () => {}
+    if (isFirstRender.current) {
+      isFirstRender.current = false // Устанавливаем в false после первого рендера
+      console.log(1)
+    }
   }, [])
+
+  useEffect(() => {
+    console.log('Active slide changed:', activeSlide)
+  }, [activeSlide]) // Логируем новое значение activeSlide
 
   return (
     <>
@@ -55,7 +69,6 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
           <div className='position-relative slider-bg d-flex justify-content-end'>
             <OttHeroSliderThumbs
               streams={streams}
-              setThumbsSwiper={setThumbsSwiper}
               thumbsSwiper={thumbsSwiper}
             />
             <div
@@ -67,6 +80,7 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                 dir={String(themeSchemeDirection)}
                 tag='ul'
                 onSwiper={setThumbsSwiper}
+                onSlideChange={handleSlideChange}
                 slidesPerView={1}
                 watchSlidesProgress={true}
                 allowTouchMove={true}
@@ -76,7 +90,7 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                   const videoJsOptions = useMemo(() => {
                     return {
                       controls: false,
-                      autoplay: false,
+                      autoplay: index === 0,
                       muted: true,
                       playsinline: true,
                       preload: 'auto',
@@ -96,6 +110,8 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                     >
                       <div className='slider--image block-images'>
                         <VideoPlayer
+                          isActive={activeSlide}
+                          index={index}
                           options={videoJsOptions}
                           // color={color}
                         />

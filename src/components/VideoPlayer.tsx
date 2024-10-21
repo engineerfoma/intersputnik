@@ -6,7 +6,6 @@ import 'video.js/dist/video-js.css'
 import 'videojs-contrib-hls' // Подключение HLS
 import 'videojs-youtube' // Подключение YouTube
 
-
 interface VideoPlayerProps {
   options: {
     autoplay: boolean
@@ -15,10 +14,16 @@ interface VideoPlayerProps {
     youtube?: { iv_load_policy: number } // Опции для YouTube
     [key: string]: any
   }
+  isActive: number
+  index: number
   // color: string
 }
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({ options }) => {
+const VideoPlayer: React.FC<VideoPlayerProps> = ({
+  options,
+  isActive,
+  index,
+}) => {
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const playerRef = React.useRef<videojs.Player | null>(null)
 
@@ -26,7 +31,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ options }) => {
     if (videoRef.current) {
       setTimeout(() => {
         playerRef.current = videojs(videoRef.current!, options, () => {
-          console.log('Player is ready')
         })
       }, 1000)
     }
@@ -37,6 +41,16 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ options }) => {
       }
     }
   }, [options])
+
+  useEffect(() => {
+    if (playerRef.current) {
+      if (index === isActive) {
+        playerRef.current.play()
+      } else {
+        playerRef.current.pause()
+      }
+    }
+  }, [isActive])
 
   return (
     <div data-vjs-player>

@@ -150,9 +150,9 @@ const HeaderDefault = memo(() => {
                 </Container>
               </Navbar>
               <div className='right-panel'>
-                <Link href='/auth/login'>
+                {/* <Link href='/auth/login'>
                   <span className='item-name'>Log in</span>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </Container>

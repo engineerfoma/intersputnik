@@ -18,10 +18,12 @@ SwiperCore.use([Navigation, Thumbs])
 
 interface OttHeroSliderProps {
   streams: Stream[]
-  setThumbsSwiper: any
   thumbsSwiper: any
 }
-const OttHeroSliderThumbs = ({ streams, setThumbsSwiper, thumbsSwiper }: OttHeroSliderProps) => {
+const OttHeroSliderThumbs = ({
+  streams,
+  thumbsSwiper,
+}: OttHeroSliderProps) => {
   const themeSchemeDirection = useSelector(theme_scheme_direction)
   return (
     <div className='position-relative my-auto'>
@@ -44,8 +46,8 @@ const OttHeroSliderThumbs = ({ streams, setThumbsSwiper, thumbsSwiper }: OttHero
               nextEl: '.slider-next',
             }}
             spaceBetween={24}
-            loop={true}
             slidesPerView={2}
+            loop={true}
             breakpoints={{
               0: {
                 direction: 'horizontal',
