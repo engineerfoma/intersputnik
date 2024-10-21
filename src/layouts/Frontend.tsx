@@ -12,6 +12,10 @@ import FooterDefault from '../components/partials/FooterDefault'
 //breadcrumb
 import BreadCrumbWidget from '@/components/BreadcrumbWidget'
 
+//mobileBar
+
+import MobileBar from '@/components/MobileBar'
+
 const Frontend = ({ children }: any) => {
   const [animationClass, setAnimationClass] = useState('animate__fadeIn')
 
@@ -39,13 +43,11 @@ const Frontend = ({ children }: any) => {
     <>
       <main className='main-content'>
         <BreadCrumbWidget />
-      <h4>123</h4>
-
         <HeaderDefault />
-
         {children}
       </main>
       <FooterDefault />
+      <MobileBar />
       <div
         id='back-to-top'
         style={{ display: 'none' }}

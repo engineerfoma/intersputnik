@@ -11,6 +11,10 @@
     line-height: 3.125em;
     transition: all 0.3s ease-in-out;
 
+    @media (max-width: 768px) {
+      bottom: 4.875em;
+    }
+
     i {
       vertical-align: middle;
     }
