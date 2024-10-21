@@ -1,3 +1,9 @@
+@keyframes click-effect {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.8); }
+  100% { transform: scale(1); }
+}
+
 .mobile-bar {
   &__wrapper {
     background: #1b4157;
@@ -24,10 +30,14 @@
     height: 46px;
     line-height: 130%;
     width: 48px;
-    transition: color 0.3s ease-in-out;
+    transition: color 1s ease-in-out;
+    background-color: transparent;
+    border: none;
+    outline: none;
 
-    &:focus {
+    &:active {
       color: #c43d30;
+      animation: click-effect 1.2s ease; /* Анимация при нажатии */
     }
   }
 
@@ -48,9 +58,9 @@
       height: 21px;
       margin-bottom: 2px;
       width: 21px;
-      transition: fill 0.3s ease-in-out;
+      transition: fill .1s ease-in-out;
 
-      &:focus {
+      &:active {
         fill: #c43d30;
       }
     }

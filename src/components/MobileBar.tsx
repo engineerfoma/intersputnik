@@ -4,7 +4,7 @@ import Link from 'next/link'
 const MobileBar = () => (
   <>
     <div className='mobile-bar__wrapper'>
-      <div className='mobile-bar__elem'>
+      <button className='mobile-bar__elem'>
         <Link
           className='mobile-bar__link mobile-bar__link-first'
           href='/'
@@ -16,16 +16,12 @@ const MobileBar = () => (
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
           >
-            <path
-              fill-rule='evenodd'
-              clip-rule='evenodd'
-              d='M10.0007 0.701172L19.1673 5.79376V19.1664H11.834V12.7498H8.16732V19.1664H0.833984V5.79376L10.0007 0.701172ZM2.66732 6.8725V17.3331H6.33398V10.9164H13.6673V17.3331H17.334V6.8725L10.0007 2.79843L2.66732 6.8725Z'
-            ></path>
+            <path d='M10.0007 0.701172L19.1673 5.79376V19.1664H11.834V12.7498H8.16732V19.1664H0.833984V5.79376L10.0007 0.701172ZM2.66732 6.8725V17.3331H6.33398V10.9164H13.6673V17.3331H17.334V6.8725L10.0007 2.79843L2.66732 6.8725Z'></path>
           </svg>
           <span>Home</span>
         </Link>
-      </div>
-      <div className='mobile-bar__elem'>
+      </button>
+      <button className='mobile-bar__elem'>
         <Link
           className='mobile-bar__link mobile-bar__link-second'
           href='/watchlist-detail'
@@ -38,11 +34,11 @@ const MobileBar = () => (
           </svg>
           <span>Live</span>
         </Link>
-      </div>
-      <div className='mobile-bar__elem'>
+      </button>
+      <button className='mobile-bar__elem'>
         <Link
           className='mobile-bar__link mobile-bar__link-third'
-          href='/watchlist-detail'
+          href='/videos'
         >
           <svg
             viewBox='0 0 16 16'
@@ -52,8 +48,8 @@ const MobileBar = () => (
           </svg>
           <span>VoD</span>
         </Link>
-      </div>
-      <div className='mobile-bar__elem'>
+      </button>
+      <button className='mobile-bar__elem'>
         <Link
           className='mobile-bar__link mobile-bar__link-second'
           href='/extra/about-us'
@@ -74,7 +70,7 @@ const MobileBar = () => (
           </svg>
           <span>About</span>
         </Link>
-      </div>
+      </button>
     </div>
   </>
 )
