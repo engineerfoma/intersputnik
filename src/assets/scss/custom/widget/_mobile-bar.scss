@@ -35,7 +35,7 @@
     border: none;
     outline: none;
 
-    &:active {
+    &:hover {
       color: #c43d30;
       animation: click-effect 1.2s ease; /* Анимация при нажатии */
     }
@@ -60,7 +60,7 @@
       width: 21px;
       transition: fill .1s ease-in-out;
 
-      &:active {
+      &:hover {
         fill: #c43d30;
       }
     }
