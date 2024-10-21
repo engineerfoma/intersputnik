@@ -47,7 +47,6 @@ const OttHeroSliderThumbs = ({
             }}
             spaceBetween={24}
             slidesPerView={2}
-            loop={true}
             breakpoints={{
               0: {
                 direction: 'horizontal',
@@ -56,6 +55,7 @@ const OttHeroSliderThumbs = ({
               768: {
                 direction: 'horizontal',
                 slidesPerView: 2,
+                loop: false
               },
             }}
             watchSlidesProgress={true}

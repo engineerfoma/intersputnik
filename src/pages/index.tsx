@@ -11,7 +11,7 @@ import { streams } from '@/service/api.service'
 import OnlyOnfara from '@/components/sections/OnlyOnFara'
 
 //static data
-import { sectionMainSliders1, sectionMainSliders2 } from "@/StaticData/data";
+import { sectionMainSliders1, sectionMainSliders2 } from '@/StaticData/data'
 
 interface OTTProps {
   streams: Stream[]
@@ -25,7 +25,7 @@ export const getStaticProps = async () => {
       notFound: true,
     }
   }
-  
+
   return {
     props: { streams: data.data }, // будет передано в компонент страницы как пропс
   }
@@ -35,10 +35,22 @@ const OTT = memo(({ streams }: OTTProps) => {
   return (
     <>
       <OttHeroSlider streams={streams} />
-      <OnlyOnfara staticData={sectionMainSliders1} header={'Category 1'}/>
-      <OnlyOnfara staticData={sectionMainSliders2} header={'Category 2'}/>
-      <OnlyOnfara staticData={sectionMainSliders1} header={'Category 3'}/>
-      <OnlyOnfara staticData={sectionMainSliders2} header={'Category 4'}/>
+      <OnlyOnfara
+        staticData={sectionMainSliders1}
+        header={'Category 1'}
+      />
+      <OnlyOnfara
+        staticData={sectionMainSliders2}
+        header={'Category 2'}
+      />
+      <OnlyOnfara
+        staticData={sectionMainSliders1}
+        header={'Category 3'}
+      />
+      <OnlyOnfara
+        staticData={sectionMainSliders2}
+        header={'Category 4'}
+      />
       {/* <TabSlider /> */}
       {/* <LastVideo videos={streams}/> */}
     </>

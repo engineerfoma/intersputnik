@@ -1,4 +1,3 @@
-'use client'
 import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react'
 
 import dynamic from 'next/dynamic'
@@ -44,8 +43,6 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
     (swiper: any) => {
       if (!isFirstRender.current) {
         setActiveSlide(swiper.realIndex)
-        console.log(swiper)
-        console.log(activeSlide)
       }
     },
     [isFirstRender]
@@ -54,12 +51,10 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
   useEffect(() => {
     if (isFirstRender.current) {
       isFirstRender.current = false // Устанавливаем в false после первого рендера
-      console.log(1)
     }
   }, [])
 
   useEffect(() => {
-    console.log('Active slide changed:', activeSlide)
   }, [activeSlide]) // Логируем новое значение activeSlide
 
   return (
