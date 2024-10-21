@@ -24,6 +24,11 @@
     height: 46px;
     line-height: 130%;
     width: 48px;
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      color: #c43d30;
+    }
   }
 
   &__link {
@@ -43,6 +48,11 @@
       height: 21px;
       margin-bottom: 2px;
       width: 21px;
+      transition: fill 0.3s ease-in-out;
+
+      &:focus {
+        fill: #c43d30;
+      }
     }
 
     &-first {
