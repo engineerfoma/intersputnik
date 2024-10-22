@@ -1,4 +1,4 @@
-import React, { memo, useRef } from 'react'
+import React, { memo, useRef, useMemo } from 'react'
 
 //react-bootstrap
 import { Row, Col, Container, Nav, Tab, Form } from 'react-bootstrap'
@@ -42,20 +42,21 @@ const VideoDetail = memo(({ currentObj }: ParapmsProps) => {
 
   const playerRef = useRef(null)
 
-  const videoJsOptions = {
-    autoplay: false,
-    controls: true,
-    responsive: true,
-    techOrder: ['youtube'],
-    sources: [
-      {
-        src: 'https://www.youtube.com/watch?v=co2a6UDHi0c',
-        type: 'video/youtube',
-      },
-    ],
-    youtube: { iv_load_policy: 1 },
-  }
-
+  const videoJsOptions = useMemo(() => {
+    return {
+      autoplay: false,
+      controls: true,
+      responsive: true,
+      techOrder: ['youtube'],
+      sources: [
+        {
+          src: 'https://www.youtube.com/watch?v=co2a6UDHi0c',
+          type: 'video/youtube',
+        },
+      ],
+      youtube: { iv_load_policy: 1 },
+    }
+  }, [])
   const handlePlayerReady = (player: any) => {
     playerRef.current = player
   }
