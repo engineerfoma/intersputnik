@@ -1,3 +1,4 @@
+'use client'
 import React, { memo, useRef, useMemo } from 'react'
 
 //react-bootstrap
