@@ -39,7 +39,6 @@ interface ParapmsProps {
 
 const VideoDetail = memo(({ currentObj }: ParapmsProps) => {
   useEnterExit()
-
   const playerRef = useRef(null)
 
   const videoJsOptions = useMemo(() => {
@@ -63,23 +62,15 @@ const VideoDetail = memo(({ currentObj }: ParapmsProps) => {
 
   return (
     <>
-      <div className='iq-main-slider site-video'>
-        <Container fluid>
-          <Row>
-            <Col lg='12'>
-              <div className='pt-0'>
-                <VideoPlayer
-                  options={videoJsOptions}
-                  // color={color}
-                />
-                {/* <VideoJS
+      <div className='pt-0 site-video__container'>
+        <VideoPlayer
+          options={videoJsOptions}
+          // color={color}
+        />
+        {/* <VideoJS
                   options={videoJsOptions}
                   onReady={handlePlayerReady}
                 /> */}
-              </div>
-            </Col>
-          </Row>
-        </Container>
       </div>
       <div className='details-part'>
         <Container fluid>
