@@ -11,7 +11,7 @@ import { streams } from '@/service/api.service'
 import OnlyOnfara from '@/components/sections/OnlyOnFara'
 
 //static data
-import { sectionMainSliders1, sectionMainSliders2 } from '@/StaticData/data'
+import { sectionMainSliders1, sectionMainSliders2, sectionMainSliders3, sectionMainSliders4 } from '@/StaticData/data'
 
 interface OTTProps {
   streams: Stream[]
@@ -44,11 +44,11 @@ const OTT = memo(({ streams }: OTTProps) => {
         header={'Category 2'}
       />
       <OnlyOnfara
-        staticData={sectionMainSliders1}
+        staticData={sectionMainSliders3}
         header={'Category 3'}
       />
       <OnlyOnfara
-        staticData={sectionMainSliders2}
+        staticData={sectionMainSliders4}
         header={'Category 4'}
       />
       {/* <TabSlider /> */}

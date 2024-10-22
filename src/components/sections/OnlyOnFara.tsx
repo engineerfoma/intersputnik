@@ -1,23 +1,22 @@
-import { memo, Fragment, useState } from "react";
+import { memo, useState } from 'react'
 
 //component
-import SectionSlider from "../slider/SectionSlider";
-import CardStyle from "../cards/CardStyle";
+import SectionSlider from '../slider/SectionSlider'
+import CardStyle from '../cards/CardStyle'
 
 interface OnlyOnFara {
   staticData: any
   header: string
 }
 
-const OnlyOnfara = memo(({staticData, header}: OnlyOnFara) => {
-  const [title] = useState("Only On fara");
-  const [onlyonfara] = useState(staticData);
+const OnlyOnfara = memo(({ staticData, header }: OnlyOnFara) => {
+  const [onlyonfara] = useState(staticData)
   return (
-    <Fragment>
+    <>
       <SectionSlider
         title={header}
         list={onlyonfara}
-        className="fara-block"
+        className='fara-block'
       >
         {(data) => (
           <CardStyle
@@ -25,12 +24,13 @@ const OnlyOnfara = memo(({staticData, header}: OnlyOnFara) => {
             title={data.title}
             movieTime={data.movieTime}
             link={data.path}
+            slug={data.slug}
           />
         )}
       </SectionSlider>
-    </Fragment>
-  );
-});
+    </>
+  )
+})
 
-OnlyOnfara.displayName = "OnlyOnfara";
-export default OnlyOnfara;
+OnlyOnfara.displayName = 'OnlyOnfara'
+export default OnlyOnfara

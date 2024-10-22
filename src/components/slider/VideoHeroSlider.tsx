@@ -22,7 +22,7 @@ const VideoHeroSlider = memo(() => {
   const [toggler, setToggler] = useState(false);
   return (
     <Fragment>
-      <section className="banner-container section-padding-bottom">
+      <section className="banner-container">
         <div className="movie-banner">
           <div id="banner-detail-slider" className="banner-container">
             <div className="movie-banner tvshows-slider">

@@ -1,4 +1,4 @@
-import { Fragment, memo } from 'react'
+import { memo } from 'react'
 
 //react-router-dom
 import Link from 'next/link'
@@ -7,17 +7,19 @@ interface Props {
   link: string
   image: string
   title: string
+  slug: string
   movieTime: string
 }
 
 const CardStyle = memo((props: Props) => {
+  const path = `${props.link}/${props.slug}`
   return (
     <>
       <div className='iq-card card-hover'>
         <div className='block-images position-relative w-100'>
           <div className='img-box w-100'>
             <Link
-              href={props.link}
+              href={path}
               className='position-absolute top-0 bottom-0 start-0 end-0'
             ></Link>
             <img
@@ -30,7 +32,7 @@ const CardStyle = memo((props: Props) => {
             <div className='cart-content'>
               <div className='content-left'>
                 <h5 className='iq-title text-capitalize'>
-                  <Link href={props.link}>{props.title}</Link>
+                  <Link href={path}>{props.title}</Link>
                 </h5>
                 <div className='movie-time d-flex align-items-center my-2'>
                   <span className='movie-time-text font-normal'>
@@ -43,7 +45,7 @@ const CardStyle = memo((props: Props) => {
           <div className='block-social-info align-items-center'>
             <div className='iq-button'>
               <Link
-                href='/movies/detail'
+                href={path}
                 tabIndex={0}
                 className='video-open playbtn-slider'
               >
