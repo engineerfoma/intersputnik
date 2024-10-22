@@ -16,11 +16,20 @@
 }
 
 .video-js {
-  height: 100vh;
+  height: calc(100dvh - 54px);
   width: 100%;
 
-  @media (max-width: 769px) {
-    height: 100%;
+  @media (max-width: 1024px) {
+    height: 32.125rem;
+
+  }
+
+  @media (max-width: 600px) {
+    height: 21.125rem;
+  }
+
+  @media (max-width: 500px) {
+    height: 16.125rem;
   }
 }
 
