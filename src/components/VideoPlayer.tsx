@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef, useMemo } from 'react'
+import React, { useEffect, useRefё } from 'react'
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
 import 'videojs-contrib-hls' // Подключение HLS
@@ -14,8 +14,8 @@ interface VideoPlayerProps {
     youtube?: { iv_load_policy: number } // Опции для YouTube
     [key: string]: any
   }
-  isActive: number
-  index: number
+  isActive?: number
+  index?: number
   // color: string
 }
 
@@ -43,7 +43,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   }, [options])
 
   useEffect(() => {
-    if (playerRef.current) {
+    if (playerRef.current && isActive) {
       if (index === isActive) {
         playerRef.current.play()
       } else {
@@ -56,7 +56,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     <div data-vjs-player>
       <video
         ref={videoRef}
-        className='video-js vjs-default-skin'
+        className='video-js vjs-default-skin vjs-big-play-centered'
         // className={`video-js vjs-default-skin ${color}`}
       />
     </div>

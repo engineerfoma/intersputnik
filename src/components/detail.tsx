@@ -1,4 +1,4 @@
-import React, { Fragment, memo, useRef } from 'react'
+import React, { memo, useRef } from 'react'
 
 //react-bootstrap
 import { Row, Col, Container, Nav, Tab, Form } from 'react-bootstrap'
@@ -13,6 +13,7 @@ import UpcomingMovies from './sections/UpcomingMovies'
 import FsLightBox from './fslight-box'
 import VideoJS from './plugins/VideoJs'
 import OnlyOnfara from '@/components/sections/OnlyOnFara'
+import VideoPlayer from '@/components/VideoPlayer.tsx'
 
 //statics
 import { sectionMainSliders2 } from '@/StaticData/data'
@@ -66,10 +67,14 @@ const VideoDetail = memo(({ currentObj }: ParapmsProps) => {
           <Row>
             <Col lg='12'>
               <div className='pt-0'>
-                <VideoJS
+                <VideoPlayer
+                  options={videoJsOptions}
+                  // color={color}
+                />
+                {/* <VideoJS
                   options={videoJsOptions}
                   onReady={handlePlayerReady}
-                />
+                /> */}
               </div>
             </Col>
           </Row>
