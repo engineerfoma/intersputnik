@@ -12,7 +12,7 @@ interface Poster {
   "to_time": number
 }
 
-export interface Stream {
+export interface Videos {
   id: string
   title: string
   subtitle: string
@@ -22,5 +22,27 @@ export interface Stream {
   website: string
   poster: Poster
   hls_link: string
+  [key: string]: any
+}
+
+interface Live {
+  "id": string,
+  "event_id": string,
+  "status": string,
+  "started_at": string,
+  "finished_at": string | null
+}
+
+export interface Stream {
+  id: string
+  name: string
+  subtitle: string
+  description: string
+  progress: number
+  duration: number
+  website: string
+  poster: Poster
+  play_link: string
+  stream: Live
   [key: string]: any
 }

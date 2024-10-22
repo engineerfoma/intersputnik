@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 // Type
-import { Stream } from '@/types/streams'
+import { Videos } from '@/types/streams'
 
 // swiper
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -17,7 +17,7 @@ import { theme_scheme_direction } from '../../store/setting/selectors'
 SwiperCore.use([Navigation, Thumbs])
 
 interface OttHeroSliderProps {
-  streams: Stream[]
+  streams: Videos[]
   thumbsSwiper: any
 }
 const OttHeroSliderThumbs = ({

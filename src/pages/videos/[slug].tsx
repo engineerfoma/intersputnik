@@ -19,6 +19,7 @@ interface ParapmsProps {
     movieTime: string
     path: string
     category: string
+    categorySlug: string
     created_at: string
   }
 }

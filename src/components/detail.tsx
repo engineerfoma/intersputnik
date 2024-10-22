@@ -33,6 +33,7 @@ interface ParapmsProps {
     movieTime: string
     path: string
     category: string
+    categorySlug: string
     created_at: string
   }
 }
@@ -113,7 +114,7 @@ const VideoDetail = memo(({ currentObj }: ParapmsProps) => {
       </div>
       <OnlyOnfara
         staticData={sectionMainSliders2}
-        header={'Other categories'}
+        header={'Other videos in category'}
       />
     </>
   )

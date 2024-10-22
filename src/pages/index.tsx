@@ -6,20 +6,19 @@ import OttHeroSlider from '@/components/slider/OttHeroSlider'
 // // sections
 import LastVideo from '@/components/sections/LastVideo'
 import TabSlider from '@/components/sections/TabSlider'
-import { type Stream } from '@/types/streams'
-import { streams } from '@/service/api.service'
+import { type Videos } from '@/types/streams'
+import { videos } from '@/service/api.service'
 import OnlyOnfara from '@/components/sections/OnlyOnFara'
 
 //static data
 import { sectionMainSliders1, sectionMainSliders2, sectionMainSliders3, sectionMainSliders4 } from '@/StaticData/data'
 
 interface OTTProps {
-  streams: Stream[]
+  streams: Videos[]
 }
 
 export const getStaticProps = async () => {
-  const { data } = await streams.get()
-
+  const { data } = await videos.get()
   if (data.error) {
     return {
       notFound: true,
@@ -51,7 +50,6 @@ const OTT = memo(({ streams }: OTTProps) => {
         staticData={sectionMainSliders4}
         header={'Category 4'}
       />
-      {/* <TabSlider /> */}
       {/* <LastVideo videos={streams}/> */}
     </>
   )

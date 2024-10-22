@@ -69,12 +69,12 @@ const FooterMega = memo(() => {
                     </li>
                     <li className="mb-3">
                       <Link href="/watchlist-detail" className="ms-3">
-                        Live
+                      LiveTV
                       </Link>
                     </li>
                     <li className="mb-3">
                       <Link href="/videos" className="ms-3">
-                        VoD
+                        Videos
                       </Link>
                     </li>
                     <li>

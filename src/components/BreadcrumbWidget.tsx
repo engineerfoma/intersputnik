@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 import { getBreadcrumb } from "@/store/fara/selectors";
 
 //img
-const imagePath = generateImgPath("/assets/images/pages/01.webp");
+const imagePath = generateImgPath("/assets/images/sputnik-title.jpg");
 
 const BreadCrumbWidget = memo(() => {
   const breadcrumb = useSelector(getBreadcrumb)
@@ -33,7 +33,7 @@ const BreadCrumbWidget = memo(() => {
                       className: "text-center justify-content-center",
                     }}
                   >
-                    <Breadcrumb.Item>Home</Breadcrumb.Item>
+                    <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
                     <Breadcrumb.Item active>{breadcrumb.name}</Breadcrumb.Item>
                   </Breadcrumb>
                 </nav>

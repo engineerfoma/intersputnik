@@ -13,7 +13,7 @@ const OttHeroSliderThumbs = dynamic(() => import('./OttHeroSliderThumbs'), {
   ssr: false,
 })
 //static
-import { Stream } from '@/types/streams'
+import { Videos } from '@/types/streams'
 
 // swiper
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -26,7 +26,7 @@ import { useSelector } from 'react-redux'
 import { theme_scheme_direction } from '../../store/setting/selectors'
 
 interface OttHeroSliderProps {
-  streams: Stream[]
+  streams: Videos[]
 }
 
 const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
@@ -125,7 +125,7 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                                 {stream.title || 'Title text'}
                               </h1>
                               <p className='line-count-3 RightAnimate-two texture-subtitle'>
-                                {stream.title || 'Description text'}
+                                {stream.subtitle || 'Subtitle text'}
                               </p>
                             </div>
                             <CustomButton

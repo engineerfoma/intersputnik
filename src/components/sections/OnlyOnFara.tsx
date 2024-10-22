@@ -15,6 +15,7 @@ const OnlyOnfara = memo(({ staticData, header }: OnlyOnFara) => {
     <>
       <SectionSlider
         title={header}
+        categorySlug={staticData[0].categorySlug}
         list={onlyonfara}
         className='fara-block'
       >

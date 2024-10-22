@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-
 //hero-slider
 import VideoHeroSlider from "../../components/slider/VideoHeroSlider";
 
@@ -22,7 +20,7 @@ import { useEnterExit } from "@/utilities/usePage";
 const VideosPage = () => {
   useEnterExit()
   return (
-    <Fragment>
+    <>
       <VideoHeroSlider />
       <OnlyOnfara
         staticData={sectionMainSliders1}
@@ -33,17 +31,17 @@ const VideosPage = () => {
         header={'Category 2'}
       />
       <OnlyOnfara
-        staticData={sectionMainSliders1}
+        staticData={sectionMainSliders3}
         header={'Category 3'}
       />
       <OnlyOnfara
-        staticData={sectionMainSliders2}
+        staticData={sectionMainSliders4}
         header={'Category 4'}
       />
       {/* <PopularVideos /> */}
       {/* <SpecialsLatestVideos /> */}
       {/* <VideosRecommendedForYou /> */}
-    </Fragment>
+    </>
   );
 };
 

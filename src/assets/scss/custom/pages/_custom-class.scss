@@ -11,12 +11,13 @@
 // }
 
 .section-padding {
-  padding: 6.25rem 0;
+  padding: 7rem 0;
 }
 
 .section-padding-2 {
   padding: 3.25rem 0 0;
 }
+
 
 .section-padding-3 {
   padding: 8rem 0 0;
@@ -28,6 +29,10 @@
   @media(max-width: 600px) {
     padding: 1.5rem 0 0;
   }
+}
+
+.section-padding-4 {
+  padding: 7rem 3rem;
 }
 
 .section-padding-top {

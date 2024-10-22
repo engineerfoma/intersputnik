@@ -25,6 +25,7 @@ interface SectionSliderProps {
   spaceBetween?: number
   className?: string
   link?: string
+  categorySlug?: string
 }
 
 const SectionSlider: FC<SectionSliderProps> = memo(
@@ -36,6 +37,7 @@ const SectionSlider: FC<SectionSliderProps> = memo(
     loop = false,
     spaceBetween = 0,
     className = '',
+    categorySlug = '',
     link,
   }) => {
     const themeSchemeDirection = useSelector(theme_scheme_direction)
@@ -75,12 +77,12 @@ const SectionSlider: FC<SectionSliderProps> = memo(
           >
             <div className='d-flex align-items-center justify-content-between px-3 my-4'>
               <h5 className='main-title text-capitalize mb-0'>{title}</h5>
-              {/* <Link
-                href={link ? link : '/view-all'}
+              <Link
+                href={'/view-all/' + categorySlug}
                 className='text-primary iq-view-all text-decoration-none'
               >
                 View All
-              </Link> */}
+              </Link>
             </div>
             <Swiper
               key={String(themeSchemeDirection)}
@@ -121,7 +123,10 @@ const SectionSlider: FC<SectionSliderProps> = memo(
               modules={modules}
             >
               {list.map((data, index) => (
-                <SwiperSlide tag="li" key={index + "slider"}>
+                <SwiperSlide
+                  tag='li'
+                  key={index + 'slider'}
+                >
                   {children(data)}
                 </SwiperSlide>
               ))}

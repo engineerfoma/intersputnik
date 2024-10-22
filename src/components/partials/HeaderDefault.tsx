@@ -119,7 +119,7 @@ const HeaderDefault = memo(() => {
                             : ''
                         }`}
                       >
-                        <span className='item-name'>Live</span>
+                        <span className='item-name'>LiveTV</span>
                       </Link>
                     </Nav.Item>
                     <Nav.Item as='li'>
@@ -131,7 +131,7 @@ const HeaderDefault = memo(() => {
                             : ''
                         }`}
                       >
-                        <span className='item-name'>VoD</span>
+                        <span className='item-name'>Videos</span>
                       </Link>
                     </Nav.Item>
                     <Nav.Item as='li'>

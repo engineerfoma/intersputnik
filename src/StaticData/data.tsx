@@ -817,6 +817,7 @@ export const sectionMainSliders1 = [
     movieTime: '2hr: 12mins',
     path: '/videos',
     category: 'Category 1',
+    categorySlug: 'Category1',
     created_at: "Feb 2022"
   },
   {
@@ -827,274 +828,346 @@ export const sectionMainSliders1 = [
     movieTime: '1hr: 22mins',
     path: '/videos',
     category: 'Category 1',
+    categorySlug: 'Category1',
     created_at: "Jan 2024"
   },
   {
     id: 3,
+    image: generateImgPath('/assets/images/sputnik-title-1.jpg'),
+    title: 'Space without borders',
+    slug: 'spaceWithoutBordersI',
+    movieTime: '1hr: 07mins',
+    path: '/videos',
+    category: 'Category 1',
+    categorySlug: 'Category1',
+    created_at: "Sep 2024"
+  },
+  {
+    id: 4,
     image: generateImgPath('/assets/images/sputnik.jpg'),
     title: 'The Sputnik',
     slug: 'theSputnik',
     movieTime: '1hr',
     path: '/videos',
     category: 'Category 1',
+    categorySlug: 'Category1',
     created_at: "Mar 2024"
   },
   {
-    id: 4,
+    id: 5,
     image: generateImgPath('/assets/images/astronaut.jpg'),
     title: 'Astronaut in the ocean',
     slug: 'astronautInTheOcean',
     movieTime: '1hr: 45mins',
     path: '/videos',
     category: 'Category 1',
+    categorySlug: 'Category1',
     created_at: "Jul 2024"
   },
   {
-    id: 5,
+    id: 6,
     image: generateImgPath('/assets/images/virtual.jpg'),
     title: 'Virtual sience',
     slug: 'virtualSience',
     movieTime: '1hr: 30mins',
     path: '/videos',
     category: 'Category 1',
+    categorySlug: 'Category1',
     created_at: "Oct 2024"
   },
   {
-    id: 6,
+    id: 7,
     image: generateImgPath('/assets/images/galaxy-conquest.jpg'),
     title: 'Galaxy conquest',
     slug: 'galaxyConquest',
     movieTime: '1hr: 15mins',
     path: '/videos',
     category: 'Category 1',
+    categorySlug: 'Category1',
     created_at: "Jan 2024"
   },
   {
-    id: 7,
+    id: 8,
     image: generateImgPath('/assets/images/robot.jpg'),
     title: 'Robots: the beginning',
     slug: 'robotsTheBeginning',
     movieTime: '1hr: 03mins',
     path: '/videos',
     category: 'Category 1',
+    categorySlug: 'Category1',
     created_at: "Aug 2024"
   },
 ]
 
 export const sectionMainSliders2 = [
   {
-    id: 8,
+    id: 9,
     image: generateImgPath('/assets/images/virtual.jpg'),
     title: 'Virtual sience II',
     slug: 'virtualSienceII',
     movieTime: '1hr: 02mins',
     path: '/videos',
     category: 'Category 2',
+    categorySlug: 'Category2',
     created_at: "Aug 2024"
   },
   {
-    id: 9,
+    id: 10,
     image: generateImgPath('/assets/images/science.jpg'),
     title: 'The Sputnik II',
     slug: 'theSputnikII',
     movieTime: '1hr: 48mins',
     path: '/videos',
     category: 'Category 2',
+    categorySlug: 'Category2',
     created_at: "Apr 2024"
   },
   {
-    id: 10,
+    id: 11,
     image: generateImgPath('/assets/images/space-1.png'),
     title: 'Open space II',
     slug: 'openSpaceII',
     movieTime: '2hr: 19mins',
     path: '/videos',
     category: 'Category 2',
+    categorySlug: 'Category2',
     created_at: "Sep 2024"
   },
   {
-    id: 11,
+    id: 12,
     image: generateImgPath('/assets/images/space-2.png'),
     title: 'Open space: Part II: last dance',
     slug: 'openSpacePartIILastDance',
     movieTime: '1hr: 01mins',
     path: '/videos',
     category: 'Category 2',
+    categorySlug: 'Category2',
     created_at: "Oct 2024"
   },
   {
-    id: 12,
+    id: 13,
     image: generateImgPath('/assets/images/galaxy-conquest.jpg'),
     title: 'Galaxy conquest II',
     slug: 'galaxyConquestII',
     movieTime: '1hr: 17mins',
     path: '/videos',
     category: 'Category 2',
+    categorySlug: 'Category2',
     created_at: "Jan 2024"
   },
   {
-    id: 13,
+    id: 14,
+    image: generateImgPath('/assets/images/sputnik-title-1.jpg'),
+    title: 'Space without borders',
+    slug: 'spaceWithoutBordersII',
+    movieTime: '1hr: 07mins',
+    path: '/videos',
+    category: 'Category 2',
+    categorySlug: 'Category2',
+    created_at: "Sep 2024"
+  },
+  {
+    id: 15,
     image: generateImgPath('/assets/images/astronaut.jpg'),
     title: 'Astronaut in the ocean II',
     slug: 'astronautInTheOceanII',
     movieTime: '1hr: 59mins',
     path: '/videos',
     category: 'Category 2',
+    categorySlug: 'Category2',
     created_at: "Mar 2024"
   },
   {
-    id: 14,
+    id: 16,
     image: generateImgPath('/assets/images/robot.jpg'),
     title: 'Robots: the beginning II',
     slug: 'robotsTheBeginningII',
     movieTime: '1hr: 06mins',
     path: '/videos',
     category: 'Category 2',
+    categorySlug: 'Category2',
     created_at: "Aug 2024"
   },
 ]
 export const sectionMainSliders3 = [
   {
-    id: 15,
-    image: generateImgPath('/assets/images/virtual.jpg'),
-    title: 'Virtual sience II',
-    slug: 'virtualSienceIInext',
-    movieTime: '1hr: 11mins',
-    path: '/videos',
-    category: 'Category 3',
-    created_at: "Jun 2024"
-  },
-  {
-    id: 16,
-    image: generateImgPath('/assets/images/science.jpg'),
-    title: 'The Sputnik II',
-    slug: 'theSputnikIInext',
-    movieTime: '1hr: 39mins',
-    path: '/videos',
-    category: 'Category 3',
-    created_at: "May 2024"
-  },
-  {
     id: 17,
-    image: generateImgPath('/assets/images/space-1.png'),
-    title: 'Open space II',
-    slug: 'openSpaceIInext',
-    movieTime: '2hr: 24mins',
-    path: '/videos',
-    category: 'Category 3',
-    created_at: "May 2024"
-  },
-  {
-    id: 18,
     image: generateImgPath('/assets/images/space-2.png'),
     title: 'Open space: Part II: last dance',
     slug: 'openSpacePartIILastDancenext',
     movieTime: '1hr: 25mins',
     path: '/videos',
     category: 'Category 3',
+    categorySlug: 'Category3',
     created_at: "May 2024"
   },
   {
-    id: 19,
+    id: 18,
     image: generateImgPath('/assets/images/galaxy-conquest.jpg'),
     title: 'Galaxy conquest II',
     slug: 'galaxyConquestIInext',
     movieTime: '1hr',
     path: '/videos',
     category: 'Category 3',
+    categorySlug: 'Category3',
     created_at: "Feb 2024"
   },
   {
+    id: 19,
+    image: generateImgPath('/assets/images/science.jpg'),
+    title: 'The Sputnik II',
+    slug: 'theSputnikIInext',
+    movieTime: '1hr: 39mins',
+    path: '/videos',
+    category: 'Category 3',
+    categorySlug: 'Category3',
+    created_at: "May 2024"
+  },
+  
+  {
     id: 20,
+    image: generateImgPath('/assets/images/space-1.png'),
+    title: 'Open space II',
+    slug: 'openSpaceIInext',
+    movieTime: '2hr: 24mins',
+    path: '/videos',
+    category: 'Category 3',
+    categorySlug: 'Category3',
+    created_at: "May 2024"
+  },
+  {
+    id: 21,
+    image: generateImgPath('/assets/images/virtual.jpg'),
+    title: 'Virtual sience II',
+    slug: 'virtualSienceIInext',
+    movieTime: '1hr: 11mins',
+    path: '/videos',
+    category: 'Category 3',
+    categorySlug: 'Category3',
+    created_at: "Jun 2024"
+  },
+  {
+    id: 22,
     image: generateImgPath('/assets/images/astronaut.jpg'),
     title: 'Astronaut in the ocean II',
     slug: 'astronautInTheOceanIInext',
     movieTime: '1hr: 31mins',
     path: '/videos',
     category: 'Category 3',
+    categorySlug: 'Category3',
     created_at: "Mar 2024"
   },
   {
-    id: 21,
+    id: 23,
     image: generateImgPath('/assets/images/robot.jpg'),
     title: 'Robots: the beginning II',
     slug: 'robotsTheBeginningIInext',
     movieTime: '1hr: 17mins',
     path: '/videos',
     category: 'Category 3',
+    categorySlug: 'Category3',
+    created_at: "Sep 2024"
+  },
+  {
+    id: 24,
+    image: generateImgPath('/assets/images/sputnik-title-1.jpg'),
+    title: 'Space without borders',
+    slug: 'spaceWithoutBordersIII',
+    movieTime: '1hr: 07mins',
+    path: '/videos',
+    category: 'Category 3',
+    categorySlug: 'Category3',
     created_at: "Sep 2024"
   },
 ]
 
 export const sectionMainSliders4 = [
   {
-    id: 22,
+    id: 25,
     image: generateImgPath('/assets/images/space-1.png'),
     title: 'Open space II',
     slug: 'openSpaceIIfour',
     movieTime: '2hr: 08mins',
     path: '/videos',
     category: 'Category 4',
+    categorySlug: 'Category4',
     created_at: "Feb 2024"
   },
   {
-    id: 23,
+    id: 26,
     image: generateImgPath('/assets/images/astronaut.jpg'),
     title: 'Astronaut in the ocean II',
     slug: 'astronautInTheOceanIIfour',
     movieTime: '1hr 05mins',
     path: '/videos',
     category: 'Category 4',
+    categorySlug: 'Category4',
     created_at: "Sep 2024"
   },
   {
-    id: 24,
+    id: 27,
+    image: generateImgPath('/assets/images/sputnik-title-1.jpg'),
+    title: 'Space without borders',
+    slug: 'spaceWithoutBordersIIII',
+    movieTime: '1hr: 07mins',
+    path: '/videos',
+    category: 'Category 4',
+    categorySlug: 'Category4',
+    created_at: "Sep 2024"
+  },
+  {
+    id: 28,
     image: generateImgPath('/assets/images/space-2.png'),
     title: 'Open space: Part II: last dance',
     slug: 'openSpacePartIILastDancefour',
     movieTime: '1hr: 27mins',
     path: '/videos',
     category: 'Category 4',
+    categorySlug: 'Category4',
     created_at: "Oct 2024"
   },
   {
-    id: 25,
+    id: 29,
     image: generateImgPath('/assets/images/science.jpg'),
     title: 'The Sputnik II',
     slug: 'theSputnikIIfour',
     movieTime: '1hr: 12mins',
     path: '/videos',
     category: 'Category 4',
+    categorySlug: 'Category4',
     created_at: "Sep 2024"
   },
   {
-    id: 26,
+    id: 30,
     image: generateImgPath('/assets/images/galaxy-conquest.jpg'),
     title: 'Galaxy conquest II',
     slug: 'galaxyConquestIIfour',
     movieTime: '1hr: 53mins',
     path: '/videos',
     category: 'Category 4',
+    categorySlug: 'Category4',
     created_at: "Jan 2024"
   },
   {
-    id: 27,
+    id: 31,
     image: generateImgPath('/assets/images/robot.jpg'),
     title: 'Robots: the beginning II',
     slug: 'robotsTheBeginningIIfour',
     movieTime: '1hr: 21mins',
     path: '/videos',
     category: 'Category 4',
+    categorySlug: 'Category4',
     created_at: "Mar 2024"
   },
   {
-    id: 28,
+    id: 32,
     image: generateImgPath('/assets/images/virtual.jpg'),
     title: 'Virtual sience II',
     slug: 'virtualSienceIIfour',
     movieTime: '1hr: 03mins',
     path: '/videos',
     category: 'Category 4',
+    categorySlug: 'Category4',
     created_at: "Oct 2024"
   },
 ]
