@@ -38,6 +38,7 @@ const VideoDetail = memo(({ currentObj, otherVideo }: ParapmsProps) => {
     return {
       autoplay: false,
       controls: true,
+      playsinline: true,
       responsive: true,
       techOrder: ['youtube'],
       sources: [

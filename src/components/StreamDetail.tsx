@@ -25,6 +25,7 @@ const StreamDetail = memo(({ currentObj, otherStreams }: ParapmsProps) => {
     return {
       controls: true,
       autoplay: false,
+      playsinline: true,
       responsive: true,
       preload: 'auto',
       poster: currentObj.poster.original,
@@ -43,8 +44,6 @@ const StreamDetail = memo(({ currentObj, otherStreams }: ParapmsProps) => {
       </div>
       <div className='details-part'>
         <Container fluid>
-          <h2>{currentObj.id}</h2>
-          <h2>{currentObj.hls_link}</h2>
           <Row>
             <Col lg='12'>
               <div className='trending-info mt-4 pt-0 pb-4'>
