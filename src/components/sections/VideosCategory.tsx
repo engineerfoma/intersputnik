@@ -1,4 +1,4 @@
-import { memo, useState } from 'react'
+import { memo, useState, useEffect } from 'react'
 
 //component
 import SectionSlider from '../slider/SectionSlider'
@@ -9,8 +9,26 @@ interface VideosCategoryProps {
   header: string
 }
 
+interface OneMovie {
+  id: number
+  image: string
+  slug: string
+  title: string
+  movieTime: string
+  path: string
+  category: string
+  categorySlug: string
+  created_at: string
+}
+
 const VideosCategory = memo(({ staticData, header }: VideosCategoryProps) => {
-  const [videosCategory] = useState(staticData)
+  const [videosCategory, setVideosCategory] = useState<OneMovie[]>(staticData)
+
+    // Обновляем состояние при изменении staticData
+    useEffect(() => {
+      setVideosCategory(staticData)
+    }, [staticData])
+    
   return (
     <>
       <SectionSlider

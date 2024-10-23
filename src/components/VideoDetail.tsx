@@ -1,4 +1,4 @@
-import React, { memo, useRef, useMemo } from 'react'
+import React, { memo, useMemo, useState, useEffect } from 'react'
 
 //react-bootstrap
 import { Row, Col, Container } from 'react-bootstrap'
@@ -7,13 +7,10 @@ import { Row, Col, Container } from 'react-bootstrap'
 import VideosCategory from '@/components/sections/VideosCategory'
 import VideoPlayer from '@/components/VideoPlayer.tsx'
 
-//statics
-import { sectionMainSliders2 } from '@/StaticData/data'
-
 //utilities
 import { useEnterExit } from '../utilities/usePage'
 
-interface oneMovie {
+interface OneMovie {
   id: number
   image: string
   slug: string
@@ -26,13 +23,14 @@ interface oneMovie {
 }
 
 interface ParapmsProps {
-  currentObj: oneMovie
-  otherVideo: oneMovie[]
+  currentObj: OneMovie
+  otherVideo: OneMovie[]
 }
 
 const VideoDetail = memo(({ currentObj, otherVideo }: ParapmsProps) => {
+  const [singleObject, setSingleObject] = useState<OneMovie>(currentObj)
+
   useEnterExit()
-  const playerRef = useRef(null)
 
   const videoJsOptions = useMemo(() => {
     return {
@@ -49,16 +47,19 @@ const VideoDetail = memo(({ currentObj, otherVideo }: ParapmsProps) => {
       ],
       youtube: { iv_load_policy: 1 },
     }
-  }, [])
-  const handlePlayerReady = (player: any) => {
-    playerRef.current = player
-  }
+  }, [singleObject])
+
+  useEffect(() => {
+    setSingleObject(currentObj)
+  }, [currentObj])
+
 
   return (
     <>
       <div className='pt-0 site-video__container'>
         <VideoPlayer
           options={videoJsOptions}
+          key={singleObject.slug}
           // color={color}
         />
         {/* <VideoJS

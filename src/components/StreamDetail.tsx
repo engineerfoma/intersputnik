@@ -20,6 +20,8 @@ interface ParapmsProps {
 }
 
 const StreamDetail = memo(({ currentObj, otherStreams }: ParapmsProps) => {
+  const [singleObject, setSingleObject] = useState<Videos>(currentObj)
+
   useEnterExit()
   const videoJsOptions = useMemo(() => {
     return {
@@ -28,19 +30,26 @@ const StreamDetail = memo(({ currentObj, otherStreams }: ParapmsProps) => {
       playsinline: true,
       responsive: true,
       preload: 'auto',
-      poster: currentObj.poster.original,
+      poster: singleObject.poster.original,
       sources: [
         {
-          src: currentObj.hls_link,
+          src: singleObject.hls_link,
         },
       ],
     }
-  }, [])
+  }, [singleObject])
+
+  useEffect(() => {
+    setSingleObject(currentObj)
+  }, [currentObj])
 
   return (
     <>
       <div className='pt-0 site-video__container'>
-        <VideoPlayer options={videoJsOptions} />
+        <VideoPlayer
+          options={videoJsOptions}
+          key={singleObject.poster.original}
+        />
       </div>
       <div className='details-part'>
         <Container fluid>

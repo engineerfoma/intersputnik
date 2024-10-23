@@ -24,19 +24,28 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   isActive,
   index,
 }) => {
-  const videoRef = useRef<HTMLVideoElement | null>(null)
+  const videoRef = useRef<HTMLDivElement | null>(null)
   const playerRef = React.useRef<videojs.Player | null>(null)
 
   useEffect(() => {
-    if (videoRef.current) {
-      playerRef.current = videojs(videoRef.current!, options, () => {})
+    if (!playerRef.current) {
+      const videoElement = document.createElement('video-js')
+
+      videoElement.classList.add('vjs-big-play-centered', 'vjs-default-skin')
+      videoRef?.current?.appendChild(videoElement)
+
+      const player = (playerRef.current = videojs(
+        videoElement,
+        options,
+        () => {}
+      ))
+    } else {
+      const player = playerRef.current
+
+      player.autoplay(options.autoplay)
+      player.src(options.sources)
     }
-    return () => {
-      if (playerRef.current) {
-        playerRef.current.dispose()
-      }
-    }
-  }, [options])
+  }, [options, videoRef])
 
   useEffect(() => {
     if (playerRef.current && (isActive || isActive === 0)) {
@@ -48,13 +57,28 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     }
   }, [isActive])
 
+  useEffect(() => {
+    const player = playerRef.current
+
+    return () => {
+      if (player && !player.isDisposed()) {
+        player.dispose()
+        playerRef.current = null
+      }
+    }
+  }, [playerRef])
+
   return (
     <div data-vjs-player>
-      <video
+      <div
+        className='site-video__container'
+        ref={videoRef}
+      ></div>
+      {/* <video
         ref={videoRef}
         className='video-js vjs-default-skin vjs-big-play-centered'
         // className={`video-js vjs-default-skin ${color}`}
-      />
+      /> */}
     </div>
   )
 }

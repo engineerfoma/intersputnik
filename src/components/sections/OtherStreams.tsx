@@ -1,4 +1,4 @@
-import { memo, useState } from 'react'
+import { memo, useState, useEffect } from 'react'
 
 //component
 import SectionSlider from '../slider/SectionSlider'
@@ -13,7 +13,13 @@ interface OtherStreamsProps {
 }
 
 const OtherStreams = memo(({ staticData, header }: OtherStreamsProps) => {
-  const [otherStreams] = useState(staticData)
+  const [otherStreams, setOtherStreams] = useState<Videos[]>(staticData)
+
+  // Обновляем состояние при изменении staticData
+  useEffect(() => {
+    setOtherStreams(staticData)
+  }, [staticData])
+  
   return (
     <>
       <SectionSlider

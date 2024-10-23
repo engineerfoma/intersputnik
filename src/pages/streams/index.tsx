@@ -40,8 +40,11 @@ export const getStaticProps = async () => {
 const AllStreams = memo(({ streams }: AllStreamsProps) => {
   useBreadcrumb('View All streams', '../../assets/images/space-title.jpg')
   return (
-    <Fragment>
-      <section className='section-padding'>
+    <>
+      <section
+        className='section-padding'
+        style={{ overflow: 'hidden' }}
+      >
         <Container fluid>
           <Row>
             <Col
@@ -74,7 +77,7 @@ const AllStreams = memo(({ streams }: AllStreamsProps) => {
           </Row>
         </Container>
       </section>
-    </Fragment>
+    </>
   )
 })
 

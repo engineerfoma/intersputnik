@@ -30,6 +30,19 @@ export const VideoJS = (props: { options: any; onReady: any }) => {
         (videoRef.current as HTMLDivElement).appendChild(videoElement);
       }
 
+
+      // const videoRef = useRef<HTMLVideoElement | null>(null)
+      // const playerRef = React.useRef<videojs.Player | null>(null)
+      // useEffect(() => {
+      //   if (playerRef.current && (isActive || isActive === 0)) {
+      //     if (index === isActive) {
+      //       playerRef.current.play()
+      //     } else {
+      //       playerRef.current.pause()
+      //     }
+      //   }
+      // }, [isActive])
+
       // #OLD
       // const player = (playerRef.current = videojs(videoElement, options, () => {
       //   videojs.log("player is ready");
