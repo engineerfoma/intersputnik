@@ -78,7 +78,7 @@ const SectionSlider: FC<SectionSliderProps> = memo(
             <div className='d-flex align-items-center justify-content-between px-3 my-4'>
               <h5 className='main-title text-capitalize mb-0'>{title}</h5>
               <Link
-                href={'/videos/category/' + categorySlug}
+                href={link + categorySlug}
                 className='text-primary iq-view-all text-decoration-none'
               >
                 View All

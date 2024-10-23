@@ -30,8 +30,8 @@ const CardStyle = memo((props: Props) => {
           </div>
           <div className='card-description with-transition'>
             <div className='cart-content'>
-              <div className='content-left'>
-                <h5 className='iq-title text-capitalize'>
+              <div className='content-left' style={{width: '100%'}}>
+                <h5 className='iq-title text-capitalize text-truncate'>
                   <Link href={path}>{props.title}</Link>
                 </h5>
                 <div className='movie-time d-flex align-items-center my-2'>

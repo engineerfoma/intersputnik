@@ -2,7 +2,9 @@
 // Requires inline-block or block for proper styling
 
 @mixin text-truncate() {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  display: -webkit-box;                  /* Использовать флекс-контейнер */
+  -webkit-box-orient: vertical;          /* Вертикальная ориентация */
+  -webkit-line-clamp: 3;  
+  overflow: hidden;                       /* Скрыть переполненный текст */
+  max-height: 6rem;  
 }

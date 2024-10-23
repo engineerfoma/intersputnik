@@ -28,13 +28,14 @@ const VideosCategory = memo(({ staticData, header }: VideosCategoryProps) => {
     useEffect(() => {
       setVideosCategory(staticData)
     }, [staticData])
-    
+
   return (
     <>
       <SectionSlider
         title={header}
         categorySlug={staticData[0].categorySlug}
         list={videosCategory}
+        link='/videos/category/'
         className='fara-block'
       >
         {(data) => (

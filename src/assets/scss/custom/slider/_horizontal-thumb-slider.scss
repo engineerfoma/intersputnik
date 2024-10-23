@@ -18,6 +18,19 @@
         z-index: 0;
         width: 100%;
         height: 100%;
+        padding-top: 50px;
+
+        @media (max-width: 1199px) {
+          padding-top: 70px;
+        }
+
+        @media (max-width: 768px) {
+          padding-top: 55px;
+        }
+
+        @media (max-width: 600px) {
+          padding-top: 0;
+        }
 
         .slider--image {
           height: 100%;
@@ -226,7 +239,7 @@
   .iq-banner-thumb-slider {
     .slider {
       .slider-bg {
-        height: 18.125rem;
+        height: 22.125rem;
         // height: 32.125rem;
 
         .slider-images {
@@ -243,16 +256,15 @@
   .iq-banner-thumb-slider {
     .slider {
       .slider-bg {
-        height: 21.125rem;
+        height: 24.125rem;
       }
     }
   }
 
   .ott-hero-pt {
-    padding-top: 55px!important;
+    padding-top: 55px !important;
   }
 }
-
 
 @media (max-width: 500px) {
   .iq-banner-thumb-slider {
@@ -264,7 +276,7 @@
   }
 
   .ott-hero-pt {
-    padding-top: 55px!important;
+    padding-top: 40px !important;
   }
 }
 

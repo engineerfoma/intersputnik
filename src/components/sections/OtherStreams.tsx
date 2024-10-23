@@ -19,13 +19,13 @@ const OtherStreams = memo(({ staticData, header }: OtherStreamsProps) => {
   useEffect(() => {
     setOtherStreams(staticData)
   }, [staticData])
-  
+
   return (
     <>
       <SectionSlider
         title={header}
-        categorySlug={staticData[0].id}
         list={otherStreams}
+        link='/streams/'
         className='fara-block'
       >
         {(data) => (
