@@ -4,19 +4,19 @@ import { memo, useState } from 'react'
 import SectionSlider from '../slider/SectionSlider'
 import CardStyle from '../cards/CardStyle'
 
-interface OnlyOnFara {
+interface VideosCategoryProps {
   staticData: any
   header: string
 }
 
-const OnlyOnfara = memo(({ staticData, header }: OnlyOnFara) => {
-  const [onlyonfara] = useState(staticData)
+const VideosCategory = memo(({ staticData, header }: VideosCategoryProps) => {
+  const [videosCategory] = useState(staticData)
   return (
     <>
       <SectionSlider
         title={header}
         categorySlug={staticData[0].categorySlug}
-        list={onlyonfara}
+        list={videosCategory}
         className='fara-block'
       >
         {(data) => (
@@ -33,5 +33,5 @@ const OnlyOnfara = memo(({ staticData, header }: OnlyOnFara) => {
   )
 })
 
-OnlyOnfara.displayName = 'OnlyOnfara'
-export default OnlyOnfara
+VideosCategory.displayName = 'VideosCategory'
+export default VideosCategory

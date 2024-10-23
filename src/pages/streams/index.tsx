@@ -1,26 +1,82 @@
-import { memo } from "react";
+import React, { Fragment, memo } from 'react'
 
-// hero slider
-import MovieHeroSlider from "@/components/slider/MovieHeroSlider";
+//router
+import Link from 'next/link'
 
-// section
-import PopularMovies from "@/components/sections/PopularMovies";
-import SpecialsLatestMovies from "@/components/sections/Specials&LatestMovies";
-import MoviesRecommendedForYou from "@/components/sections/MoviesRecommendedForYou";
+//react-bootstrap
+import { Col, Container, Row } from 'react-bootstrap'
 
-import { useEnterExit } from "@/utilities/usePage";
+// data
+import { geners } from '@/StaticData/data'
 
-const Movies = memo(() => {
-    useEnterExit()
-    return (
-        <>
-            <MovieHeroSlider />
-            <PopularMovies />
-            <SpecialsLatestMovies />
-            <MoviesRecommendedForYou />
-        </>
-    );
-});
+//components
+import GenersCard from '@/components/cards/GanresCard'
 
-Movies.displayName = "Movies";
-export default Movies;
+//custom hooks
+import { useBreadcrumb } from '@/utilities/usePage'
+
+//types
+import { type Videos } from '@/types/streams'
+
+//services
+import { videos } from '@/service/api.service'
+interface AllStreamsProps {
+  streams: Videos[]
+}
+
+export const getStaticProps = async () => {
+  const { data } = await videos.get()
+  if (data.error) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: { streams: data.data }, // будет передано в компонент страницы как пропс
+  }
+}
+
+const AllStreams = memo(({ streams }: AllStreamsProps) => {
+  useBreadcrumb('View All streams', '../../assets/images/space-title.jpg')
+  return (
+    <Fragment>
+      <section className='section-padding'>
+        <Container fluid>
+          <Row>
+            <Col
+              sm='12'
+              className='my-4'
+            >
+              <div className='d-flex align-items-center justify-content-between'>
+                <h5 className='main-title text-capitalize mb-0'>LiveTV</h5>
+              </div>
+            </Col>
+          </Row>
+          <Row
+            xl='5'
+            md='2'
+            className='row-cols-1 geners-card geners-style-grid'
+          >
+            {streams.map((item, index) => (
+              <Col
+                key={index}
+                className='slide-items'
+              >
+                <GenersCard
+                  slug={item.id}
+                  title={item.title}
+                  image={item.poster.original}
+                  type={item.type}
+                />
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+    </Fragment>
+  )
+})
+
+AllStreams.displayName = 'AllStreams'
+export default AllStreams

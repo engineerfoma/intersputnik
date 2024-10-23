@@ -76,7 +76,7 @@ const HeaderDefault = memo(() => {
               </div>
               <Navbar
                 expand='xl'
-                className="offcanvas mobile-offcanvas nav py-xl-0 mega-menu-conten"
+                className="nav py-xl-0 mega-menu-content"
                 id='navbar_main'
               >
                 <Container
@@ -91,12 +91,7 @@ const HeaderDefault = memo(() => {
                       <Link
                         href='/'
                         className={`nav-link ${
-                          location.asPath === '/' ||
-                          location.asPath === '/home' ||
-                          location.asPath === '/movies' ||
-                          location.asPath === '/tv-shows' ||
-                          location.asPath === '/videos' ||
-                          location.asPath === '/merchandise'
+                          location.asPath === '/'
                             ? 'active'
                             : ''
                         }`}
@@ -106,15 +101,9 @@ const HeaderDefault = memo(() => {
                     </Nav.Item>
                     <Nav.Item as='li'>
                       <Link
-                        href='/watchlist-detail'
+                        href='/streams'
                         className={`nav-link ${
-                          location.asPath === '/movies/related' ||
-                          location.asPath === '/movies/restricted' ||
-                          location.asPath === '/play-list' ||
-                          location.asPath === '/genres' ||
-                          location.asPath === '/cast' ||
-                          location.asPath === '/tags' ||
-                          location.asPath === '/watchlist-detail'
+                          location.asPath.split('/').includes('streams')
                             ? 'active'
                             : ''
                         }`}
@@ -126,7 +115,7 @@ const HeaderDefault = memo(() => {
                       <Link
                         href='/videos'
                         className={`nav-link ${
-                          location.asPath.split('/').includes('extra')
+                          location.asPath.split('/').includes('videos')
                             ? 'active'
                             : ''
                         }`}
@@ -138,7 +127,7 @@ const HeaderDefault = memo(() => {
                       <Link
                         href='/extra/about-us'
                         className={`nav-link ${
-                          location.asPath.split('/').includes('blogs')
+                          location.asPath.split('/').includes('about-us')
                             ? 'active'
                             : ''
                         }`}

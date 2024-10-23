@@ -4,24 +4,27 @@ import {
   sectionMainSliders3,
   sectionMainSliders4,
 } from '@/StaticData/data'
-import VideoDetail from '@/components/detail'
+import VideoDetail from '@/components/VideoDetail'
 
 interface ParamsPathProps {
   slug: string // Здесь slug должен соответствовать тому, что вы используете в URL
 }
 
+interface oneMovie {
+  id: number
+  image: string
+  slug: string
+  title: string
+  movieTime: string
+  path: string
+  category: string
+  categorySlug: string
+  created_at: string
+}
+
 interface ParapmsProps {
-  currentObj: {
-    id: number
-    image: string
-    slug: string
-    title: string
-    movieTime: string
-    path: string
-    category: string
-    categorySlug: string
-    created_at: string
-  }
+  currentObj: oneMovie
+  otherVideo: oneMovie[]
 }
 const data = [
   ...sectionMainSliders1,
@@ -48,12 +51,21 @@ export async function getStaticProps({ params }: { params: ParamsPathProps }) {
   // const res = await fetch(`https://api.example.com/users/${params.slug}`)
   // const user = await res.json()
   const currentObj = data.find((el) => el.slug === params.slug) || null
+  const otherVideo =
+    data.filter(
+      (el) => el.slug !== params.slug && el.category === currentObj?.category
+    ) || null
 
-  return { props: { currentObj } } // Передаем данные в компонент
+  return { props: { currentObj, otherVideo } } // Передаем данные в компонент
 }
 
-const SingleVideo = ({ currentObj }: ParapmsProps) => {
-  return <VideoDetail currentObj={currentObj} />
+const SingleVideo = ({ currentObj, otherVideo }: ParapmsProps) => {
+  return (
+    <VideoDetail
+      currentObj={currentObj}
+      otherVideo={otherVideo}
+    />
+  )
 }
 
 export default SingleVideo

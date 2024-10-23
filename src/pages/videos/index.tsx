@@ -12,7 +12,7 @@ import { sectionMainSliders1, sectionMainSliders2, sectionMainSliders3, sectionM
 import PopularVideos from "../../components/sections/PopularVideos";
 import SpecialsLatestVideos from "../../components/sections/Specials&LatestVideos";
 import VideosRecommendedForYou from "../../components/sections/VideosRecommendedForYou";
-import OnlyOnfara from '@/components/sections/OnlyOnFara'
+import VideosCategory from '@/components/sections/VideosCategory'
 
 //custom hook
 import { useEnterExit } from "@/utilities/usePage";
@@ -22,19 +22,19 @@ const VideosPage = () => {
   return (
     <>
       <VideoHeroSlider />
-      <OnlyOnfara
+      <VideosCategory
         staticData={sectionMainSliders1}
         header={'Category 1'}
       />
-      <OnlyOnfara
+      <VideosCategory
         staticData={sectionMainSliders2}
         header={'Category 2'}
       />
-      <OnlyOnfara
+      <VideosCategory
         staticData={sectionMainSliders3}
         header={'Category 3'}
       />
-      <OnlyOnfara
+      <VideosCategory
         staticData={sectionMainSliders4}
         header={'Category 4'}
       />

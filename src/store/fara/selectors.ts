@@ -1,7 +1,8 @@
 // Selectors
 interface breadcrumb {
     show: boolean,
-    name: string
+    name: string,
+    url: string
 }
 interface InitialState {
     fara: {

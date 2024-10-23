@@ -34,28 +34,13 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null)
   const [activeSlide, setActiveSlide] = useState(0)
   // const [color, setColor] = useState('')
-  const isFirstRender = useRef(true) // Используем useRef для отслеживания первого рендера
   // const handleClick = useCallback(() => {
   //   setColor(color === '' ? 'red-button' : '')
   // }, [color])
 
-  const handleSlideChange = useCallback(
-    (swiper: any) => {
-      if (!isFirstRender.current) {
-        setActiveSlide(swiper.realIndex)
-      }
-    },
-    [isFirstRender]
-  )
-
-  useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false // Устанавливаем в false после первого рендера
-    }
-  }, [])
-
-  useEffect(() => {
-  }, [activeSlide]) // Логируем новое значение activeSlide
+  const handleSlideChange = (swiper: any) => {
+    setActiveSlide(swiper.realIndex)
+  }
 
   return (
     <>
@@ -130,7 +115,7 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                             </div>
                             <CustomButton
                               buttonTitle='Stream Now '
-                              link='/watchlist-detail'
+                              link={`/streams/${stream.id}`}
                               linkButton='false'
                             />
                           </div>

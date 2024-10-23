@@ -23,7 +23,7 @@
     width: 100%;
     z-index: 999;
 
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
       display: none;
     }
   }
@@ -68,7 +68,7 @@
       height: 21px;
       margin-bottom: 2px;
       width: 21px;
-      transition: fill .2s ease-in-out;
+      transition: fill 0.2s ease-in-out;
     }
 
     &-first {
@@ -94,6 +94,15 @@
         width: 30px;
         margin-left: 5px;
         height: 30px;
+      }
+    }
+
+    &.active {
+      span {
+        color: #c43d30;
+      }
+      svg {
+        fill: #c43d30;
       }
     }
   }

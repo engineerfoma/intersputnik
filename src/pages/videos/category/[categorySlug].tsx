@@ -57,7 +57,7 @@ export async function getStaticProps({ params }: { params: ParamsPathProps }) {
 }
 
 const ViewCategory = ({ currentObj }: ParapmsProps) => {
-  useBreadcrumb('View All in Category')
+  useBreadcrumb('View All in ' + currentObj[0].category, '../../assets/images/sputnik-title.jpg')
 
   return (
     <>

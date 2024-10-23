@@ -1,44 +1,36 @@
 import React, { memo, useRef, useMemo } from 'react'
 
 //react-bootstrap
-import { Row, Col, Container, Nav, Tab, Form } from 'react-bootstrap'
-
-//router
-import Link from 'next/link'
+import { Row, Col, Container } from 'react-bootstrap'
 
 //components
-import ReviewComponent from './ReviewComponent'
-import Sources from './Sources'
-import UpcomingMovies from './sections/UpcomingMovies'
-import FsLightBox from './fslight-box'
-import VideoJS from './plugins/VideoJs'
-import OnlyOnfara from '@/components/sections/OnlyOnFara'
+import VideosCategory from '@/components/sections/VideosCategory'
 import VideoPlayer from '@/components/VideoPlayer.tsx'
 
 //statics
 import { sectionMainSliders2 } from '@/StaticData/data'
 
-//function
-import { generateImgPath } from '../StaticData/data'
-
 //utilities
 import { useEnterExit } from '../utilities/usePage'
 
-interface ParapmsProps {
-  currentObj: {
-    id: number
-    image: string
-    slug: string
-    title: string
-    movieTime: string
-    path: string
-    category: string
-    categorySlug: string
-    created_at: string
-  }
+interface oneMovie {
+  id: number
+  image: string
+  slug: string
+  title: string
+  movieTime: string
+  path: string
+  category: string
+  categorySlug: string
+  created_at: string
 }
 
-const VideoDetail = memo(({ currentObj }: ParapmsProps) => {
+interface ParapmsProps {
+  currentObj: oneMovie
+  otherVideo: oneMovie[]
+}
+
+const VideoDetail = memo(({ currentObj, otherVideo }: ParapmsProps) => {
   useEnterExit()
   const playerRef = useRef(null)
 
@@ -112,8 +104,8 @@ const VideoDetail = memo(({ currentObj }: ParapmsProps) => {
           </Row>
         </Container>
       </div>
-      <OnlyOnfara
-        staticData={sectionMainSliders2}
+      <VideosCategory
+        staticData={otherVideo}
         header={'Other videos in category'}
       />
     </>

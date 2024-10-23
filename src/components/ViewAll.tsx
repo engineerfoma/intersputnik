@@ -6,12 +6,6 @@ import { Container, Row, Col } from 'react-bootstrap'
 //components
 import CardStyle from '@/components/cards/CardStyle'
 
-//function
-import { generateImgPath } from '@/StaticData/data'
-
-//custom hook
-import { useBreadcrumb } from '@/utilities/usePage'
-
 interface CurrentObject {
   id: number
   image: string
@@ -29,7 +23,6 @@ interface ParapmsProps {
 }
 
 const ViewAll = memo(({ currentObj }: ParapmsProps) => {
-  useBreadcrumb('View All in Category')
 
   return (
     <>

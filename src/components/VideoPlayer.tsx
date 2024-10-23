@@ -10,7 +10,7 @@ interface VideoPlayerProps {
   options: {
     autoplay: boolean
     controls: boolean
-    sources?: { src: string; type?: string }[]
+    sources: { src: string; type?: string }[]
     youtube?: { iv_load_policy: number } // Опции для YouTube
     [key: string]: any
   }
@@ -29,12 +29,8 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
   useEffect(() => {
     if (videoRef.current) {
-      setTimeout(() => {
-        playerRef.current = videojs(videoRef.current!, options, () => {
-        })
-      }, 1000)
+      playerRef.current = videojs(videoRef.current!, options, () => {})
     }
-
     return () => {
       if (playerRef.current) {
         playerRef.current.dispose()
@@ -43,7 +39,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   }, [options])
 
   useEffect(() => {
-    if (playerRef.current && isActive) {
+    if (playerRef.current && (isActive || isActive === 0)) {
       if (index === isActive) {
         playerRef.current.play()
       } else {

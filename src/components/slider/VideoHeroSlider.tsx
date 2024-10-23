@@ -91,7 +91,7 @@ const VideoHeroSlider = memo(() => {
                           data-delay-in="1.2"
                         >
                           <Link
-                            href="/videos/detail"
+                            href="#"
                             className="btn text-uppercase position-relative"
                           >
                             <span className="button-text">Play Now</span>
@@ -205,7 +205,7 @@ const VideoHeroSlider = memo(() => {
                           data-delay-in="1.2"
                         >
                           <Link
-                            href="/videos/detail"
+                            href="#"
                             className="btn text-uppercase position-relative"
                           >
                             <span className="button-text">Play Now</span>

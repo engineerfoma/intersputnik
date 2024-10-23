@@ -16,13 +16,13 @@ export const useEnterExit = () => {
 };
 
 
-export const useBreadcrumb = (name: string = 'View All') => {
+export const useBreadcrumb = (name: string = 'View All', url: string) => {
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(set_breadcrumb({ show: true, name: name }))
+    dispatch(set_breadcrumb({ show: true, name: name, url  }))
 
     return () => {
-      dispatch(set_breadcrumb({ show: false, name: '' }))
+      dispatch(set_breadcrumb({ show: false, name: '', url: '' }))
     }
   }, [])
 };

@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 import { getBreadcrumb } from "@/store/fara/selectors";
 
 //img
-const imagePath = generateImgPath("/assets/images/sputnik-title.jpg");
+// const imagePath = generateImgPath("/assets/images/sputnik-title.jpg");
 
 const BreadCrumbWidget = memo(() => {
   const breadcrumb = useSelector(getBreadcrumb)
@@ -20,7 +20,7 @@ const BreadCrumbWidget = memo(() => {
       {breadcrumb.show ?
         <div
           className="iq-breadcrumb"
-          style={{ backgroundImage: `url(${imagePath})` }}
+          style={{ backgroundImage: `url(${breadcrumb.url})` }}
         >
           <Container fluid>
             <Row className="align-items-center">
