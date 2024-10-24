@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "prod": "node ./.output/server/index.mjs",
     "start": "next start",
     "lint": "next lint"
   },
