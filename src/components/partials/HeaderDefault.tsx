@@ -1,4 +1,4 @@
-import { memo, Fragment, useState, useEffect } from 'react'
+import { memo, useState, useEffect } from 'react'
 
 // react-bootstrap
 import {
@@ -60,7 +60,7 @@ const HeaderDefault = memo(() => {
     }
   }, [location])
   return (
-    <Fragment>
+    <>
       <header className='header-center-home header-default header-sticky'>
         <Navbar
           expand='xl'
@@ -147,7 +147,7 @@ const HeaderDefault = memo(() => {
           </Container>
         </Navbar>
       </header>
-    </Fragment>
+    </>
   )
 })
 

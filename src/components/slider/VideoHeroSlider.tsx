@@ -1,4 +1,4 @@
-import React, { memo, Fragment, useState } from "react";
+import React, { memo, useState } from "react";
 
 //react-bootstrap
 import { Col, Row } from "react-bootstrap";
@@ -21,7 +21,7 @@ const VideoHeroSlider = memo(() => {
   const themeSchemeDirection = useSelector(theme_scheme_direction);
   const [toggler, setToggler] = useState(false);
   return (
-    <Fragment>
+    <>
       <section className="banner-container">
         <div className="movie-banner">
           <div id="banner-detail-slider" className="banner-container">
@@ -282,7 +282,7 @@ const VideoHeroSlider = memo(() => {
         toggler={toggler}
         sources={["/assets/images/video/trailer.mp4"]}
       />
-    </Fragment>
+    </>
   );
 });
 

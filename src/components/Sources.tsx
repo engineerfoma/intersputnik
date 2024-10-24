@@ -1,11 +1,11 @@
-import React, { Fragment, memo } from 'react'
+import React, { memo } from 'react'
 
 //react-router-dom
 import Link from 'next/link'
 
 const Sources = memo(() => {
   return (
-    <Fragment>
+    <>
       <div className='source-list-content table-responsive'>
         <table className='table custom-table'>
           <thead>
@@ -72,7 +72,7 @@ const Sources = memo(() => {
           </tbody>
         </table>
       </div>
-    </Fragment>
+    </>
   )
 })
 

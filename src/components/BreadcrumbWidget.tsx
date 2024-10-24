@@ -1,4 +1,4 @@
-import { Fragment, memo } from "react";
+import { memo } from "react";
 
 //react bootstrap
 import { Breadcrumb, Container, Row, Col } from "react-bootstrap";
@@ -16,7 +16,7 @@ import { getBreadcrumb } from "@/store/fara/selectors";
 const BreadCrumbWidget = memo(() => {
   const breadcrumb = useSelector(getBreadcrumb)
   return (
-    <Fragment>
+    <>
       {breadcrumb.show ?
         <div
           className="iq-breadcrumb"
@@ -41,7 +41,7 @@ const BreadCrumbWidget = memo(() => {
             </Row>
           </Container>
         </div> : ''}
-    </Fragment>
+    </>
   );
 });
 

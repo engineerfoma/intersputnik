@@ -1,4 +1,4 @@
-import { Fragment, memo, useState } from 'react'
+import { memo, useState } from 'react'
 
 //react bootstrap
 import { Col, Container, Row } from 'react-bootstrap'
@@ -55,7 +55,7 @@ const TeamSection = memo(() => {
     },
   ])
   return (
-    <Fragment>
+    <>
       <section>
         <Container
           style={{ backgroundImage: 'url(/assets/images/home-bg.png)', height: '850px' }}
@@ -89,7 +89,7 @@ const TeamSection = memo(() => {
           </Row>
         </Container>
       </section>
-    </Fragment>
+    </>
   )
 })
 

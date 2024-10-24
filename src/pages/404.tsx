@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 //react bootstrap
 import { Col, Container, Row } from 'react-bootstrap'
@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 const ErrorPage1 = () => {
   return (
-    <Fragment>
+    <>
       <div className='section-padding vh-100'>
         <Container className=''>
           <Row className='h-100 align-items-center'>
@@ -38,7 +38,7 @@ const ErrorPage1 = () => {
           </Row>
         </Container>
       </div>
-    </Fragment>
+    </>
   )
 }
 

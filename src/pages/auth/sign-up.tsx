@@ -1,4 +1,4 @@
-import React, { Fragment, memo } from 'react'
+import React from 'react'
 
 //react-bootstrap
 import { Col, Container, Form, Row } from 'react-bootstrap'
@@ -9,7 +9,7 @@ import Link from 'next/link';
 const SignUp = () => {
 
   return (
-    <Fragment>
+    <>
       <main className='main-content'>
         <div className='vh-100' style={{ backgroundImage: "url(/assets/images/home-bg.png)", backgroundSize: 'cover', backgroundRepeat: "no-repeat", position: 'relative', minHeight: '500px' }}>
           <Container>
@@ -63,7 +63,7 @@ const SignUp = () => {
           </Container>
         </div>
       </main>
-    </Fragment>
+    </>
   );
 };
 
