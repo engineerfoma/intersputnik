@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react'
+import Link from 'next/link'
 
 import dynamic from 'next/dynamic'
 
@@ -60,6 +61,7 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                 onSlideChange={handleSlideChange}
                 slidesPerView={1}
                 watchSlidesProgress={true}
+                watchOverflow={true} // Следит за переполнением
                 allowTouchMove={true}
                 className='swiper-container'
               >
@@ -110,6 +112,10 @@ const OttHeroSlider = ({ streams }: OttHeroSliderProps) => {
                                 {stream.subtitle || 'Subtitle text'}
                               </p>
                             </div>
+                            <Link
+                              href={`/streams/${stream.id}`}
+                              className='iq-banner-thumb-slider__link'
+                            ></Link>
                             <CustomButton
                               buttonTitle='Stream Now '
                               link={`/streams/${stream.id}`}

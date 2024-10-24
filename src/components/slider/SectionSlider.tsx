@@ -69,7 +69,7 @@ const SectionSlider: FC<SectionSliderProps> = memo(
     }
 
     return (
-      <div className={className}>
+      <div>
         <Container fluid>
           <div
             className='overflow-hidden card-style-slider'

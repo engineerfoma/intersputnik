@@ -1,4 +1,15 @@
 .iq-banner-thumb-slider {
+
+  &__link {
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 99;
+  }
+
   .slider {
     .slider-bg {
       height: 100vh;

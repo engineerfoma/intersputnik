@@ -1,8 +1,11 @@
 @import '../assets/scss/fara.scss';
 @import '../assets/scss/custom.scss';
 
-.fara-block .swiper-wrapper {
-  margin: 0 !important;
+.fara-block {
+  margin-top: 5.5rem;
+  &.swiper-wrapper {
+    margin: 0 !important;
+  }
 }
 
 .top-ten-block .swiper-wrapper {
@@ -12,6 +15,10 @@
 .swiper-backface-hidden .swiper-slide {
   transform: unset !important;
   backface-visibility: visible !important;
+}
+
+.text-beige {
+  color: #f0e7dc;
 }
 
 .video-js {

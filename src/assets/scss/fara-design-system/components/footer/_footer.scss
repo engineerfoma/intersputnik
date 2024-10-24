@@ -135,3 +135,51 @@ footer {
     }
   }
 }
+
+.w-fit {
+  width: fit-content;
+}
+
+.footer-subscribe {
+  width: 40%;
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+    width: 60%;
+  }
+
+  @media (max-width: 820px) {
+    margin-top: 40px;
+    width: 100%;
+  }
+}
+
+.footer-direction {
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.footer-flex {
+  width: 50%;
+  gap: 150px;
+
+  @media (max-width: 1024px) {
+    width: 70%;
+    gap: 250px;
+  }
+
+  @media (max-width: 820px) {
+    width: 100%;
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+
+.footer-logo-column {
+  @media (max-width: 1024px) {
+    margin-bottom: 0!important;
+  }
+}

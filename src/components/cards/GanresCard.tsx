@@ -14,7 +14,12 @@ const GenersCard = memo((props: GenersCardProps) => {
   return (
     <>
       <div className='iq-card-geners card-hover-style-two'>
-        <div className='block-images position-relative w-100'>
+        <Link
+          href={{
+            pathname: '/streams/' + props.slug,
+          }}
+          className='block-images position-relative w-100'
+        >
           <div className='img-box rounded position-relative'>
             <img
               src={props.image}
@@ -23,18 +28,13 @@ const GenersCard = memo((props: GenersCardProps) => {
             />
             <div className='blog-description'>
               <h6 className='mb-0 iq-title'>
-                <Link
-                  href={{
-                    pathname: '/streams/' + props.slug,
-                  }}
-                  className='text-decoration-none text-capitalize line-count-2 p-2'
-                >
+                <p className='text-decoration-none text-beige text-capitalize line-count-2 p-2'>
                   {props.title}
-                </Link>
+                </p>
               </h6>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
     </>
   )

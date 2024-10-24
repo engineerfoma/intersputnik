@@ -36,7 +36,6 @@ const VideosCategory = memo(({ staticData, header }: VideosCategoryProps) => {
         categorySlug={staticData[0].categorySlug}
         list={videosCategory}
         link='/videos/category/'
-        className='fara-block'
       >
         {(data) => (
           <CardStyle

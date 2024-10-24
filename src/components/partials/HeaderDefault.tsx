@@ -80,18 +80,6 @@ const HeaderDefault = memo(() => {
                     </Nav.Item>
                     <Nav.Item as='li'>
                       <Link
-                        href='/streams'
-                        className={`nav-link ${
-                          location.asPath.split('/').includes('streams')
-                            ? 'active'
-                            : ''
-                        }`}
-                      >
-                        <span className='item-name'>LiveTV</span>
-                      </Link>
-                    </Nav.Item>
-                    <Nav.Item as='li'>
-                      <Link
                         href='/videos'
                         className={`nav-link ${
                           location.asPath.split('/').includes('videos')
@@ -100,6 +88,18 @@ const HeaderDefault = memo(() => {
                         }`}
                       >
                         <span className='item-name'>Videos</span>
+                      </Link>
+                    </Nav.Item>
+                    <Nav.Item as='li'>
+                      <Link
+                        href='/streams'
+                        className={`nav-link ${
+                          location.asPath.split('/').includes('streams')
+                            ? 'active'
+                            : ''
+                        }`}
+                      >
+                        <span className='item-name'>LiveTV</span>
                       </Link>
                     </Nav.Item>
                     <Nav.Item as='li'>

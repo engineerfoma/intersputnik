@@ -26,7 +26,6 @@ const OtherStreams = memo(({ staticData, header }: OtherStreamsProps) => {
         title={header}
         list={otherStreams}
         link='/streams/'
-        className='fara-block'
       >
         {(data) => (
           <CardStyle
