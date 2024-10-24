@@ -24,10 +24,10 @@ interface OneMovie {
 const VideosCategory = memo(({ staticData, header }: VideosCategoryProps) => {
   const [videosCategory, setVideosCategory] = useState<OneMovie[]>(staticData)
 
-    // Обновляем состояние при изменении staticData
-    useEffect(() => {
-      setVideosCategory(staticData)
-    }, [staticData])
+  // Обновляем состояние при изменении staticData
+  useEffect(() => {
+    setVideosCategory(staticData)
+  }, [staticData])
 
   return (
     <>

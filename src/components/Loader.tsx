@@ -1,15 +1,15 @@
-import { Fragment, memo } from "react";
+import { memo } from "react";
 
 // Next-Image
 import Image from "next/image";
 
 // img
 // import Loader from '/assets/images/loader.gif'
-import LoaderImg from '../../public/assets/images/loader.gif'
+import LoaderImg from '../../public/assets/images/logo.webp'
 
 const Loader = memo(() => {
   return (
-    <Fragment>
+    <>
       <div className="loader simple-loader animate__animated animate__fadeOut">
         <div className="loader-body">
           <Image
@@ -20,7 +20,7 @@ const Loader = memo(() => {
           />
         </div>
       </div>
-    </Fragment>
+    </>
   );
 });
 

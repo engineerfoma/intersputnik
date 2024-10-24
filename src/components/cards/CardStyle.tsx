@@ -1,7 +1,11 @@
-import { memo } from 'react'
+import { memo, useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 //react-router-dom
 import Link from 'next/link'
+
+//components
+import Loader from '../Loader'
 
 interface Props {
   link: string
@@ -13,6 +17,8 @@ interface Props {
 
 const CardStyle = memo((props: Props) => {
   const path = `${props.link}/${props.slug}`
+  const router = useRouter()
+
   return (
     <>
       <div className='iq-card card-hover'>
@@ -30,7 +36,7 @@ const CardStyle = memo((props: Props) => {
           </div>
           <div className='card-description with-transition'>
             <div className='cart-content'>
-              <div className='content-left' style={{width: '100%'}}>
+              <div className='content-left'>
                 <h5 className='iq-title text-capitalize text-truncate'>
                   <Link href={path}>{props.title}</Link>
                 </h5>
@@ -46,7 +52,6 @@ const CardStyle = memo((props: Props) => {
             <div className='iq-button'>
               <Link
                 href={path}
-                tabIndex={0}
                 className='video-open playbtn-slider'
               >
                 <svg

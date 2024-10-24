@@ -4,8 +4,6 @@ import { memo } from 'react'
 import OttHeroSlider from '@/components/slider/OttHeroSlider'
 
 // // sections
-import LastVideo from '@/components/sections/LastVideo'
-import TabSlider from '@/components/sections/TabSlider'
 import { type Videos } from '@/types/streams'
 import { videos } from '@/service/api.service'
 import VideosCategory from '@/components/sections/VideosCategory'
@@ -50,7 +48,6 @@ const OTT = memo(({ streams }: OTTProps) => {
         staticData={sectionMainSliders4}
         header={'Category 4'}
       />
-      {/* <LastVideo videos={streams}/> */}
     </>
   )
 })

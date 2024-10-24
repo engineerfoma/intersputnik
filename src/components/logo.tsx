@@ -1,4 +1,4 @@
-import React, { memo, Fragment } from "react";
+import React, { memo } from "react";
 
 //router
 import Link from "next/link";
@@ -9,7 +9,7 @@ interface LogoProps {
 
 const Logo = memo(({ imagePath }: LogoProps) => {
   return (
-    <Fragment>
+    <>
       <div className="logo-default">
         <Link className="navbar-brand text-primary" href="/">
           <img
@@ -20,7 +20,7 @@ const Logo = memo(({ imagePath }: LogoProps) => {
           />
         </Link>
       </div>
-    </Fragment>
+    </>
   );
 });
 

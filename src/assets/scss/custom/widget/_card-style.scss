@@ -111,6 +111,8 @@
     justify-content: center;
     top: inherit;
     transition: opacity 0.2s ease-in-out;
+    margin: 0 auto;
+    width: fit-content;
 
     .share-wrapper {
       position: absolute;
