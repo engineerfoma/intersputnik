@@ -26,6 +26,15 @@ body {
 
 .details-part {
   padding-top: 1.875em;
+  padding-bottom: 5.5rem;
+
+  @media (max-width: 1024px) {
+    padding-bottom: 3.125rem;
+  }
+
+  @media (max-width: 767px) {
+    padding: 1.875rem 0;
+  }
 
   .trending-info {
     position: relative;
@@ -462,13 +471,14 @@ Rtl Box & Color Customizer
     height: 100%;
     box-shadow: $box-shadow;
 
-    h1, h2 {
+    h1,
+    h2 {
       font-size: 1.2rem !important;
       text-align: center;
       font-weight: 700;
       margin-bottom: 12px;
 
-      @media(max-width: 600px) {
+      @media (max-width: 600px) {
         font-size: 1.1rem !important;
       }
 
@@ -481,11 +491,11 @@ Rtl Box & Color Customizer
       margin-bottom: 0;
 
       @media (max-width: 780px) {
-        font-size: .9rem !important;
+        font-size: 0.9rem !important;
       }
 
       @media (max-width: 500px) {
-        font-size: .8rem !important;
+        font-size: 0.8rem !important;
       }
     }
   }
@@ -851,7 +861,7 @@ Rtl Box & Color Customizer
 
 .team-section {
   max-width: 30%;
-  @media(max-width: 991px) {
+  @media (max-width: 991px) {
     min-width: 80%;
   }
 }

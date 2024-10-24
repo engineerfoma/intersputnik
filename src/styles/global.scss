@@ -3,6 +3,15 @@
 
 .fara-block {
   margin-top: 5.5rem;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 3.125rem;
+  }
+
+  @media (max-width: 767px) {
+    margin: 1.875rem 0;
+  }
+
   &.swiper-wrapper {
     margin: 0 !important;
   }
