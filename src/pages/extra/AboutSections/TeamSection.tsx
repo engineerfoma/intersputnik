@@ -6,9 +6,6 @@ import { Col, Container, Row } from 'react-bootstrap'
 //components
 import ProfileCard from '../../../components/cards/ProfileCard'
 
-//function
-import { generateImgPath } from '../../../StaticData/data'
-
 const TeamSection = memo(() => {
   const [lists] = useState([
     {
@@ -58,7 +55,10 @@ const TeamSection = memo(() => {
     <>
       <section>
         <Container
-          style={{ backgroundImage: 'url(/assets/images/home-bg.png)', height: '850px' }}
+          style={{
+            backgroundImage: 'url(/assets/images/home-bg.png)',
+            height: '850px',
+          }}
         >
           <Row className='align-items-center section-padding-3'>
             <Col lg='3'></Col>

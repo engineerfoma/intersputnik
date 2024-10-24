@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 // Type
 import { Videos } from '@/types/streams'
@@ -20,10 +20,7 @@ interface OttHeroSliderProps {
   streams: Videos[]
   thumbsSwiper: any
 }
-const OttHeroSliderThumbs = ({
-  streams,
-  thumbsSwiper,
-}: OttHeroSliderProps) => {
+const OttHeroSliderThumbs = ({ streams, thumbsSwiper }: OttHeroSliderProps) => {
   const themeSchemeDirection = useSelector(theme_scheme_direction)
   return (
     <div className='position-relative my-auto'>
@@ -55,7 +52,7 @@ const OttHeroSliderThumbs = ({
               768: {
                 direction: 'horizontal',
                 slidesPerView: 2,
-                loop: false
+                loop: false,
               },
             }}
             watchSlidesProgress={true}

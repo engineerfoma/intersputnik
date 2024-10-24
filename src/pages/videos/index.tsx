@@ -1,21 +1,23 @@
 //hero-slider
-import VideoHeroSlider from "../../components/slider/VideoHeroSlider";
+import VideoHeroSlider from '../../components/slider/VideoHeroSlider'
 
 //constants
 // import { streams } from '@/service/api.service'
-import { sectionMainSliders1, sectionMainSliders2, sectionMainSliders3, sectionMainSliders4 } from '@/StaticData/data'
+import {
+  sectionMainSliders1,
+  sectionMainSliders2,
+  sectionMainSliders3,
+  sectionMainSliders4,
+} from '@/StaticData/data'
 
 //types
 // import { type Stream } from '@/types/streams'
 
 //sections
-import PopularVideos from "../../components/sections/PopularVideos";
-import SpecialsLatestVideos from "../../components/sections/Specials&LatestVideos";
-import VideosRecommendedForYou from "../../components/sections/VideosRecommendedForYou";
 import VideosCategory from '@/components/sections/VideosCategory'
 
 //custom hook
-import { useEnterExit } from "@/utilities/usePage";
+import { useEnterExit } from '@/utilities/usePage'
 
 const VideosPage = () => {
   useEnterExit()
@@ -38,12 +40,9 @@ const VideosPage = () => {
         staticData={sectionMainSliders4}
         header={'Category 4'}
       />
-      {/* <PopularVideos /> */}
-      {/* <SpecialsLatestVideos /> */}
-      {/* <VideosRecommendedForYou /> */}
     </>
-  );
-};
+  )
+}
 
-VideosPage.DisplayName = VideosPage;
-export default VideosPage;
+VideosPage.DisplayName = VideosPage
+export default VideosPage

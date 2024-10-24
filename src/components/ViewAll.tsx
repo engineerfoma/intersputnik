@@ -23,7 +23,6 @@ interface ParapmsProps {
 }
 
 const ViewAll = memo(({ currentObj }: ParapmsProps) => {
-
   return (
     <>
       <div className='section-padding-4'>

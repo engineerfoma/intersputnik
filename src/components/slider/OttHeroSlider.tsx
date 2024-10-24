@@ -4,9 +4,6 @@ import dynamic from 'next/dynamic'
 
 import VideoPlayer from '@/components/VideoPlayer.tsx'
 
-// next link
-import Link from 'next/link'
-
 // components
 import CustomButton from '../CustomButton'
 const OttHeroSliderThumbs = dynamic(() => import('./OttHeroSliderThumbs'), {

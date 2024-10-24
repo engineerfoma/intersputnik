@@ -1,15 +1,7 @@
 import { memo, useState, useEffect } from 'react'
 
 // react-bootstrap
-import {
-  Button,
-  Nav,
-  Collapse,
-  Navbar,
-  Offcanvas,
-  Container,
-  Dropdown,
-} from 'react-bootstrap'
+import { Nav, Navbar, Container } from 'react-bootstrap'
 
 //router
 import Link from 'next/link'
@@ -17,7 +9,6 @@ import { useRouter } from 'next/router'
 
 // components
 import Logo from '../logo'
-import CustomToggle from '../CustomToggle'
 
 const HeaderDefault = memo(() => {
   const [isMega, setIsMega] = useState(true)
@@ -25,16 +16,6 @@ const HeaderDefault = memo(() => {
 
   const [show1, setShow1] = useState(false)
   const [show, setShow] = useState(false)
-
-  // const [open, setOpen] = useState(false)
-  // const [open1, setOpen1] = useState(false)
-  // const [open2, setOpen2] = useState(false)
-  // const [open3, setOpen3] = useState(false)
-  // const [open4, setOpen4] = useState(false)
-  // const [open5, setOpen5] = useState(false)
-  // const [open6, setOpen6] = useState(false)
-  // const [open7, setOpen7] = useState(false)
-  // const [open8, setOpen8] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,11 +53,11 @@ const HeaderDefault = memo(() => {
           >
             <div className='d-flex align-items-center justify-content-between w-100 landing-header'>
               <div className='d-flex gap-3 gap-xl-0 align-items-center'>
-              <Logo imagePath={'/assets/images/logo.webp'}></Logo>
+                <Logo imagePath={'/assets/images/logo.webp'}></Logo>
               </div>
               <Navbar
                 expand='xl'
-                className="nav py-xl-0 mega-menu-content"
+                className='nav py-xl-0 mega-menu-content'
                 id='navbar_main'
               >
                 <Container
@@ -91,9 +72,7 @@ const HeaderDefault = memo(() => {
                       <Link
                         href='/'
                         className={`nav-link ${
-                          location.asPath === '/'
-                            ? 'active'
-                            : ''
+                          location.asPath === '/' ? 'active' : ''
                         }`}
                       >
                         <span className='item-name'>Home</span>
@@ -139,7 +118,7 @@ const HeaderDefault = memo(() => {
                 </Container>
               </Navbar>
               {/* <div className='right-panel'> */}
-                {/* <Link href='/auth/login'>
+              {/* <Link href='/auth/login'>
                   <span className='item-name'>Log in</span>
                 </Link> */}
               {/* </div> */}

@@ -18,7 +18,10 @@ const ErrorPage1 = () => {
               <div className='py-3 text-center mt-5 mb-4'>
                 <h4 className='fw-semibold mb-0'>Oops! something went wrong</h4>
               </div>
-              <p className='text-center' style={{color: '#010610'}}>
+              <p
+                className='text-center'
+                style={{ color: '#010610' }}
+              >
                 We’re sorry, it looks like the page you’re looking for isn’t in
                 our system
               </p>

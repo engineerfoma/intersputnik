@@ -1,13 +1,7 @@
 import React, { memo } from 'react'
 
-//router
-import Link from 'next/link'
-
 //react-bootstrap
 import { Col, Container, Row } from 'react-bootstrap'
-
-// data
-import { geners } from '@/StaticData/data'
 
 //components
 import GenersCard from '@/components/cards/GanresCard'

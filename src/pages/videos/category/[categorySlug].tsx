@@ -28,7 +28,6 @@ interface CurrentObject {
   categorySlug: string
 }
 
-
 interface ParapmsProps {
   currentObj: CurrentObject[]
 }
@@ -50,14 +49,18 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }: { params: ParamsPathProps }) {
   const currentObj =
     data.filter((el) => {
-      return el.categorySlug === params.categorySlug}) || null
+      return el.categorySlug === params.categorySlug
+    }) || null
   console.log(currentObj)
 
   return { props: { currentObj } }
 }
 
 const ViewCategory = ({ currentObj }: ParapmsProps) => {
-  useBreadcrumb('View All in ' + currentObj[0].category, '../../assets/images/sputnik-title.jpg')
+  useBreadcrumb(
+    'View All in ' + currentObj[0].category,
+    '../../assets/images/sputnik-title.jpg'
+  )
 
   return (
     <>

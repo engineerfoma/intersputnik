@@ -53,7 +53,6 @@ const VideoDetail = memo(({ currentObj, otherVideo }: ParapmsProps) => {
     setSingleObject(currentObj)
   }, [currentObj])
 
-
   return (
     <>
       <div className='pt-0 site-video__container'>

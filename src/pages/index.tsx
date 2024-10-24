@@ -9,7 +9,12 @@ import { videos } from '@/service/api.service'
 import VideosCategory from '@/components/sections/VideosCategory'
 
 //static data
-import { sectionMainSliders1, sectionMainSliders2, sectionMainSliders3, sectionMainSliders4 } from '@/StaticData/data'
+import {
+  sectionMainSliders1,
+  sectionMainSliders2,
+  sectionMainSliders3,
+  sectionMainSliders4,
+} from '@/StaticData/data'
 
 interface OTTProps {
   streams: Videos[]

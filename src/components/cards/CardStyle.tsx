@@ -4,9 +4,6 @@ import { useRouter } from 'next/router'
 //react-router-dom
 import Link from 'next/link'
 
-//components
-import Loader from '../Loader'
-
 interface Props {
   link: string
   image: string
@@ -17,7 +14,6 @@ interface Props {
 
 const CardStyle = memo((props: Props) => {
   const path = `${props.link}/${props.slug}`
-  const router = useRouter()
 
   return (
     <>

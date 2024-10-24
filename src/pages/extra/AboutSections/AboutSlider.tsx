@@ -1,12 +1,5 @@
 import { memo, useRef } from 'react'
 
-//react-bootstrap
-import { Nav, Tab } from 'react-bootstrap'
-
-//react-router-dom
-// import { Link } from "react-router-dom";
-import Link from 'next/link'
-
 //static data
 import { aboutSlider } from '@/StaticData/data'
 
@@ -39,7 +32,7 @@ const AboutSlider = memo(() => {
             rewind={false}
             slidesPerView={1}
             modules={[Navigation]}
-            style={{margin: '54px 0 0'}}
+            style={{ margin: '54px 0 0' }}
           >
             {aboutSlider.map((data) => (
               <SwiperSlide
